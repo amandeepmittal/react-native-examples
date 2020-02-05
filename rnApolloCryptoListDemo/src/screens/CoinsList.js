@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
+import { useQuery } from '@apollo/react-hooks'
+import { FETCH_COIN_LIST } from '../graphql/Queries'
 
 function CoinsList(props) {
   const { navigation } = props
+  const { loading, data } = useQuery(FETCH_COIN_LIST)
+
+  useEffect(() => {
+    console.log(data)
+  }, [])
+
   return (
     <View style={styles.container}>
       <Text style={styles.boldText}>Coins List</Text>
