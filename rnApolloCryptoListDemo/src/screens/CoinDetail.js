@@ -61,6 +61,10 @@ function CoinDetail(props) {
   )
 }
 
+CoinDetail.navigationOptions = screenProps => ({
+  title: screenProps.navigation.getParam('coin').CoinInfo.Name
+})
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
