@@ -1,5 +1,11 @@
 import React, { useEffect } from 'react'
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
+import {
+  Text,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  ActivityIndicator
+} from 'react-native'
 import { useQuery } from '@apollo/react-hooks'
 import { FETCH_COIN_LIST } from '../graphql/Queries'
 
@@ -7,16 +13,20 @@ function CoinsList(props) {
   const { navigation } = props
   const { loading, data } = useQuery(FETCH_COIN_LIST)
 
-  useEffect(() => {
-    console.log(data)
-  }, [])
+  // useEffect(() => {
+  //   console.log(data)
+  // }, [])
 
+  if (loading) {
+    return (
+      <View style={styles.loadingIndicatorContainer}>
+        <ActivityIndicator size='large' color='#fff' />
+      </View>
+    )
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.boldText}>Coins List</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Detail')}>
-        <Text style={styles.boldText}>Go to Detail</Text>
-      </TouchableOpacity>
     </View>
   )
 }
@@ -32,6 +42,12 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 24,
     fontWeight: 'bold'
+  },
+  loadingIndicatorContainer: {
+    flex: 1,
+    backgroundColor: '#333',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
 
