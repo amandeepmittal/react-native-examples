@@ -9,11 +9,14 @@ export const FETCH_COIN_LIST = gql`
           Id
           Name
           FullName
-          ImageUrl
         }
         DISPLAY @type(name: "DisplayPayload") {
           USD @type(name: "USDPayLoad") {
             PRICE
+            OPENDAY
+            HIGHDAY
+            LOWDAY
+            OPEN24HOUR
           }
         }
       }
