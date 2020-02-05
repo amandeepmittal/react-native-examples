@@ -17,7 +17,7 @@ function CoinsList(props) {
   //   console.log(data)
   // }, [])
 
-  if (loading) {
+  if (loading && !data) {
     return (
       <View style={styles.loadingIndicatorContainer}>
         <ActivityIndicator size='large' color='#fff' />
