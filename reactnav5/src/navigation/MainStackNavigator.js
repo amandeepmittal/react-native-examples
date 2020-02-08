@@ -10,7 +10,11 @@ function MainStackNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='Home' component={Home} />
+        <Stack.Screen
+          name='Home'
+          component={Home}
+          options={{ title: 'Home Screen' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
