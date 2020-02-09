@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Home from '../screens/Home'
 import Detail from '../screens/Detail'
+import Settings from '../screens/Settings'
 
 const Stack = createStackNavigator()
 
@@ -35,6 +36,11 @@ function MainStackNavigator() {
           options={({ route }) => ({
             title: route.params.item.name
           })}
+        />
+        <Stack.Screen
+          name='Settings'
+          component={Settings}
+          options={{ title: 'Settings' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

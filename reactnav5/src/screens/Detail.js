@@ -1,8 +1,8 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
 function Detail(props) {
-  const { route } = props
+  const { route, navigation } = props
   const { item } = route.params
   const { name, home, species } = item
   return (
@@ -13,6 +13,11 @@ function Detail(props) {
         <Text style={styles.cardText}>Home Planet: {home}</Text>
         <Text style={styles.cardText}>Species: {species}</Text>
       </View>
+      <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => navigation.navigate('Settings')}>
+        <Text style={styles.buttonText}>Go to Settings</Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -42,6 +47,16 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#ffd700',
     marginBottom: 5
+  },
+  buttonContainer: {
+    backgroundColor: '#222',
+    borderRadius: 5,
+    padding: 10,
+    margin: 20
+  },
+  buttonText: {
+    fontSize: 20,
+    color: '#fff'
   }
 })
 
