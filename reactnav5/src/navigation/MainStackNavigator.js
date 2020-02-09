@@ -22,7 +22,8 @@ function MainStackNavigator() {
           },
           headerTintColor: '#ffd700',
           headerBackTitleVisible: false
-        }}>
+        }}
+        headerMode='float'>
         <Stack.Screen
           name='Home'
           component={Home}
