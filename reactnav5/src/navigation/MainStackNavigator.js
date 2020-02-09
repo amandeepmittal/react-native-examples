@@ -23,7 +23,9 @@ function MainStackNavigator() {
         <Stack.Screen
           name='Detail'
           component={Detail}
-          options={{ title: 'Detail Screen' }}
+          options={({ route }) => ({
+            title: route.params.item.name
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>
