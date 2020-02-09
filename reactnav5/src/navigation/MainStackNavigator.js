@@ -20,7 +20,8 @@ function MainStackNavigator() {
           headerTitleStyle: {
             fontWeight: 'bold'
           },
-          headerTintColor: '#ffd700'
+          headerTintColor: '#ffd700',
+          headerBackTitleVisible: false
         }}>
         <Stack.Screen
           name='Home'
