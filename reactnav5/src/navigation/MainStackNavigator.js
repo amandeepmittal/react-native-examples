@@ -13,7 +13,14 @@ function MainStackNavigator() {
       <Stack.Navigator
         initialRouteName='Home'
         screenOptions={{
-          gestureEnabled: true
+          gestureEnabled: true,
+          headerStyle: {
+            backgroundColor: '#101010'
+          },
+          headerTitleStyle: {
+            fontWeight: 'bold'
+          },
+          headerTintColor: '#ffd700'
         }}>
         <Stack.Screen
           name='Home'
