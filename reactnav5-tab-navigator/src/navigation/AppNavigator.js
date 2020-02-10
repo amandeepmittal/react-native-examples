@@ -20,25 +20,20 @@ function MainTabNavigator() {
         style: {
           backgroundColor: '#ffd700'
         }
-      }}>
-      <Tab.Screen
-        name='Home'
-        component={Home}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name='ios-home' color={color} size={size} />
-          )
-        }}
-      />
-      <Tab.Screen
-        name='Profile'
-        component={Profile}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name='ios-person' size={size} color={color} />
-          )
-        }}
-      />
+      }}
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          let iconName
+          if (route.name == 'Home') {
+            iconName = 'ios-home'
+          } else if (route.name == 'Profile') {
+            iconName = 'ios-person'
+          }
+          return <Ionicons name={iconName} color={color} size={size} />
+        }
+      })}>
+      <Tab.Screen name='Home' component={Home} />
+      <Tab.Screen name='Profile' component={Profile} />
     </Tab.Navigator>
   )
 }
