@@ -1,12 +1,24 @@
 import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from '../screens/Home'
 import Detail from '../screens/Detail'
 import Settings from '../screens/Settings'
+import Profile from '../screens/Profile'
 
 const Stack = createStackNavigator()
+const Tab = createBottomTabNavigator()
+
+function MainTabNavigator() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name='Home' component={Home} />
+      <Tab.Screen name='Profile' component={Profile} />
+    </Tab.Navigator>
+  )
+}
 
 function MainStackNavigator() {
   return (
@@ -25,11 +37,7 @@ function MainStackNavigator() {
           headerBackTitleVisible: false
         }}
         headerMode='float'>
-        <Stack.Screen
-          name='Home'
-          component={Home}
-          options={{ title: 'Home Screen' }}
-        />
+        <Stack.Screen name='Home' component={MainTabNavigator} />
         <Stack.Screen
           name='Detail'
           component={Detail}
