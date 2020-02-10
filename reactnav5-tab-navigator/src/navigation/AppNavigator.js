@@ -12,6 +12,19 @@ import Profile from '../screens/Profile'
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
 
+function getHeaderTitle(route) {
+  const routeName = route.state
+    ? route.state.routes[route.state.index].name
+    : route.params?.screen || 'Home'
+
+  switch (routeName) {
+    case 'Home':
+      return 'Home'
+    case 'Profile':
+      return 'Profile'
+  }
+}
+
 function MainTabNavigator() {
   return (
     <Tab.Navigator
@@ -55,7 +68,13 @@ function MainStackNavigator() {
           headerBackTitleVisible: false
         }}
         headerMode='float'>
-        <Stack.Screen name='Home' component={MainTabNavigator} />
+        <Stack.Screen
+          name='Home'
+          component={MainTabNavigator}
+          options={({ route }) => ({
+            headerTitle: getHeaderTitle(route)
+          })}
+        />
         <Stack.Screen
           name='Detail'
           component={Detail}
