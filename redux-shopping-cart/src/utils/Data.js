@@ -1,4 +1,4 @@
-export const BookItems = [
+export const books = [
   {
     id: 1,
     name: 'The Book Thief',
