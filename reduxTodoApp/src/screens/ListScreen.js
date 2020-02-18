@@ -7,9 +7,13 @@ import {
   TouchableOpacity
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
+import { useSelector } from 'react-redux'
+
 import Header from '../components/Header'
 
 function ListView() {
+  const listItems = useSelector(state => state.itemList)
+
   return (
     <View
       style={{
@@ -20,7 +24,11 @@ function ListView() {
         paddingHorizontal: 20,
         paddingVertical: 20
       }}>
-      <Text>Here goes list items</Text>
+      {listItems.length !== 0 ? (
+        <Text>Contains List items</Text>
+      ) : (
+        <Text style={{ fontSize: 30 }}>You list is empty :'(</Text>
+      )}
     </View>
   )
 }
