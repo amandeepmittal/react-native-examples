@@ -1,8 +1,15 @@
-import React from 'react'
-import { StyleSheet, TouchableOpacity, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import {
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  View,
+  TextInput
+} from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 
 function ModalScreen({ navigation }) {
+  const [value, onChangeText] = useState('Placeholder')
   return (
     <View style={styles.container}>
       <View style={styles.innerContainer}>
@@ -17,6 +24,36 @@ function ModalScreen({ navigation }) {
           <Text style={{ color: '#444', fontSize: 20 }}>
             What do you want to do?
           </Text>
+          <TextInput
+            style={{
+              height: 50,
+              width: 200,
+              padding: 5,
+              borderColor: 'gray',
+              borderBottomWidth: 1
+            }}
+            numberOfLines={1}
+            onChangeText={text => onChangeText(text)}
+            value={value}
+            clearButtonMode='while-editing'
+          />
+          <TouchableOpacity
+            style={{
+              marginTop: 10,
+              backgroundColor: 'blue',
+              width: 50,
+              height: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: 5
+            }}
+            onPress={() => navigation.navigate('List')}>
+            <Ionicons
+              name='ios-arrow-dropright-circle'
+              size={40}
+              color='#fff'
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
