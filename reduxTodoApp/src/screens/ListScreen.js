@@ -9,12 +9,29 @@ import {
 import { Ionicons } from '@expo/vector-icons'
 import Header from '../components/Header'
 
+function ListView() {
+  return (
+    <View
+      style={{
+        backgroundColor: 'white',
+        flex: 1,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        paddingHorizontal: 20,
+        paddingVertical: 20
+      }}>
+      <Text>Here goes list items</Text>
+    </View>
+  )
+}
+
 function ListScreen({ navigation }) {
   return (
     <>
       <StatusBar barStyle='light-content' />
       <View style={styles.container}>
         <Header title={'List'} />
+        <ListView />
         <View style={styles.fabContainer}>
           <TouchableOpacity
             onPress={() => navigation.navigate('Modal')}
