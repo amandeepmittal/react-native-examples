@@ -30,21 +30,17 @@ function ListView() {
         <FlatList
           data={listItems}
           keyExtractor={item => item.id.toString()}
-          ItemSeparatorComponent={() => Separator()}
           renderItem={({ item }) => (
             <View style={styles.listItemContainer}>
-              <View style={styles.listItemMetaContainer}>
-                <Text style={styles.itemTitle} numberOfLines={1}>
-                  {item.name}
-                </Text>
-                {/* <View style={styles.buttonContainer}>
-                  <TouchableOpacity
-                    onPress={() => removeItemFromCart(item)}
-                    style={styles.button}>
-                    <Text style={styles.buttonText}>Remove -</Text>
-                  </TouchableOpacity>
-                </View> */}
-              </View>
+              <Text style={styles.itemTitle} numberOfLines={1}>
+                {item.name}
+              </Text>
+
+              <TouchableOpacity
+                onPress={() => alert({ item })}
+                style={styles.button}>
+                <Ionicons name='ios-trash' color='#fff' size={20} />
+              </TouchableOpacity>
             </View>
           )}
         />
@@ -95,17 +91,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   listItemContainer: {
+    flex: 1,
     flexDirection: 'row',
-    padding: 10
-  },
-
-  listItemMetaContainer: {
-    padding: 5,
-    paddingLeft: 10
+    paddingTop: 10,
+    paddingBottom: 5,
+    paddingRight: 5,
+    justifyContent: 'space-between',
+    width: '100%',
+    borderBottomWidth: 0.25
   },
   itemTitle: {
     fontSize: 22,
     fontWeight: '400'
+  },
+  button: {
+    borderRadius: 8,
+    backgroundColor: '#ff333390',
+    padding: 5
   }
 })
 
