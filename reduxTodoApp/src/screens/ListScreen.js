@@ -7,10 +7,12 @@ import {
   TouchableOpacity
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
+import Header from '../components/Header'
 
 function ListScreen({ navigation }) {
   return (
     <View style={styles.container}>
+      <Header title={'List'} />
       <View style={styles.fabContainer}>
         <TouchableOpacity
           onPress={() => navigation.navigate('Modal')}
