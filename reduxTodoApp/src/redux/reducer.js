@@ -1,8 +1,14 @@
 export const ADD_ITEM = 'ADD_ITEM'
+export const REMOVE_ITEM = 'REMOVE_ITEM'
 
 export const addItem = item => ({
   type: ADD_ITEM,
   payload: item
+})
+
+export const removeItem = id => ({
+  type: REMOVE_ITEM,
+  payload: id
 })
 
 const initialState = {
@@ -18,6 +24,11 @@ const rootReducer = (state = initialState, action) => {
           id: Math.random(),
           name: action.payload
         })
+      }
+    case REMOVE_ITEM:
+      return {
+        ...state,
+        itemList: state.itemList.filter(item => item.id !== action.payload)
       }
 
     default:

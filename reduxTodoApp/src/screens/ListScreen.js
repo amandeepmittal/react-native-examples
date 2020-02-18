@@ -8,13 +8,16 @@ import {
   FlatList
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { removeItem } from '../redux/reducer'
 
 import Header from '../components/Header'
 
 function ListView() {
   const listItems = useSelector(state => state.itemList)
   console.log({ listItems })
+
+  const dispatch = useDispatch()
 
   return (
     <View
@@ -35,9 +38,8 @@ function ListView() {
               <Text style={styles.itemTitle} numberOfLines={1}>
                 {item.name}
               </Text>
-
               <TouchableOpacity
-                onPress={() => alert({ item })}
+                onPress={() => dispatch(removeItem(item.id))}
                 style={styles.button}>
                 <Ionicons name='ios-trash' color='#fff' size={20} />
               </TouchableOpacity>
