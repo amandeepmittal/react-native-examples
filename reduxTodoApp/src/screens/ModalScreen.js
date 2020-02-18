@@ -7,9 +7,19 @@ import {
   TextInput
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
+import { useDispatch } from 'react-redux'
+import { addItem } from '../redux/reducer'
 
 function ModalScreen({ navigation }) {
-  const [value, onChangeText] = useState('Placeholder')
+  const [value, setValue] = useState('')
+
+  const dispatch = useDispatch()
+
+  const onSaveNote = value => {
+    dispatch(addItem(value))
+    navigation.navigate('List')
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.innerContainer}>
@@ -33,7 +43,7 @@ function ModalScreen({ navigation }) {
               borderBottomWidth: 1
             }}
             numberOfLines={1}
-            onChangeText={text => onChangeText(text)}
+            onChangeText={value => setValue(value)}
             value={value}
             clearButtonMode='while-editing'
           />
@@ -47,7 +57,7 @@ function ModalScreen({ navigation }) {
               justifyContent: 'center',
               borderRadius: 5
             }}
-            onPress={() => navigation.navigate('List')}>
+            onPress={() => onSaveNote(value)}>
             <Ionicons
               name='ios-arrow-dropright-circle'
               size={40}

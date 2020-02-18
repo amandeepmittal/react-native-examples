@@ -13,6 +13,7 @@ import Header from '../components/Header'
 
 function ListView() {
   const listItems = useSelector(state => state.itemList)
+  console.log({ listItems })
 
   return (
     <View
