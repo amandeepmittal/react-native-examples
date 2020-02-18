@@ -11,16 +11,19 @@ import Header from '../components/Header'
 
 function ListScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Header title={'List'} />
-      <View style={styles.fabContainer}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Modal')}
-          style={styles.fabButton}>
-          <Ionicons name='ios-add' color='#fff' size={70} />
-        </TouchableOpacity>
+    <>
+      <StatusBar barStyle='light-content' />
+      <View style={styles.container}>
+        <Header title={'List'} />
+        <View style={styles.fabContainer}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Modal')}
+            style={styles.fabButton}>
+            <Ionicons name='ios-add' color='#fff' size={70} />
+          </TouchableOpacity>
+        </View>
       </View>
-    </View>
+    </>
   )
 }
 
