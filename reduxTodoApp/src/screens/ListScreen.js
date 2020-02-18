@@ -4,7 +4,8 @@ import {
   StatusBar,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity,
+  FlatList
 } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { useSelector } from 'react-redux'
@@ -26,7 +27,27 @@ function ListView() {
         paddingVertical: 20
       }}>
       {listItems.length !== 0 ? (
-        <Text>Contains List items</Text>
+        <FlatList
+          data={listItems}
+          keyExtractor={item => item.id.toString()}
+          ItemSeparatorComponent={() => Separator()}
+          renderItem={({ item }) => (
+            <View style={styles.listItemContainer}>
+              <View style={styles.listItemMetaContainer}>
+                <Text style={styles.itemTitle} numberOfLines={1}>
+                  {item.name}
+                </Text>
+                {/* <View style={styles.buttonContainer}>
+                  <TouchableOpacity
+                    onPress={() => removeItemFromCart(item)}
+                    style={styles.button}>
+                    <Text style={styles.buttonText}>Remove -</Text>
+                  </TouchableOpacity>
+                </View> */}
+              </View>
+            </View>
+          )}
+        />
       ) : (
         <Text style={{ fontSize: 30 }}>You list is empty :'(</Text>
       )}
@@ -72,6 +93,19 @@ const styles = StyleSheet.create({
     height: 70,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  listItemContainer: {
+    flexDirection: 'row',
+    padding: 10
+  },
+
+  listItemMetaContainer: {
+    padding: 5,
+    paddingLeft: 10
+  },
+  itemTitle: {
+    fontSize: 22,
+    fontWeight: '400'
   }
 })
 
