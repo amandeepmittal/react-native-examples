@@ -19,6 +19,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* rnAnonChatAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* rnAnonChatAppTests.m */; };
 		38D22CD9DD7415D577F153E9 /* libPods-rnAnonChatApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7961F39F8E8AE812C42D1AB /* libPods-rnAnonChatApp.a */; };
 		5AFA0E1BCC414252EA732931 /* libPods-rnAnonChatAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE634DE8A4C30C3096CBB2A /* libPods-rnAnonChatAppTests.a */; };
+		85F96B9B24044B79004B901E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85F96B9A24044B79004B901E /* GoogleService-Info.plist */; };
 		A34141BF4CA946101758E33C /* libPods-rnAnonChatApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB597406E4ECE4EC9CCDB1C /* libPods-rnAnonChatApp-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		2D02E47B1E0B4A5D006451C7 /* rnAnonChatApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rnAnonChatApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* rnAnonChatApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rnAnonChatApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF7FB2C51CCF83A9EC41DD5 /* Pods-rnAnonChatAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnAnonChatAppTests.debug.xcconfig"; path = "Target Support Files/Pods-rnAnonChatAppTests/Pods-rnAnonChatAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		85F96B9A24044B79004B901E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		956C2D0A85A056E602757E1A /* libPods-rnAnonChatApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnAnonChatApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE634DE8A4C30C3096CBB2A /* libPods-rnAnonChatAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnAnonChatAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9753D72C842B0B0553E6732 /* Pods-rnAnonChatApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnAnonChatApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-rnAnonChatApp-tvOSTests/Pods-rnAnonChatApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				85F96B9A24044B79004B901E /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* rnAnonChatApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* rnAnonChatAppTests */,
@@ -194,7 +197,6 @@
 				4BF7FB2C51CCF83A9EC41DD5 /* Pods-rnAnonChatAppTests.debug.xcconfig */,
 				FFCC3CEAEC38EF8A9755CA00 /* Pods-rnAnonChatAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -309,6 +311,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -339,6 +342,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				85F96B9B24044B79004B901E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
