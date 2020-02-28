@@ -1,22 +1,8 @@
 import React from 'react'
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar
-} from 'react-native'
-
-import Login from './src/screens/Login'
+import AuthNavigator from './src/navigation/AuthNavigator'
 
 const App = () => {
-  return (
-    <>
-      <StatusBar barStyle='dark-content' />
-      <Login />
-    </>
-  )
+  return <AuthNavigator />
 }
 
 export default App
