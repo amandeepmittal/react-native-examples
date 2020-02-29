@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, StatusBar, StyleSheet, Alert } from 'react-native'
+import { View, Text, StatusBar, StyleSheet, Button, Alert } from 'react-native'
 import {
   GoogleSigninButton,
   GoogleSignin,
@@ -86,13 +86,23 @@ export default function Login() {
           color={GoogleSigninButton.Color.Dark}
           onPress={() => signIn()}
         />
+        <View style={styles.statusContainer}>
+          {isLoggedIn === false ? (
+            <Text style={styles.message}>You must sign in!</Text>
+          ) : (
+            <Button
+              onPress={() => signOut()}
+              title='Sign out'
+              color='#332211'
+            />
+          )}
+        </View>
       </View>
     </>
   )
 }
 
 const styles = StyleSheet.create({
-  rootContainer: {},
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -101,5 +111,12 @@ const styles = StyleSheet.create({
   signInButton: {
     width: 192,
     height: 48
+  },
+  statusContainer: {
+    marginVertical: 20
+  },
+  message: {
+    fontSize: 20,
+    color: 'red'
   }
 })
