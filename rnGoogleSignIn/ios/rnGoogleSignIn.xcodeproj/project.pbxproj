@@ -17,6 +17,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* rnGoogleSignInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* rnGoogleSignInTests.m */; };
 		613683A6413586D46D4DF5CD /* libPods-rnGoogleSignIn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1480BA9F598F4EC64B8D4FA /* libPods-rnGoogleSignIn.a */; };
+		8588F7CF240A57E60036A997 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8588F7CE240A57E60036A997 /* GoogleService-Info.plist */; };
 		D6E9A581D54AFF44BA224FF3 /* libPods-rnGoogleSignInTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FA7623AE6EF8B404D203D /* libPods-rnGoogleSignInTests.a */; };
 		E8B8CD60C708AFB25699E58E /* libPods-rnGoogleSignIn-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8535B2DA263AD875C613FA37 /* libPods-rnGoogleSignIn-tvOSTests.a */; };
 		F670F1A509C38435E3772C3F /* libPods-rnGoogleSignIn-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB533CBADC94EF206C77035 /* libPods-rnGoogleSignIn-tvOS.a */; };
@@ -58,6 +59,7 @@
 		578FA7623AE6EF8B404D203D /* libPods-rnGoogleSignInTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnGoogleSignInTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB07580D4D6608BD2B370A0 /* Pods-rnGoogleSignInTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnGoogleSignInTests.release.xcconfig"; path = "Target Support Files/Pods-rnGoogleSignInTests/Pods-rnGoogleSignInTests.release.xcconfig"; sourceTree = "<group>"; };
 		8535B2DA263AD875C613FA37 /* libPods-rnGoogleSignIn-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnGoogleSignIn-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8588F7CE240A57E60036A997 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8E4F5A15F95496BF7DDDDBBC /* Pods-rnGoogleSignIn-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnGoogleSignIn-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-rnGoogleSignIn-tvOSTests/Pods-rnGoogleSignIn-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B693606B1D40F3453A0B75DF /* Pods-rnGoogleSignInTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnGoogleSignInTests.debug.xcconfig"; path = "Target Support Files/Pods-rnGoogleSignInTests/Pods-rnGoogleSignInTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBB2AF10E02B871E3E78DF7C /* Pods-rnGoogleSignIn-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnGoogleSignIn-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-rnGoogleSignIn-tvOSTests/Pods-rnGoogleSignIn-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +163,6 @@
 				B693606B1D40F3453A0B75DF /* Pods-rnGoogleSignInTests.debug.xcconfig */,
 				6BB07580D4D6608BD2B370A0 /* Pods-rnGoogleSignInTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +176,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8588F7CE240A57E60036A997 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* rnGoogleSignIn */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* rnGoogleSignInTests */,
@@ -309,6 +311,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -337,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8588F7CF240A57E60036A997 /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
