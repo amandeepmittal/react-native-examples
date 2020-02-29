@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, StatusBar, StyleSheet, Button, Alert } from 'react-native'
+import {
+  View,
+  Text,
+  StatusBar,
+  Image,
+  StyleSheet,
+  Button,
+  Alert
+} from 'react-native'
 import {
   GoogleSigninButton,
   GoogleSignin,
@@ -97,6 +105,23 @@ export default function Login() {
             />
           )}
         </View>
+        <View style={styles.userInfoContainer}>
+          {isLoggedIn && (
+            <>
+              <View style={styles.header}>
+                <Text>Welcome {userInfo.user.name}</Text>
+              </View>
+              <View style={styles.profileImageContainer}>
+                <Image
+                  style={styles.profileImage}
+                  source={{
+                    uri: userInfo && userInfo.user && userInfo.user.photo
+                  }}
+                />
+              </View>
+            </>
+          )}
+        </View>
       </View>
     </>
   )
@@ -118,5 +143,18 @@ const styles = StyleSheet.create({
   message: {
     fontSize: 20,
     color: 'red'
+  },
+  userInfoContainer: {
+    marginVertical: 20
+  },
+  profileImageContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+  profileImage: {
+    width: 100,
+    height: 100
   }
 })
