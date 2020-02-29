@@ -245,6 +245,7 @@ DEPENDENCIES:
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - GoogleSignIn (~> 5.0.2)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -365,6 +366,6 @@ SPEC CHECKSUMS:
   RNGoogleSignin: a00f87261ea13df9a5cea8deafa6927d6f2c3562
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: d9324e6346feecdd2c4384bb36b3c7136e7fcaf3
+PODFILE CHECKSUM: cd379c82eaec2a5411697042d163c30c67350f7b
 
 COCOAPODS: 1.8.4
