@@ -13,6 +13,8 @@ import {
   GoogleSignin,
   statusCodes
 } from '@react-native-community/google-signin'
+import { firebase } from '@react-native-firebase/auth'
+
 import { WEB_CLIENT_ID } from '../utils/keys'
 
 export default function Login() {
@@ -38,6 +40,16 @@ export default function Login() {
       setUserInfo(userInfo)
       setError(null)
       setIsLoggedIn(true)
+
+      // create a new firebase credential with the token
+      const { accessToken, idToken } = await GoogleSignin.signIn()
+      const credential = firebase.auth.GoogleAuthProvider.credential(
+        idToken,
+        accessToken
+      )
+
+      // login with credential
+      await firebase.auth().signInWithCredential(credential)
     } catch (error) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // when user cancels sign in process,
