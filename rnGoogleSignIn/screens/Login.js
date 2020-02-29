@@ -76,7 +76,6 @@ export default function Login() {
     try {
       await GoogleSignin.revokeAccess()
       await GoogleSignin.signOut()
-      setUserInfo(null)
       setIsLoggedIn(false)
     } catch (error) {
       Alert.alert('Something else went wrong... ', error.toString())
@@ -106,7 +105,7 @@ export default function Login() {
           )}
         </View>
         <View style={styles.userInfoContainer}>
-          {isLoggedIn && (
+          {isLoggedIn === true ? (
             <>
               <Text style={styles.displayTitle}>
                 Welcome {userInfo.user.name}
@@ -120,7 +119,7 @@ export default function Login() {
                 />
               </View>
             </>
-          )}
+          ) : null}
         </View>
       </View>
     </>
