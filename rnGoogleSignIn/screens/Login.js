@@ -108,9 +108,9 @@ export default function Login() {
         <View style={styles.userInfoContainer}>
           {isLoggedIn && (
             <>
-              <View style={styles.header}>
-                <Text>Welcome {userInfo.user.name}</Text>
-              </View>
+              <Text style={styles.displayTitle}>
+                Welcome {userInfo.user.name}
+              </Text>
               <View style={styles.profileImageContainer}>
                 <Image
                   style={styles.profileImage}
@@ -156,5 +156,9 @@ const styles = StyleSheet.create({
   profileImage: {
     width: 100,
     height: 100
+  },
+  displayTitle: {
+    fontSize: 22,
+    color: '#010101'
   }
 })
