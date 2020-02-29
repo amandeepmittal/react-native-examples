@@ -85,7 +85,6 @@ export default function Login() {
   return (
     <>
       <StatusBar barStyle='dark-content' />
-
       <View style={styles.container}>
         <GoogleSigninButton
           style={styles.signInButton}
