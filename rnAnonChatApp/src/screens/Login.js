@@ -5,7 +5,6 @@ import auth from '@react-native-firebase/auth'
 
 export default function Login() {
   // firebase login function later
-
   async function login() {
     try {
       await auth().signInAnonymously()
