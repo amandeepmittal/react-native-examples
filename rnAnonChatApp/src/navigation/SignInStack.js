@@ -2,9 +2,9 @@ import * as React from 'react'
 import { TouchableOpacity } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import ChatRoom from '../screens/ChatRoom.js'
 import Icon from 'react-native-vector-icons/Ionicons'
 import auth from '@react-native-firebase/auth'
+import ChatRoom from '../screens/ChatRoom.js'
 
 const Stack = createStackNavigator()
 
