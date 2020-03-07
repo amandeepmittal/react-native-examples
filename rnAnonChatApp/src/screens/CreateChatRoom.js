@@ -6,13 +6,25 @@ import {
   TextInput,
   TouchableOpacity
 } from 'react-native'
+import firestore from '@react-native-firebase/firestore'
 
-export default function CreateChatRoom() {
+export default function CreateChatRoom({ navigation }) {
   const [roomName, setRoomName] = useState('')
 
   function handleButtonPress() {
     if (roomName.length > 0) {
-      // create new thread using firebase
+      // create new thread using firebase & firestore
+      firestore()
+        .collection('MESSAGE_THREADS')
+        .add({
+          name: roomName,
+          latestMessage: {
+            text: `${roomName} created. Welcome!`
+          }
+        })
+        .then(() => {
+          navigation.navigate('ChatRoom')
+        })
     }
   }
 
