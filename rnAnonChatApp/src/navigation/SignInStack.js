@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Icon from 'react-native-vector-icons/Ionicons'
 import auth from '@react-native-firebase/auth'
 import ChatRoom from '../screens/ChatRoom.js'
+import CreateChatRoom from '../screens/CreateChatRoom'
 
 const Stack = createStackNavigator()
 
@@ -23,13 +24,27 @@ export default function SignInStack() {
         <Stack.Screen
           name='ChatRoom'
           component={ChatRoom}
-          options={{
+          options={({ navigation }) => ({
             title: 'Chat Room',
+            headerLeft: () => (
+              <TouchableOpacity
+                style={{ marginLeft: 10 }}
+                onPress={() => navigation.navigate(CreateChatRoom)}>
+                <Icon name='ios-add' size={30} color='#444' />
+              </TouchableOpacity>
+            ),
             headerRight: () => (
               <TouchableOpacity style={{ marginRight: 10 }} onPress={logOut}>
                 <Icon name='ios-log-out' size={30} color='#444' />
               </TouchableOpacity>
             )
+          })}
+        />
+        <Stack.Screen
+          name='CreateChatRoom'
+          component={CreateChatRoom}
+          options={{
+            title: 'Create a room'
           }}
         />
       </Stack.Navigator>
