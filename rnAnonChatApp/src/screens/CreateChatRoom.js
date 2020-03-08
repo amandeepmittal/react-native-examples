@@ -19,7 +19,8 @@ export default function CreateChatRoom({ navigation }) {
         .add({
           name: roomName,
           latestMessage: {
-            text: `${roomName} created. Welcome!`
+            text: `${roomName} created. Welcome!`,
+            createdAt: new Date().getTime()
           }
         })
         .then(() => {
