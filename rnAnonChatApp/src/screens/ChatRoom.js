@@ -10,7 +10,7 @@ import {
 import firestore from '@react-native-firebase/firestore'
 import Separator from '../components/Separator'
 
-export default function ChatRoom() {
+export default function ChatRoom({ navigation }) {
   const [threads, setThreads] = useState([])
   const [loading, setLoading] = useState(true) // Set loading to true on component mount
 
@@ -52,7 +52,8 @@ export default function ChatRoom() {
         data={threads}
         keyExtractor={item => item._id}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => alert('Open a message thread')}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Messages', { thread: item })}>
             <View style={styles.row}>
               {item.unread ? (
                 <View style={[styles.dot, styles.dotUnread]} />

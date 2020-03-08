@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import auth from '@react-native-firebase/auth'
 import ChatRoom from '../screens/ChatRoom.js'
 import CreateChatRoom from '../screens/CreateChatRoom'
+import Messages from '../screens/Messages'
 
 const Stack = createStackNavigator()
 
@@ -45,6 +46,13 @@ export default function SignInStack() {
           component={CreateChatRoom}
           options={{
             title: 'Create a room'
+          }}
+        />
+        <Stack.Screen
+          name='Messages'
+          component={Messages}
+          options={{
+            title: 'Messages'
           }}
         />
       </Stack.Navigator>
