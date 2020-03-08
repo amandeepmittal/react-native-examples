@@ -33,7 +33,7 @@ export default function ChatRoom({ navigation }) {
 
         // Update state with the threads array
         setThreads(threads)
-        console.log(threads)
+        // console.log(threads)
         if (loading) {
           setLoading(false)
         }
