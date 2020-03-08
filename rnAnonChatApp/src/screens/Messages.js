@@ -20,7 +20,7 @@ export default function Messages() {
     }
   ])
 
-  function handleSend(messages) {
+  function onSend(messages) {
     setMessages(previousState =>
       GiftedChat.append(previousState.messages, messages)
     )
@@ -29,7 +29,7 @@ export default function Messages() {
   return (
     <GiftedChat
       messages={messages}
-      onSend={handleSend}
+      onSend={onSend}
       user={{
         _id: 1
       }}
