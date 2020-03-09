@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import auth from '@react-native-firebase/auth'
+import { AuthContext } from '../navigation/AuthNavigator'
 
 export default function Home() {
-  // TODO: add firebase sign-out and user info function later
+  const user = useContext(AuthContext)
+
+  async function logOut() {
+    try {
+      await auth().signOut()
+    } catch (e) {
+      console.error(e)
+    }
+  }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome user!</Text>
-      <TouchableOpacity style={styles.button} onPress={() => alert('Sign out')}>
+      <Text style={styles.title}>Welcome {user.uid}!</Text>
+      <TouchableOpacity style={styles.button} onPress={logOut}>
         <Text style={styles.buttonText}>Sign out 🤷</Text>
       </TouchableOpacity>
     </View>
@@ -24,7 +34,7 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 20,
     marginBottom: 30,
-    fontSize: 28,
+    fontSize: 16,
     fontWeight: '500',
     color: '#7f78d2'
   },

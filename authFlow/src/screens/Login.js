@@ -1,16 +1,27 @@
 import React from 'react'
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import auth from '@react-native-firebase/auth'
 
 export default function Login() {
-  // TODO: add firebase login function later
+  async function signIn() {
+    try {
+      await auth().signInAnonymously()
+    } catch (e) {
+      switch (e.code) {
+        case 'auth/operation-not-allowed':
+          console.log('Enable anonymous in your firebase console.')
+          break
+        default:
+          console.error(e)
+          break
+      }
+    }
+  }
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => alert('Anonymous login')}
-      >
+      <TouchableOpacity style={styles.button} onPress={signIn}>
         <Text style={styles.buttonText}>Login Anonymously 🔥</Text>
       </TouchableOpacity>
     </View>
