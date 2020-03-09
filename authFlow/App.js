@@ -1,12 +1,8 @@
 import React from 'react'
-import Home from './src/screens/Home'
+import AuthNavigator from './src/navigation/AuthNavigator'
 
 const App = () => {
-  return (
-    <>
-      <Home />
-    </>
-  )
+  return <AuthNavigator />
 }
 
 export default App

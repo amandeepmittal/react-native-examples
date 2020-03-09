@@ -8,12 +8,8 @@ const Stack = createStackNavigator()
 export default function SignInStack() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ title: 'Home Screen' }}
-        />
+      <Stack.Navigator headerMode="none">
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   )
