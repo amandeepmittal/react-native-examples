@@ -26,7 +26,7 @@ export default function ChatRoom({ navigation }) {
             _id: documentSnapshot.id, // required for FlatList
             // give defaults
             name: '',
-            lastMessage: { text: '' },
+            lastestMessage: { text: '' },
             ...documentSnapshot.data()
           }
         })
