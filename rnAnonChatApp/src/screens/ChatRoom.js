@@ -55,11 +55,6 @@ export default function ChatRoom({ navigation }) {
           <TouchableOpacity
             onPress={() => navigation.navigate('Messages', { thread: item })}>
             <View style={styles.row}>
-              {item.unread ? (
-                <View style={[styles.dot, styles.dotUnread]} />
-              ) : (
-                <View style={styles.dot} />
-              )}
               <View style={styles.content}>
                 <View style={styles.header}>
                   <Text style={styles.nameText}>{item.name}</Text>
@@ -111,15 +106,5 @@ const styles = StyleSheet.create({
     color: '#949494',
     fontSize: 16,
     marginTop: 2
-  },
-  dot: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: 'transparent',
-    marginRight: 5
-  },
-  dotUnread: {
-    backgroundColor: '#2196F3'
   }
 })
