@@ -51,9 +51,9 @@ export default function SignInStack() {
         <Stack.Screen
           name='Messages'
           component={Messages}
-          options={{
-            title: 'Messages'
-          }}
+          options={({ route }) => ({
+            title: route.params.thread.name
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>
