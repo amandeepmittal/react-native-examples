@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { GiftedChat } from 'react-native-gifted-chat'
+import firestore from '@react-native-firebase/firestore'
+import auth from '@react-native-firebase/auth'
 
-export default function Messages() {
+export default function Messages({ route }) {
   const [messages, setMessages] = useState([
     {
       _id: 0,
@@ -20,7 +22,36 @@ export default function Messages() {
     }
   ])
 
-  function handleSend(newMessage = []) {
+  async function handleSend(newMessage = []) {
+    const text = messages[0].text
+    const { thread } = route.params
+    const user = auth().currentUser.toJSON()
+
+    await firestore()
+      .collection('MESSAGE_THREADS')
+      .doc(thread._id)
+      .set(
+        {
+          latestMessage: {
+            text,
+            createdAt: new Date().getTime()
+          }
+        },
+        { merge: true }
+      )
+
+    firestore()
+      .collection('MESSAGE_THREADS')
+      .doc(thread._id)
+      .collection('MESSAGES')
+      .add({
+        text,
+        createdAt: new Date().getTime(),
+        user: {
+          _id: user.uid
+        }
+      })
+
     setMessages(GiftedChat.append(messages, newMessage))
   }
 

@@ -23,7 +23,12 @@ export default function CreateChatRoom({ navigation }) {
             createdAt: new Date().getTime()
           }
         })
-        .then(() => {
+        .then(docRef => {
+          docRef.collection('MESSAGES').add({
+            text: `${roomName} created. Welcome!`,
+            createdAt: new Date().getTime(),
+            system: true
+          })
           navigation.navigate('ChatRoom')
         })
     }
