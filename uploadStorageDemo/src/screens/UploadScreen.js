@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   SafeAreaView,
@@ -35,7 +35,7 @@ export default function UploadScreen() {
       } else if (response.customButton) {
         console.log('User tapped custom button: ', response.customButton);
       } else {
-        const source = {uri: response.uri};
+        const source = { uri: response.uri };
         console.log(source);
         setImage(source);
       }
@@ -43,7 +43,7 @@ export default function UploadScreen() {
   };
 
   const uploadImage = async () => {
-    const {uri} = image;
+    const { uri } = image;
     const filename = uri.substring(uri.lastIndexOf('/') + 1);
     const uploadUri = Platform.OS === 'ios' ? uri.replace('file://', '') : uri;
 
@@ -83,7 +83,7 @@ export default function UploadScreen() {
       </TouchableOpacity>
       <View style={styles.imageContainer}>
         {image !== null ? (
-          <Image source={{uri: image.uri}} style={styles.imageBox} />
+          <Image source={{ uri: image.uri }} style={styles.imageBox} />
         ) : null}
         {uploading ? (
           <View style={styles.progressBarContainer}>
