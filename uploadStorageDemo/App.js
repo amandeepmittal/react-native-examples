@@ -1,12 +1,12 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
-import AppTabs from './src/navigation/Navigator';
+import UploadScreen from './src/screens/UploadScreen';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <AppTabs />
+      <UploadScreen />
     </>
   );
 };
