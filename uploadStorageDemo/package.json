@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.7",
+    "@react-native-firebase/app": "6.3.4",
+    "@react-native-firebase/storage": "6.3.4",
     "@react-navigation/bottom-tabs": "5.2.0",
     "@react-navigation/native": "5.0.10",
     "react": "16.9.0",
