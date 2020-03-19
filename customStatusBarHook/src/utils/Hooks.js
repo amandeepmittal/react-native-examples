@@ -2,15 +2,10 @@ import React, { useCallback } from "react";
 import { StatusBar } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 
-/**
- * Provide a simple way to change the status bar color
- * when the current screen focus
- */
-
-export const useStatusBar = style => {
+export const useStatusBar = (style, animated = true) => {
   useFocusEffect(
     useCallback(() => {
-      StatusBar.setBarStyle(style);
+      StatusBar.setBarStyle(style, animated);
     }, [])
   );
 };
