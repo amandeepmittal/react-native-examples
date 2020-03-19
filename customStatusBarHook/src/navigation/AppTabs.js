@@ -3,8 +3,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { View, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { useStatusBar } from "../utils/Hooks";
 
 function HomeScreen() {
+  useStatusBar("dark-content");
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text style={{ fontSize: 20, color: "#333333" }}>Home Screen</Text>
@@ -13,6 +15,7 @@ function HomeScreen() {
 }
 
 function SettingsScreen() {
+  useStatusBar("light-content");
   return (
     <View
       style={{
