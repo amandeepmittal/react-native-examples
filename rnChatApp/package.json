@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "react-native-paper": "3.6.0",
+    "react-native-vector-icons": "6.6.0"
   },
   "devDependencies": {
     "@babel/core": "7.8.7",
