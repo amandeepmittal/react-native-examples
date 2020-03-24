@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Title } from 'react-native-paper';
+import { Title, IconButton } from 'react-native-paper';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 
-export default function SignupScreen() {
+export default function SignupScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -28,6 +28,13 @@ export default function SignupScreen() {
         modeValue='contained'
         labelStyle={styles.loginButtonLabel}
       />
+      <IconButton
+        icon='keyboard-backspace'
+        size={30}
+        style={styles.navButton}
+        color='#6646ee'
+        onPress={() => navigation.navigate('Login')}
+      />
     </View>
   );
 }
@@ -47,6 +54,9 @@ const styles = StyleSheet.create({
     fontSize: 22
   },
   navButtonText: {
-    fontSize: 16
+    fontSize: 18
+  },
+  navButton: {
+    marginTop: 10
   }
 });

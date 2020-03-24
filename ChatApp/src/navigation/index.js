@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider as PaperProvider } from 'react-native-paper';
-import LoginScreen from '../screens/LoginScreen';
+import Routes from './Routes';
 
 /**
  * Wrap all providers here
@@ -9,7 +9,7 @@ import LoginScreen from '../screens/LoginScreen';
 export default function Providers() {
   return (
     <PaperProvider>
-      <LoginScreen />
+      <Routes />
     </PaperProvider>
   );
 }

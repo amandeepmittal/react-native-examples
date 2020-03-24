@@ -4,7 +4,7 @@ import { Title } from 'react-native-paper';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -33,6 +33,7 @@ export default function LoginScreen() {
         modeValue='text'
         uppercase={false}
         labelStyle={styles.navButtonText}
+        onPress={() => navigation.navigate('Signup')}
       />
     </View>
   );
