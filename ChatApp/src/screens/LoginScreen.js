@@ -30,7 +30,7 @@ export default function LoginScreen({ navigation }) {
         title='Login'
         modeValue='contained'
         labelStyle={styles.loginButtonLabel}
-        onPress={() => login()}
+        onPress={() => login(email, password)}
       />
       <FormButton
         title='New user? Join here'

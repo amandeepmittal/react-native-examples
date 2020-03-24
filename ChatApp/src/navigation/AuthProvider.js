@@ -17,9 +17,23 @@ export const AuthProvider = ({ children }) => {
       value={{
         user,
         setUser,
-        login: async () => {
+        login: async (email, password) => {
           try {
-            await auth().signInAnonymously();
+            await auth().signInWithEmailAndPassword(email, password);
+          } catch (e) {
+            switch (e.code) {
+              case 'auth/operation-not-allowed':
+                console.log('Enable anonymous in your firebase console.');
+                break;
+              default:
+                console.error(e);
+                break;
+            }
+          }
+        },
+        register: async (email, password) => {
+          try {
+            await auth().createUserWithEmailAndPassword(email, password);
           } catch (e) {
             switch (e.code) {
               case 'auth/operation-not-allowed':
