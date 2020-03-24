@@ -4,9 +4,10 @@ import { Title } from 'react-native-paper';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 
-export default function Login() {
+export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
   return (
     <View style={styles.container}>
       <Title style={styles.titleText}>Welcome to Chat app</Title>
