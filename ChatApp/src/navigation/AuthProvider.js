@@ -21,28 +21,14 @@ export const AuthProvider = ({ children }) => {
           try {
             await auth().signInWithEmailAndPassword(email, password);
           } catch (e) {
-            switch (e.code) {
-              case 'auth/operation-not-allowed':
-                console.log('Enable anonymous in your firebase console.');
-                break;
-              default:
-                console.error(e);
-                break;
-            }
+            console.log(e);
           }
         },
         register: async (email, password) => {
           try {
             await auth().createUserWithEmailAndPassword(email, password);
           } catch (e) {
-            switch (e.code) {
-              case 'auth/operation-not-allowed':
-                console.log('Enable anonymous in your firebase console.');
-                break;
-              default:
-                console.error(e);
-                break;
-            }
+            console.log(e);
           }
         },
         logout: async () => {
