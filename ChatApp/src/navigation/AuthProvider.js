@@ -4,7 +4,6 @@ import auth from '@react-native-firebase/auth';
 /**
  * This provider is created
  * to access user in whole app
- * also, to check user logged in state
  */
 
 export const AuthContext = createContext({});
