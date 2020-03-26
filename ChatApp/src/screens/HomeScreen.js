@@ -4,7 +4,7 @@ import { Title } from 'react-native-paper';
 import { AuthContext } from '../navigation/AuthProvider';
 import FormButton from '../components/FormButton';
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen() {
   const { user, logout } = useContext(AuthContext);
 
   return (
@@ -16,11 +16,6 @@ export default function HomeScreen({ navigation }) {
         modeValue='contained'
         title='Logout'
         onPress={() => logout()}
-      />
-      <FormButton
-        modeValue='contained'
-        title='Add Room'
-        onPress={() => navigation.navigate('AddRoom')}
       />
     </View>
   );
