@@ -16,11 +16,7 @@ export default function AddRoomScreen({ navigation }) {
       firestore()
         .collection('THREADS')
         .add({
-          name: roomName,
-          latestMessage: {
-            text: `${roomName} created.`,
-            createdAt: new Date().getTime()
-          }
+          name: roomName
         })
         .then(() => {
           navigation.navigate('Home');
