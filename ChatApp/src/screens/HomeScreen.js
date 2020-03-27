@@ -26,7 +26,6 @@ export default function HomeScreen() {
         });
 
         setThreads(threads);
-        console.log(threads);
 
         if (loading) {
           setLoading(false);
