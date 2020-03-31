@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Dimensions, Text } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import { Button } from 'react-native-paper';
 
 const { width, height } = Dimensions.get('screen');
