@@ -10,6 +10,7 @@ const ModalStack = createStackNavigator();
 /**
  * All chat app related screens
  */
+
 function ChatApp() {
   return (
     <ChatAppStack.Navigator
