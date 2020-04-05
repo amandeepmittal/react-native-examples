@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { IconButton } from 'react-native-paper';
 import HomeScreen from '../screens/HomeScreen';
 import AddRoomScreen from '../screens/AddRoomScreen';
+import RoomScreen from '../screens/RoomScreen';
 
 const ChatAppStack = createStackNavigator();
 const ModalStack = createStackNavigator();
@@ -38,6 +39,7 @@ function ChatApp() {
           )
         })}
       />
+      <ChatAppStack.Screen name='Room' component={RoomScreen} />
     </ChatAppStack.Navigator>
   );
 }
