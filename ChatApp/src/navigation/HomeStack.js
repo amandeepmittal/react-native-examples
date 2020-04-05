@@ -39,7 +39,13 @@ function ChatApp() {
           )
         })}
       />
-      <ChatAppStack.Screen name='Room' component={RoomScreen} />
+      <ChatAppStack.Screen
+        name='Room'
+        component={RoomScreen}
+        options={({ route }) => ({
+          title: route.params.thread.name
+        })}
+      />
     </ChatAppStack.Navigator>
   );
 }
