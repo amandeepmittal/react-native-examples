@@ -168,7 +168,7 @@ export default function RoomScreen({ route }) {
   return (
     <GiftedChat
       messages={messages}
-      // make sure to change the user id to current user
+      // Step 6: make sure to change the user id to current user
       onSend={handleSend}
       user={{ _id: currentUser.uid }}
       placeholder='Type your message here...'
