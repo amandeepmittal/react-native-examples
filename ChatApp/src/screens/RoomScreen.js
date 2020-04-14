@@ -1,40 +1,131 @@
-import React, { useState, useContext } from 'react';
-import { GiftedChat, Bubble, Send } from 'react-native-gifted-chat';
+// implement firestore to store messages: Creating new messages
+
+// Step 1 import statements especially hooks
+import React, { useState, useContext, useEffect } from 'react';
+import {
+  GiftedChat,
+  Bubble,
+  Send,
+  // Step 9: Render system msg with custom styles
+  SystemMessage
+} from 'react-native-gifted-chat';
 import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import { IconButton } from 'react-native-paper';
-// import { AuthContext } from '../navigation/AuthProvider';
+// Step 1.1 import auth context since we need current user info
+import { AuthContext } from '../navigation/AuthProvider';
+// Step 1.1 import firestore since we need to make queries to the collection
+// THREADS & add a new message when possible
+import firestore from '@react-native-firebase/firestore';
 
-export default function RoomScreen() {
-  const [messages, setMessages] = useState([
-    /**
-     * Mock message data
-     */
-    // example of system message
-    {
-      _id: 0,
-      text: 'New room created.',
-      createdAt: new Date().getTime(),
-      system: true
-    },
-    // example of chat message
-    {
-      _id: 1,
-      text: 'Henlo!',
-      createdAt: new Date().getTime(),
-      user: {
-        _id: 2,
-        name: 'Test User'
-      }
-    }
-  ]);
+// Step 2
+export default function RoomScreen({ route }) {
+  // create an empty messages array
+  const [messages, setMessages] = useState([]);
+  // fetch `thread` object from the previous screen to get current thread id or room id the user is in, using route.params from react-navigation!!!
+  const { thread } = route.params;
+  // get current user details who is logged in
+  const { user } = useContext(AuthContext);
+  // convert the user data in a json object
+  const currentUser = user.toJSON();
 
-  // const { user } = useContext(AuthContext);
-  // const currentUser = user.toJSON();
+  // helper method used when sending a message
+  async function handleSend(messages) {
+    // Step 3 get the text of the message
+    const text = messages[0].text;
 
-  // helper method that is sends a message
-  async function handleSend(newMessage = []) {
-    setMessages(GiftedChat.append(messages, newMessage));
+    // Step 3.1 create a message collection inside threads
+    // when sending a message after this step, on firebase console
+    // you are going to see a MESSAGES sub collection inside collection THREADS
+    firestore()
+      .collection('THREADS')
+      // get the document that is the thread id of the current room the user is in
+      .doc(thread._id)
+      // add the MESSAGES collection to it
+      .collection('MESSAGES')
+      .add({
+        // add the text
+        text,
+        // add the current time
+        createdAt: new Date().getTime(),
+        // add user info related to the text, that is users id and email
+        user: {
+          _id: currentUser.uid,
+          email: currentUser.email
+        }
+      });
+
+    // Step 4 have to update the collection THREADS to display
+    // the latest message on the home screen under the description
+    // of Room name on home screen
+    // to do this, get the current room's id (thread.id)
+    // set an object called latestMessage: {} with the message text, its time
+    // and merge it.
+    // set with merge will update fields in the document or
+    // create it if it doesn't exists
+    await firestore()
+      .collection('THREADS')
+      .doc(thread._id)
+      .set(
+        {
+          latestMessage: {
+            text,
+            createdAt: new Date().getTime()
+          }
+        },
+        // pass the second property
+        { merge: true }
+      );
+
+    // set without merge will overwrite a document
   }
+
+  // Step 5 fetch messages from Firestore in useEffect hook
+  useEffect(() => {
+    const messagesListener = firestore()
+      .collection('THREADS')
+      .doc(thread._id)
+      .collection('MESSAGES')
+      // order these messages to display according
+      // to the timestamp they are sent in desc order
+      .orderBy('createdAt', 'desc')
+      .onSnapshot(querySnapshot => {
+        // A QuerySnapshot contains zero or more DocumentSnapshot objects
+        // representing the results of a query. The documents can be accessed
+        // as an array via the docs property
+
+        const messages = querySnapshot.docs.map(doc => {
+          const firebaseData = doc.data();
+
+          // the data object is going to contain the id of the document
+          // the text
+          // the timestamp and other data
+
+          const data = {
+            _id: doc.id,
+            text: '',
+            createdAt: new Date().getTime(),
+            ...firebaseData
+          };
+
+          // if the msg generator is not by the system
+          // it means the user sent the text message
+          if (!firebaseData.system) {
+            data.user = {
+              ...firebaseData.user,
+              name: firebaseData.user.email
+            };
+          }
+
+          return data;
+        });
+
+        // lastly update the messages state variable
+        setMessages(messages);
+      });
+
+    // Stop listening for updates whenever the component unmounts
+    return () => messagesListener();
+  }, []);
 
   function renderBubble(props) {
     return (
@@ -80,11 +171,24 @@ export default function RoomScreen() {
     );
   }
 
+  // Step 9: Render system msg with custom styles
+
+  function renderSystemMessage(props) {
+    return (
+      <SystemMessage
+        {...props}
+        wrapperStyle={styles.systemMessageWrapper}
+        textStyle={styles.systemMessageText}
+      />
+    );
+  }
+
   return (
     <GiftedChat
       messages={messages}
-      onSend={newMessage => handleSend(newMessage)}
-      user={{ _id: 1, name: 'User Test' }}
+      // Step 6: make sure to change the user id to current user
+      onSend={handleSend}
+      user={{ _id: currentUser.uid }}
       placeholder='Type your message here...'
       alwaysShowSend
       showUserAvatar
@@ -93,6 +197,8 @@ export default function RoomScreen() {
       renderLoading={renderLoading}
       renderSend={renderSend}
       scrollToBottomComponent={scrollToBottomComponent}
+      // Step 9: Render system msg with custom styles
+      renderSystemMessage={renderSystemMessage}
     />
   );
 }
@@ -110,5 +216,15 @@ const styles = StyleSheet.create({
   bottomComponentContainer: {
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  systemMessageWrapper: {
+    backgroundColor: '#6646ee',
+    borderRadius: 4,
+    padding: 5
+  },
+  systemMessageText: {
+    fontSize: 14,
+    color: '#fff',
+    fontWeight: 'bold'
   }
 });
