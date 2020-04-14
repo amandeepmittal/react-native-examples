@@ -2,7 +2,13 @@
 
 // Step 1 import statements especially hooks
 import React, { useState, useContext, useEffect } from 'react';
-import { GiftedChat, Bubble, Send } from 'react-native-gifted-chat';
+import {
+  GiftedChat,
+  Bubble,
+  Send,
+  // Step 9: Render system msg with custom styles
+  SystemMessage
+} from 'react-native-gifted-chat';
 import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import { IconButton } from 'react-native-paper';
 // Step 1.1 import auth context since we need current user info
@@ -165,6 +171,18 @@ export default function RoomScreen({ route }) {
     );
   }
 
+  // Step 9: Render system msg with custom styles
+
+  function renderSystemMessage(props) {
+    return (
+      <SystemMessage
+        {...props}
+        wrapperStyle={styles.systemMessageWrapper}
+        textStyle={styles.systemMessageText}
+      />
+    );
+  }
+
   return (
     <GiftedChat
       messages={messages}
@@ -179,6 +197,8 @@ export default function RoomScreen({ route }) {
       renderLoading={renderLoading}
       renderSend={renderSend}
       scrollToBottomComponent={scrollToBottomComponent}
+      // Step 9: Render system msg with custom styles
+      renderSystemMessage={renderSystemMessage}
     />
   );
 }
@@ -196,5 +216,15 @@ const styles = StyleSheet.create({
   bottomComponentContainer: {
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  systemMessageWrapper: {
+    backgroundColor: '#6646ee',
+    borderRadius: 4,
+    padding: 5
+  },
+  systemMessageText: {
+    fontSize: 14,
+    color: '#fff',
+    fontWeight: 'bold'
   }
 });
