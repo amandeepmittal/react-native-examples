@@ -11,7 +11,6 @@ import {
 } from 'react-native-gifted-chat';
 import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import { IconButton } from 'react-native-paper';
-// Step 1.1 import auth context since we need current user info
 import { AuthContext } from '../navigation/AuthProvider';
 // Step 1.1 import firestore since we need to make queries to the collection
 // THREADS & add a new message when possible
@@ -23,9 +22,7 @@ export default function RoomScreen({ route }) {
   const [messages, setMessages] = useState([]);
   // fetch `thread` object from the previous screen to get current thread id or room id the user is in, using route.params from react-navigation!!!
   const { thread } = route.params;
-  // get current user details who is logged in
   const { user } = useContext(AuthContext);
-  // convert the user data in a json object
   const currentUser = user.toJSON();
 
   // helper method used when sending a message
