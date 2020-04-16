@@ -14,7 +14,7 @@ export default function HomeScreen({ navigation }) {
   useEffect(() => {
     const unsubscribe = firestore()
       .collection('THREADS')
-      // .orderBy('latestMessage.createdAt', 'desc')
+      .orderBy('latestMessage.createdAt', 'desc')
       .onSnapshot(querySnapshot => {
         const threads = querySnapshot.docs.map(documentSnapshot => {
           return {
