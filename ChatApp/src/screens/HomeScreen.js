@@ -21,8 +21,7 @@ export default function HomeScreen({ navigation }) {
             _id: documentSnapshot.id,
             // give defaults
             name: '',
-            // Step 10: change static description
-            // to display latest msg in a chat room
+
             latestMessage: {
               text: ''
             },
@@ -59,8 +58,6 @@ export default function HomeScreen({ navigation }) {
           >
             <List.Item
               title={item.name}
-              // Step 10: change static description
-              // to display latest msg in a chat room
               description={item.latestMessage.text}
               titleNumberOfLines={1}
               titleStyle={styles.listTitle}

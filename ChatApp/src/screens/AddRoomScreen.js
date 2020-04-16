@@ -17,28 +17,13 @@ export default function AddRoomScreen({ navigation }) {
         .collection('THREADS')
         .add({
           name: roomName,
-          // Step 7: since the THREADS is going to store the
-          // latest message ( or the last msg sent in a thread)
-          // it is better to add a system generated message
-          // to indicate that a chat room is created
-          // this is going to be displayed only when a new room is created
           latestMessage: {
             text: `You have joined the room ${roomName}.`,
             createdAt: new Date().getTime()
           }
         })
-        // Step 8: A DocumentReference refers to a document location in a Firestore
-        // database and can be used to write, read, or listen to the location.
-        // The document at the referenced location may or may not exist. A
-        // DocumentReference can also be used to create a CollectionReference to
-        // a subcollection.
-        // we need docRef to refer or create MESSAGES sub
-        // collection inside THREADS when the first time
-        // a chat room is created
         .then(docRef => {
           docRef.collection('MESSAGES').add({
-            // this is going to be system generated
-            // and the first msg in any new chat room created
             text: `You have joined the room ${roomName}.`,
             createdAt: new Date().getTime(),
             system: true
