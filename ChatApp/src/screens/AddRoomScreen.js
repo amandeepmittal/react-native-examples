@@ -4,8 +4,10 @@ import { IconButton, Title } from 'react-native-paper';
 import firestore from '@react-native-firebase/firestore';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
+import useStatsBar from '../utils/useStatusBar';
 
 export default function AddRoomScreen({ navigation }) {
+  useStatsBar('dark-content');
   const [roomName, setRoomName] = useState('');
 
   /**
