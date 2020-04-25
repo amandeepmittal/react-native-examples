@@ -3,8 +3,11 @@ import { View, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import { List, Divider } from 'react-native-paper';
 import firestore from '@react-native-firebase/firestore';
 import Loading from '../components/Loading';
+import useStatsBar from '../utils/useStatusBar';
 
 export default function HomeScreen({ navigation }) {
+  useStatsBar('light-content');
+
   const [threads, setThreads] = useState([]);
   const [loading, setLoading] = useState(true);
 
