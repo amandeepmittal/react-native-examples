@@ -18,7 +18,7 @@ export default function SimpleImagePicker() {
       }
     };
 
-    ImagePicker.showImagePicker(options, response => {
+    ImagePicker.launchImageLibrary(options, response => {
       console.log({ response });
 
       if (response.didCancel) {
