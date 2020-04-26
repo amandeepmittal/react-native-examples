@@ -12,6 +12,14 @@ export const STYLES = StyleSheet.create({
   },
   title: {
     fontSize: 22
+  },
+  selectButtonContainer: {
+    margin: 20,
+    borderRadius: 5
+  },
+  selectButtonTitle: {
+    padding: 10,
+    fontSize: 18
   }
 });
 
