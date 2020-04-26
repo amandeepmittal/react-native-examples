@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, Alert, Image } from 'react-native';
 import { STYLES, COLORS } from './Styles';
 import ImagePicker from 'react-native-image-picker';
 
@@ -12,15 +12,13 @@ export default function SimpleImagePicker() {
       maxWidth: 256,
       maxHeight: 256,
       noData: true,
-      mediaType: 'photo', // other values 'video', 'mixed'
+      mediaType: 'photo',
       storageOptions: {
         skipBackup: true
       }
     };
 
     ImagePicker.launchImageLibrary(options, response => {
-      console.log({ response });
-
       if (response.didCancel) {
         console.log('User cancelled photo picker');
         Alert.alert('You did not select any image');
@@ -30,7 +28,9 @@ export default function SimpleImagePicker() {
         console.log('User tapped custom button: ', response.customButton);
       } else {
         let source = { uri: response.uri };
-        console.log({ source });
+
+        // ADD THIS
+        setImageSource(source.uri);
       }
     });
   }
@@ -46,6 +46,22 @@ export default function SimpleImagePicker() {
       <Text style={[STYLES.title, { color: COLORS.primaryLight }]}>
         Simple Image Picker
       </Text>
+      {/* ADD THIS */}
+      <View style={STYLES.imageContainer}>
+        {imageSource === null ? (
+          <Image
+            source={require('../assets/placeholderimage.jpg')}
+            style={STYLES.imageBox}
+            resizeMode='contain'
+          />
+        ) : (
+          <Image
+            source={{ uri: imageSource }}
+            style={STYLES.imageBox}
+            resizeMode='contain'
+          />
+        )}
+      </View>
       <TouchableOpacity
         onPress={selectImage}
         style={[

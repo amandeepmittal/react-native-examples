@@ -20,6 +20,16 @@ export const STYLES = StyleSheet.create({
   selectButtonTitle: {
     padding: 10,
     fontSize: 18
+  },
+  // ADD BELOW
+  imageContainer: {
+    marginVertical: 20,
+    borderWidth: 5,
+    borderColor: '#ff5555'
+  },
+  imageBox: {
+    width: 256,
+    height: 256
   }
 });
 
