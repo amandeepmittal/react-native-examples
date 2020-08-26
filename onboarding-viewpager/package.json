@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/viewpager": "3.3.0",
     "expo": "~38.0.8",
     "expo-status-bar": "^1.0.2",
     "react": "~16.11.0",
