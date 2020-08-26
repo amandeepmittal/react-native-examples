@@ -1,12 +1,14 @@
 import React, { useRef } from 'react';
 import { View } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
+import { useNavigation } from '@react-navigation/native';
 
 import Page from '../components/Page';
 import Footer from '../components/Footer';
 
 const Onboarding = () => {
   const pagerRef = useRef(null);
+  const navigation = useNavigation();
 
   const handlePageChange = pageNumber => {
     pagerRef.current.setPage(pageNumber);
@@ -40,6 +42,10 @@ const Onboarding = () => {
             leftButtonLabel="Back"
             leftButtonPress={() => {
               handlePageChange(0);
+            }}
+            rightButtonLabel="Continue"
+            rightButtonPress={() => {
+              navigation.navigate('Home');
             }}
           />
         </View>
