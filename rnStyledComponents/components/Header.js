@@ -29,7 +29,7 @@ const IconButton = styled.TouchableOpacity`
   background: #e6e6e6;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
+  margin-left: 12px;
 `;
 
 const Header = ({ headerTitle }) => {
