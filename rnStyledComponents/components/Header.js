@@ -12,7 +12,7 @@ const Container = styled.View`
 `;
 
 const HeaderTitle = styled.Text`
-  font-size: 28;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.25px;
   color: #3a86e9;
