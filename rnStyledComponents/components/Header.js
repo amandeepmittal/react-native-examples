@@ -15,7 +15,7 @@ const HeaderTitle = styled.Text`
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.25px;
-  color: #3a86e9;
+  color: #4267b2;
 `;
 
 const IconButtonsRow = styled.View`
