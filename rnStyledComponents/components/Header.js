@@ -11,7 +11,7 @@ const Container = styled.View`
   justify-content: space-between;
 `;
 
-const HeaderTitle = styled.Text`
+const Title = styled.Text`
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.25px;
@@ -35,7 +35,7 @@ const IconButton = styled.TouchableOpacity`
 const Header = ({ headerTitle }) => {
   return (
     <Container>
-      <HeaderTitle>{headerTitle}</HeaderTitle>
+      <Title>{headerTitle}</Title>
       <IconButtonsRow>
         <IconButton activeOpacity={0.7} onPress={() => true}>
           <MaterialCommunityIcons name='magnify' size={28} color='#010101' />

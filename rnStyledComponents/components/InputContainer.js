@@ -1,6 +1,13 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
+import InputMenu from './InputMenu';
+
+const Container = styled.View`
+  width: 100%;
+  height: 90px;
+`;
+
 const TextInput = styled.TextInput`
   width: 100%;
   height: 60px;
@@ -10,8 +17,20 @@ const TextInput = styled.TextInput`
   margin-left: 10px;
 `;
 
-const InputContainer = () => {
-  return <TextInput placeholder="What's on your mind?" />;
+const Separator = styled.View`
+  width: 100%;
+  height: 0.5px;
+  background-color: #e9e9e9;
+`;
+
+const InputContainer = ({ menu }) => {
+  return (
+    <Container>
+      <TextInput placeholder="What's on your mind?" />
+      <Separator />
+      <InputMenu menuItems={menu} />
+    </Container>
+  );
 };
 
 export default InputContainer;
