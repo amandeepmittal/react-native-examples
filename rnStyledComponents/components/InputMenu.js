@@ -23,7 +23,7 @@ const RowMenuText = styled.Text`
   font-size: 12px;
 `;
 
-const InputMenu = ({ menuItems }) => {
+const InputMenu = () => {
   return (
     <RowContainer>
       {menuItems.map(item => (
