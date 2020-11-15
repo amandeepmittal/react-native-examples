@@ -6,7 +6,7 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
-### **Forms with Formik**
+## Forms with Formik
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/forms-with-formik)
 - 👉 [Blog post](https://blog.jscrambler.com/creating-and-validating-react-native-forms-with-formik/)
@@ -48,3 +48,12 @@ Here is a list of notable examples and the blog post they are related [_if possi
 - 👉 [Blog post](https://amanhimself.dev/blog/create-custom-headers-with-react-native-svg)
 
 <img src="https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif" width="200" />
+
+## Using Styled Components in React Native and Expo
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnStyledComponents)
+- 👉 [Blog post](https://blog.logrocket.com/how-to-use-styled-components-with-react-native/)
+
+<img src="https://blog.logrocket.com/wp-content/uploads/2020/10/completedui-nocdn.png" width="200" />
+
+##
