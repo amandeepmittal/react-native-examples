@@ -56,4 +56,9 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 <img src="https://blog.logrocket.com/wp-content/uploads/2020/10/completedui-nocdn.png" width="200" />
 
-##
+## Handle Navigation in WebViews
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnApolloCryptoListDemo)
+- 👉 [Blog post](https://amanhimself.dev/blog/handle-navigation-in-webviews-react-native)
+
+<img src="https://miro.medium.com/max/377/1*r2li3qWatN2JM_Pl9nhGBA.gif" width="200" />
