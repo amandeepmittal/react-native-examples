@@ -14,10 +14,21 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-creating-forms-react-native-formik-4.gif" width="200"/> <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-creating-forms-react-native-formik-8.gif" width="200" />
 
-## Animated Header View on a Scroll
+## Animated Header View on a Scroll with React Native Animated API
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/animate-header-on-scroll)
 - 👉 [Blog post](https://blog.jscrambler.com/how-to-animate-a-header-view-on-scroll-with-react-native-animated/)
 - **Description**: In this tutorial, let's explore a way to create a header view component that animates on the scroll position of the ScrollView component from React Native. We will go through the basics of creating a new Animated value as well as explaining the significance of functions and properties like interpolation, extrapolate, contentOffset, and so on.
 
 <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-how-to-animate-header-view-with-react-native-animated-5.gif" width="200" /> <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-how-to-animate-header-view-with-react-native-animated-6.gif" width="200" />
+
+## Chat app with Firebase + Firestore + React Native Gifted Chat + React Native Paper + React Navigation v5
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp)
+- 👉 **Blog post series**: [Part1](https://amanhimself.dev/blog/chat-app-with-react-native-part-1) | [Part2](https://amanhimself.dev/blog/chat-app-with-react-native-part-2) | [Part3](https://amanhimself.dev/blog/chat-app-with-react-native-part-3) | [Part4](https://amanhimself.dev/blog/chat-app-with-react-native-part-4) | [Part5](https://amanhimself.dev/blog/chat-app-with-react-native-part-5) | [Part6](https://amanhimself.dev/blog/chat-app-with-react-native-part-6)
+
+<img src="https://miro.medium.com/max/684/1*7UqfiUWxFDtSyR2_CQoigQ.gif" width="200" /> <img src="https://miro.medium.com/max/684/1*5owHh4tZ5mmOyVfsn9kOwA.gif" width="200" />
+
+<img src="https://miro.medium.com/max/684/1*Ztwt_qL30dreUv_JMvhhwg.gif" width="200" /> <img src="https://miro.medium.com/max/684/1*nDaN1lXF75iWEWg6X-0sqQ.gif" width="200" />
+
+<img src="https://miro.medium.com/max/714/1*_X5Ye5IJpkOYbUsED8ELYg.gif" width="200" />
