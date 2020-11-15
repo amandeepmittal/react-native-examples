@@ -22,7 +22,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-how-to-animate-header-view-with-react-native-animated-5.gif" width="200" /> <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-how-to-animate-header-view-with-react-native-animated-6.gif" width="200" />
 
-## Chat app with Firebase + Firestore + React Native Gifted Chat + React Native Paper + React Navigation v5
+## Chat app with Expo + Firebase + Firestore + react-native-gifted-chat + react-native-paper + react-navigation v5
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp)
 - 👉 **Blog post series**: [Part1](https://amanhimself.dev/blog/chat-app-with-react-native-part-1) | [Part2](https://amanhimself.dev/blog/chat-app-with-react-native-part-2) | [Part3](https://amanhimself.dev/blog/chat-app-with-react-native-part-3) | [Part4](https://amanhimself.dev/blog/chat-app-with-react-native-part-4) | [Part5](https://amanhimself.dev/blog/chat-app-with-react-native-part-5) | [Part6](https://amanhimself.dev/blog/chat-app-with-react-native-part-6)
@@ -33,7 +33,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 <img src="https://miro.medium.com/max/714/1*_X5Ye5IJpkOYbUsED8ELYg.gif" width="200" />
 
-## Create onBoarding screens with React Native View Pager
+## Create onBoarding screens with react-native-viewpager
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/onboarding-viewpager)
 - 👉 [Blog post](https://blog.logrocket.com/how-to-create-onboarding-screens-with-react-native-viewpager/)
@@ -63,14 +63,14 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 <img src="https://miro.medium.com/max/377/1*r2li3qWatN2JM_Pl9nhGBA.gif" width="200" />
 
-## Getting Started with React Navigation v5
+## Getting Started with react-navigation v5
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-stack-navigator)
 - 👉 [Blog post](https://amanhimself.dev/blog/stack-navigator-with-react-navigation-v5)
 
 <img src="https://miro.medium.com/max/825/1*IUWdHNEwH4bLtRzBwQ8yng.gif" width="400" />
 
-## Nesting Tab and Stack Navigation Patterns in React Navigation v5
+## Nesting Tab and Stack Navigation Patterns in react-navigation v5
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-tab-navigator)
 - 👉 [Blog post](https://amanhimself.dev/blog/nested-navigators-in-react-native)
