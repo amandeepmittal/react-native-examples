@@ -40,3 +40,11 @@ Here is a list of notable examples and the blog post they are related [_if possi
 - **Description**: In this tutorial, we’ll look at one of the ways to create onboarding screens in a React Native app. We are going to use a React Native community package, called react-native-viewpager, that allows us to swipe left or right between different pages where each page has some data to display.
 
 <img src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2020/09/completenavigationflow.gif?resize=362%2C748&ssl=1" width="200" />
+
+## Create Custom Custom Wavy Headers with react-native-svg
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/onboarding-viewpager)
+- 👉 [Expo Client](https://expo.io/@amanhimself/rnwavysvg)
+- 👉 [Blog post](https://amanhimself.dev/blog/create-custom-headers-with-react-native-svg)
+
+<img src="https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif" width="200" />
