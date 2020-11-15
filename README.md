@@ -32,3 +32,11 @@ Here is a list of notable examples and the blog post they are related [_if possi
 <img src="https://miro.medium.com/max/684/1*Ztwt_qL30dreUv_JMvhhwg.gif" width="200" /> <img src="https://miro.medium.com/max/684/1*nDaN1lXF75iWEWg6X-0sqQ.gif" width="200" />
 
 <img src="https://miro.medium.com/max/714/1*_X5Ye5IJpkOYbUsED8ELYg.gif" width="200" />
+
+## Create onBoarding screens with React Native View Pager
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/onboarding-viewpager)
+- 👉 [Blog post](https://blog.logrocket.com/how-to-create-onboarding-screens-with-react-native-viewpager/)
+- **Description**: In this tutorial, we’ll look at one of the ways to create onboarding screens in a React Native app. We are going to use a React Native community package, called react-native-viewpager, that allows us to swipe left or right between different pages where each page has some data to display.
+
+<img src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2020/09/completenavigationflow.gif?resize=362%2C748&ssl=1" width="200" />
