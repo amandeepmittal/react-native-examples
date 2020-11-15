@@ -90,3 +90,11 @@ Here is a list of notable examples and the blog post they are related [_if possi
 - 👉 [Blog post series](https://amanhimself.dev/blog/create-custom-status-bar-hook-react-navigation)
 
 <img src="https://i.imgur.com/sS9ASUg.gif" width="200" />
+
+---
+
+> 👉 Learn about React Native and Expo at my [personal blog](https://amanhimself.dev/).
+
+> 📮 Or join more than 1100+ Developers to get latest updates on my blog posts and side projects. [Subscribe the newsletter here](https://tinyletter.com/amanhimself/)
+
+[![](https://i.imgur.com/buKsTUD.png)](https://ko-fi.com/amanhimself)
