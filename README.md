@@ -68,4 +68,25 @@ Here is a list of notable examples and the blog post they are related [_if possi
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-stack-navigator)
 - 👉 [Blog post](https://amanhimself.dev/blog/stack-navigator-with-react-navigation-v5)
 
-<img src="https://miro.medium.com/max/825/1*IUWdHNEwH4bLtRzBwQ8yng.gif" width="200" />
+<img src="https://miro.medium.com/max/825/1*IUWdHNEwH4bLtRzBwQ8yng.gif" width="400" />
+
+## Nesting Tab and Stack Navigation Patterns in React Navigation v5
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-tab-navigator)
+- 👉 [Blog post](https://amanhimself.dev/blog/nested-navigators-in-react-native)
+
+<img src="https://miro.medium.com/max/369/1*gCs24QDMEQ_D6DcDxjiALw.gif" width="200" />
+
+## Getting Started with Expo and React Native with Hooks & Redux (Hooks!)
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-tab-navigator)
+- 👉 **Blog post series**: [Part 1](https://amanhimself.dev/blog/getting-started-with-react-native-expo-hooks-2020) | [Part 2](https://amanhimself.dev/blog/redux-with-react-native-hooks)
+
+<img src="https://miro.medium.com/max/381/1*BJYPQHfTF0wKbZ9CIIhL0g.gif" width="200" />
+
+## Create a custom hook to status bar styles with useFocusEffect & react-navigation v5
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/customStatusBarHook)
+- 👉 [Blog post series](https://amanhimself.dev/blog/create-custom-status-bar-hook-react-navigation)
+
+<img src="https://i.imgur.com/sS9ASUg.gif" width="200" />
