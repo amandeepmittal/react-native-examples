@@ -62,3 +62,10 @@ Here is a list of notable examples and the blog post they are related [_if possi
 - 👉 [Blog post](https://amanhimself.dev/blog/handle-navigation-in-webviews-react-native)
 
 <img src="https://miro.medium.com/max/377/1*r2li3qWatN2JM_Pl9nhGBA.gif" width="200" />
+
+## Getting Started with React Navigation v5
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-stack-navigator)
+- 👉 [Blog post](https://amanhimself.dev/blog/stack-navigator-with-react-navigation-v5)
+
+<img src="https://miro.medium.com/max/825/1*IUWdHNEwH4bLtRzBwQ8yng.gif" width="200" />
