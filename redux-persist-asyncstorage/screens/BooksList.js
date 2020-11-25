@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function BooksListApp() {
+export default function BooksList() {
   return (
     <View style={styles.container}>
       <Text>BooksList</Text>
