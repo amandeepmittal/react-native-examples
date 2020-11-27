@@ -12,7 +12,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { getBooks, addBookmark, removeBookmark } from '../redux/actions';
 
-export default function BooksList({ navigation }) {
+export default function BooksList() {
   const { books, bookmarks } = useSelector(state => state.booksReducer);
   const dispatch = useDispatch();
 
