@@ -10,17 +10,35 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { getBooks } from '../redux/actions';
+import { getBooks, addBookmark, removeBookmark } from '../redux/actions';
 
-export default function BooksList() {
-  const { books } = useSelector(state => state.booksReducer);
+export default function BooksList({ navigation }) {
+  const { books, bookmarks } = useSelector(state => state.booksReducer);
   const dispatch = useDispatch();
 
   const fetchBooks = () => dispatch(getBooks());
+  const addToBookmarkList = book => dispatch(addBookmark(book));
+  const removeFromBookmarkList = book => dispatch(removeBookmark(book));
 
   useEffect(() => {
     fetchBooks();
   }, []);
+
+  const handleAddBookmark = book => {
+    addToBookmarkList(book);
+  };
+
+  const handleRemoveBookmark = book => {
+    removeFromBookmarkList(book);
+  };
+
+  const ifExists = book => {
+    if (bookmarks.filter(item => item.id === book.id).length > 0) {
+      return true;
+    }
+
+    return false;
+  };
 
   const renderItem = ({ item }) => {
     return (
@@ -69,12 +87,16 @@ export default function BooksList() {
             {/* Buttons */}
             <View style={{ marginTop: 14 }}>
               <TouchableOpacity
-                onPress={() => console.log('Bookmarked!')}
+                onPress={() =>
+                  ifExists(item)
+                    ? handleRemoveBookmark(item)
+                    : handleAddBookmark(item)
+                }
                 activeOpacity={0.7}
                 style={{
                   flexDirection: 'row',
                   padding: 2,
-                  backgroundColor: '#2D3038',
+                  backgroundColor: ifExists(item) ? '#F96D41' : '#2D3038',
                   borderRadius: 20,
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -83,9 +105,9 @@ export default function BooksList() {
                 }}
               >
                 <MaterialCommunityIcons
-                  color='#64676D'
+                  color={ifExists(item) ? 'white' : '#64676D'}
                   size={24}
-                  name='bookmark-outline'
+                  name={ifExists(item) ? 'bookmark-outline' : 'bookmark'}
                 />
               </TouchableOpacity>
             </View>
