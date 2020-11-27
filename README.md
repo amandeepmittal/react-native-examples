@@ -6,6 +6,17 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Redux Persist
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/redux-persist-asyncstorage)
+- 👉 [Blog post]() _Coming soon_
+- **Description**: How to configure, integrate and use redux-persist library in a React Native & Expo app and dynamically change the UI based on the state updates. This example uses:
+  - react-navigation v5 (bottom-tabs)
+  - redux, react-redux (with hooks), redux-thunk, redux-persist
+  - Example API data from [Draftbit's Example Data Service](https://example-data.draftbit.com/).
+  
+<img src="https://i.imgur.com/tP4SSP5.gif" width="200" />
+
+
 ## Forms with Formik
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/forms-with-formik)
