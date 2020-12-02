@@ -37,6 +37,17 @@ import { booksData } from './constants/data';
 // }
 
 export default function App() {
+  const [completeScrollBarHeight, setCompleteScrollBarHeight] = useState(1);
+  const [visibleScrollBarHeight, setVisibleScrollBarHeight] = useState(0);
+
+  const scrollIndicator = new Animated.Value(0);
+
+  const scrollIndicatorSize =
+    completeScrollBarHeight > visibleScrollBarHeight
+      ? (visibleScrollBarHeight * visibleScrollBarHeight) /
+        completeScrollBarHeight
+      : visibleScrollBarHeight;
+
   return (
     <>
       <StatusBar style='light' />
@@ -53,6 +64,17 @@ export default function App() {
             <ScrollView
               contentContainerStyle={{ paddingRight: 14 }}
               showsVerticalScrollIndicator={false}
+              scrollEventThrottle={16}
+              onContentSizeChange={height => {
+                setCompleteScrollBarHeight(height);
+              }}
+              onLayout={({
+                nativeEvent: {
+                  layout: { x, y, width, height }
+                }
+              }) => {
+                setVisibleScrollBarHeight(height);
+              }}
             >
               <Text
                 style={{
@@ -80,7 +102,16 @@ export default function App() {
                 backgroundColor: '#52057b',
                 borderRadius: 8
               }}
-            ></View>
+            >
+              <View
+                style={{
+                  width: 6,
+                  borderRadius: 8,
+                  backgroundColor: '#bc6ff1',
+                  height: scrollIndicatorSize
+                }}
+              />
+            </View>
           </View>
         </View>
         <View style={{ flex: 4 }} />
