@@ -1,5 +1,5 @@
-import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { ScrollView, Text, View, Animated } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import VerticalCustomScroll from './components/VerticalCustomScroll';
@@ -73,6 +73,14 @@ export default function App() {
                 {booksData.description}
               </Text>
             </ScrollView>
+            <View
+              style={{
+                height: '100%',
+                width: 6,
+                backgroundColor: '#52057b',
+                borderRadius: 8
+              }}
+            ></View>
           </View>
         </View>
         <View style={{ flex: 4 }} />
