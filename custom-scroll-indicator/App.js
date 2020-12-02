@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import VerticalCustomScroll from './components/VerticalCustomScroll';
@@ -42,10 +42,40 @@ export default function App() {
       <StatusBar style='light' />
       <View style={{ flex: 1, backgroundColor: '#892cdc', paddingTop: 50 }}>
         <View style={{ alignItems: 'center' }}>
-          <Text style={{ color: 'white', fontSize: 24, fontWeight: '700' }}>
+          <Text style={{ color: 'white', fontSize: 28, fontWeight: '700' }}>
             Custom Scroll Bar
           </Text>
         </View>
+        <View style={{ flex: 3, marginVertical: 20 }}>
+          <View
+            style={{ flex: 1, flexDirection: 'row', paddingHorizontal: 20 }}
+          >
+            <ScrollView
+              contentContainerStyle={{ paddingRight: 14 }}
+              showsVerticalScrollIndicator={false}
+            >
+              <Text
+                style={{
+                  fontSize: 22,
+                  color: 'white',
+                  fontWeight: '600',
+                  marginBottom: 12
+                }}
+              >
+                {booksData.title}
+              </Text>
+              <Text
+                style={{
+                  fontSize: 18,
+                  color: 'white'
+                }}
+              >
+                {booksData.description}
+              </Text>
+            </ScrollView>
+          </View>
+        </View>
+        <View style={{ flex: 4 }} />
       </View>
     </>
   );
