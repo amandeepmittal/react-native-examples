@@ -1,52 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ScrollView, Text, View, Animated } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-import VerticalCustomScroll from './components/VerticalCustomScroll';
-
 import { booksData } from './constants/data';
-
-// export default function App() {
-//   return (
-//     <View style={{ flex: 1, backgroundColor: '#892cdc', paddingTop: 50 }}>
-//       <View style={{ alignItems: 'center' }}>
-//         <Text style={{ color: 'white', fontSize: 24, fontWeight: '700' }}>
-//           Custom Scroll Bar
-//         </Text>
-//       </View>
-//       <View style={{ flex: 3, marginVertical: 16 }}>
-//         <VerticalCustomScroll
-//           paddingHorizontal={18}
-//           scrollTextHeading={booksData.title}
-//           scrollTextHeadingSize={22}
-//           scrollTextHeadingColor='white'
-//           scrollTextHeadingMarginBottom={12}
-//           scrollText={booksData.description}
-//           scrollTextSize={18}
-//           scrollTextColor='white'
-//           scrollBarColor='#52057b'
-//           scrollBarBorderRadius={8}
-//           scrollBarIndicatorColor='#bc6ff1'
-//           contentPaddingRight={14}
-//           scrollBarWidth={6}
-//         />
-//       </View>
-//       <View style={{ flex: 4 }} />
-//     </View>
-//   );
-// }
 
 export default function App() {
   const [completeScrollBarHeight, setCompleteScrollBarHeight] = useState(1);
   const [visibleScrollBarHeight, setVisibleScrollBarHeight] = useState(0);
 
-  const scrollIndicator = new Animated.Value(0);
+  const scrollIndicator = useRef(new Animated.Value(0)).current;
 
   const scrollIndicatorSize =
     completeScrollBarHeight > visibleScrollBarHeight
       ? (visibleScrollBarHeight * visibleScrollBarHeight) /
         completeScrollBarHeight
       : visibleScrollBarHeight;
+
+  const difference =
+    visibleScrollBarHeight > scrollIndicatorSize
+      ? visibleScrollBarHeight - scrollIndicatorSize
+      : 1;
+
+  const scrollIndicatorPosition = Animated.multiply(
+    scrollIndicator,
+    visibleScrollBarHeight / completeScrollBarHeight
+  ).interpolate({
+    inputRange: [0, difference],
+    outputRange: [0, difference],
+    extrapolate: 'clamp'
+  });
 
   return (
     <>
@@ -70,11 +52,15 @@ export default function App() {
               }}
               onLayout={({
                 nativeEvent: {
-                  layout: { x, y, width, height }
+                  layout: { height }
                 }
               }) => {
                 setVisibleScrollBarHeight(height);
               }}
+              onScroll={Animated.event(
+                [{ nativeEvent: { contentOffset: { y: scrollIndicator } } }],
+                { useNativeDriver: false }
+              )}
             >
               <Text
                 style={{
@@ -103,12 +89,13 @@ export default function App() {
                 borderRadius: 8
               }}
             >
-              <View
+              <Animated.View
                 style={{
                   width: 6,
                   borderRadius: 8,
                   backgroundColor: '#bc6ff1',
-                  height: scrollIndicatorSize
+                  height: scrollIndicatorSize,
+                  transform: [{ translateY: scrollIndicatorPosition }]
                 }}
               />
             </View>
