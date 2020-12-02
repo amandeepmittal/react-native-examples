@@ -6,16 +6,30 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Custom Scroll bar indicator in ScrollView
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/custom-scroll-indicator)
+- 👉 [Blog post]() _Coming soon_
+- **Description**: The implementation of a scroll bar indicator is not directly customizable on cross-platforms in React Native. If you are building an app whose screen design depends on displaying a customized scroll bar indicator, then let's build one in this tutorial.
+  This example uses:
+  - Expo SDK 39
+  - `Animated.multiply()` from React Native API
+  - `onScroll` prop on `ScrollView`
+  - Example API data from [Draftbit's Example Data Service](https://example-data.draftbit.com/).
+
+<img src="https://i.imgur.com/WCvjoHN.gif" width="200"/> <img src="https://i.imgur.com/jWULIWa.gif" width="200" />
+
 ## Redux Persist
+
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/redux-persist-asyncstorage)
 - 👉 [Blog post]() _Coming soon_
 - **Description**: How to configure, integrate and use redux-persist library in a React Native & Expo app and dynamically change the UI based on the state updates. This example uses:
+  - Expo SDK 39
   - react-navigation v5 (bottom-tabs)
   - redux, react-redux (with hooks), redux-thunk, redux-persist
   - Example API data from [Draftbit's Example Data Service](https://example-data.draftbit.com/).
-  
-<img src="https://i.imgur.com/tP4SSP5.gif" width="200" />
 
+<img src="https://i.imgur.com/tP4SSP5.gif" width="200" />
 
 ## Forms with Formik
 
