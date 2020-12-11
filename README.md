@@ -12,7 +12,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 - 👉 [Blog post](https://amanhimself.dev/blog/custom-scroll-bar-indicator-with-react-native-animated-api)
 - **Description**: The implementation of a scroll bar indicator is not directly customizable on cross-platforms in React Native. If you are building an app whose screen design depends on displaying a customized scroll bar indicator, then let's build one in this tutorial.
   This example uses:
-  - Expo SDK 39
+  - Expo SDK 40
   - `Animated.multiply()` from React Native API
   - `onScroll` prop on `ScrollView`
   - Example API data from [Draftbit's Example Data Service](https://example-data.draftbit.com/).
@@ -43,7 +43,9 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/animate-header-on-scroll)
 - 👉 [Blog post](https://blog.jscrambler.com/how-to-animate-a-header-view-on-scroll-with-react-native-animated/)
-- **Description**: In this tutorial, let's explore a way to create a header view component that animates on the scroll position of the ScrollView component from React Native. We will go through the basics of creating a new Animated value as well as explaining the significance of functions and properties like interpolation, extrapolate, contentOffset, and so on.
+- **Description**: In this tutorial, let's explore a way to create a header view component that animates on the scroll position of the ScrollView component from React Native. We will go through the basics of creating a new Animated value as well as explaining the significance of functions and properties like interpolation, extrapolate, contentOffset, and so on. This example uses:
+  - Expo SDK 38
+  - React Native Animated API
 
 <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-how-to-animate-header-view-with-react-native-animated-5.gif" width="200" /> <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-how-to-animate-header-view-with-react-native-animated-6.gif" width="200" />
 
