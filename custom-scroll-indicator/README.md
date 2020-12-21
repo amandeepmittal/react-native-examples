@@ -18,6 +18,6 @@
 
 ## 📝 Notes
 
-- [**Tutorial**]() _Coming Soon_ by [@amanhimself][@amanhimself]
+- [**Tutorial**](https://amanhimself.dev/blog/custom-scroll-bar-indicator-with-react-native-animated-api) by [@amanhimself][@amanhimself]
 
 [@amanhimself]: https://twitter.com/amanhimself
