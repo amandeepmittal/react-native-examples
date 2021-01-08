@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 
 import Home from '../screens/Home';
 import Details from '../screens/Details';
 
-const Stack = createStackNavigator();
+const Stack = createSharedElementStackNavigator();
 
 const RootNavigator = () => {
   return (

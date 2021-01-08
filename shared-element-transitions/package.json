@@ -20,7 +20,9 @@
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.9",
     "react-native-screens": "~2.15.0",
-    "react-native-web": "~0.13.12"
+    "react-native-shared-element": "^0.7.0",
+    "react-native-web": "~0.13.12",
+    "react-navigation-shared-element": "^5.0.0-alpha1"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"
