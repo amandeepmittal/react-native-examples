@@ -17,6 +17,6 @@
 
 ## 📝 Notes
 
-- [**Tutorial** coming soon]() by [@amanhimself][@amanhimself]
+- [**Tutorial**](https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/) by [@amanhimself][@amanhimself]
 
 [@amanhimself]: https://twitter.com/amanhimself

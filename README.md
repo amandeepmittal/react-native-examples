@@ -22,7 +22,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 ## Redux Persist
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/redux-persist-asyncstorage)
-- 👉 [Blog post]() _Coming soon_
+- 👉 [Blog post](https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/)
 - **Description**: How to configure, integrate and use redux-persist library in a React Native & Expo app and dynamically change the UI based on the state updates. This example uses:
   - Expo SDK 40
   - react-navigation v5 (bottom-tabs)
