@@ -11,16 +11,16 @@ Here is a list of notable examples and the blog post they are related [_if possi
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/custom-scroll-indicator)
 - 👉 [Blog post]() **to be published**
 
-- **Description**: The implementation of a scroll bar indicator is not directly customizable on cross-platforms in React Native. If you are building an app whose screen design depends on displaying a customized scroll bar indicator, then let's build one in this tutorial.
-  This example uses:
-  - Expo SDK 40
-  - [React Navigation v5](https://reactnavigation.org/docs/getting-started)
-  - [react-navigation-shared-element](https://github.com/IjzerenHein/react-navigation-shared-element)
-  - [react-native-shared-element](https://github.com/IjzerenHein/react-native-shared-element#SharedElementAnimation)
-  - Images from Unsplash
-  - Delayed loading example using [react-native-animatable](https://github.com/oblador/react-native-animatable)
-  
-  <img src="https://i.imgur.com/M4Fhl05.gif" width="200"/>
+This example uses:
+
+- Expo SDK 40
+- [React Navigation v5](https://reactnavigation.org/docs/getting-started)
+- [react-navigation-shared-element](https://github.com/IjzerenHein/react-navigation-shared-element)
+- [react-native-shared-element](https://github.com/IjzerenHein/react-native-shared-element#SharedElementAnimation)
+- Images from Unsplash
+- Delayed loading example using [react-native-animatable](https://github.com/oblador/react-native-animatable)
+
+<img src="https://i.imgur.com/M4Fhl05.gif" width="200"/>
 
 ## Custom Scroll bar indicator in ScrollView
 
