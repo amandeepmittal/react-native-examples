@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   ScrollView,
-  StyleSheet,
   Text,
   View,
   TouchableOpacity,
@@ -12,20 +11,21 @@ import { StatusBar } from 'expo-status-bar';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { SharedElement } from 'react-navigation-shared-element';
 
+import { data } from '../config/data';
+
 const { width } = Dimensions.get('screen');
 
 const ITEM_WIDTH = width * 0.9;
 const ITEM_HEIGHT = ITEM_WIDTH * 0.9;
 
-import { data } from '../config/data';
-
-export default function Home({ navigation }) {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, backgroundColor: '#0f0f0f' }}>
       <StatusBar hidden />
+      {/* Header */}
       <View style={{ marginTop: 50, marginBottom: 20, paddingHorizontal: 20 }}>
         <Text style={{ color: '#888', textTransform: 'uppercase' }}>
-          Friday 8 January
+          Saturday 9 January
         </Text>
         <Text style={{ color: '#fff', fontSize: 32, fontWeight: '600' }}>
           Today
@@ -40,9 +40,9 @@ export default function Home({ navigation }) {
           {data.map(item => (
             <View key={item.id}>
               <TouchableOpacity
-                style={{ marginBottom: 14 }}
                 activeOpacity={0.8}
-                onPress={() => navigation.navigate('Details', { item })}
+                style={{ marginBottom: 14 }}
+                onPress={() => navigation.navigate('DetailScreen', { item })}
               >
                 <SharedElement id={`item.${item.id}.image_url`}>
                   <Image
@@ -106,10 +106,3 @@ export default function Home({ navigation }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#0f0f0f'
-  }
-});
