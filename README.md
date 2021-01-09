@@ -19,8 +19,8 @@ Here is a list of notable examples and the blog post they are related [_if possi
   - [react-native-shared-element](https://github.com/IjzerenHein/react-native-shared-element#SharedElementAnimation)
   - Images from Unsplash
   - Delayed loading example using [react-native-animatable](https://github.com/oblador/react-native-animatable)
-
-<img src="https://i.imgur.com/FxWw67j.gif" width="200"/>
+  
+  <img src="https://i.imgur.com/M4Fhl05.gif" width="200"/>
 
 ## Custom Scroll bar indicator in ScrollView
 
