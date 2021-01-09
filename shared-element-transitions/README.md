@@ -10,7 +10,7 @@
 ## 🚀 How to use
 
 - Bootstrap this project:
-  > `npx create-react-native-app -t https://github.com/amandeepmittal/react-native-examples/tree/master/redux-persist-asyncstorage`
+  > `npx create-react-native-app -t https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions`
 - Start the project:
   - `yarn ios` -- open on iOS
   - `yarn android` -- open on Android
