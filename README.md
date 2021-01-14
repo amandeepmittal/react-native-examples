@@ -1,5 +1,19 @@
 # React Native Examples
 
+[![made with expo](https://img.shields.io/badge/MADE%20WITH%20EXPO-000.svg?style=for-the-badge&logo=expo&labelColor=4630eb&logoWidth=20)](https://github.com/expo/expo) [![supports iOS and Android](https://img.shields.io/badge/Platforms-Native-4630EB.svg?style=for-the-badge&logo=EXPO&labelColor=000&logoColor=fff)](https://github.com/expo/expo)
+
+[![follow @amanhimself](https://img.shields.io/twitter/follow/amanhimself.svg?style=for-the-badge&logo=TWITTER&logoColor=FFFFFF&labelColor=00aced&logoWidth=20&color=lightgray)](https://twitter.com/amanhimself)
+
+<blockquote>
+
+👉 Learn about React Native and Expo at my [personal blog](https://amanhimself.dev/).
+
+📮 Or join more than 1100+ Developers to get latest updates on my blog posts and side projects. [Subscribe the newsletter here](https://amanhimself.substack.com/).
+
+</blockquote>
+
+[![](https://i.imgur.com/buKsTUD.png)](https://ko-fi.com/amanhimself)
+
 This repository contains most of the examples I've used in blog posts on React Native and Expo. The blog posts are hosted mostly on my [personal blog](https://amanhimself.dev) and elsewhere.
 
 You may find some of the examples being outdated in time, in terms of framework updates or libraries. Don't worry the concept would be the same.
@@ -140,15 +154,3 @@ This example uses:
 - 👉 [Blog post series](https://amanhimself.dev/blog/create-custom-status-bar-hook-react-navigation)
 
 <img src="https://i.imgur.com/sS9ASUg.gif" width="200" />
-
----
-
-<blockquote>
-
-👉 Learn about React Native and Expo at my [personal blog](https://amanhimself.dev/).
-
-📮 Or join more than 1100+ Developers to get latest updates on my blog posts and side projects. [Subscribe the newsletter here](https://amanhimself.substack.com/).
-
-</blockquote>
-
-[![](https://i.imgur.com/buKsTUD.png)](https://ko-fi.com/amanhimself)
