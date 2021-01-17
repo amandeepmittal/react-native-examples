@@ -18,18 +18,6 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
-## Remove Tab bar Border Width
-
-- 👉 [Repo]()
-- 👉 [Blog post]() **to be published**
-
-This example uses:
-
-- Expo SDK 40
-- [React Navigation v5](https://reactnavigation.org/docs/getting-started)
-
-<img src="https://i.imgur.com/ttIMI5V.png" width="200"/> <img src="https://i.imgur.com/WqR3X9I.png" width="200"/>
-
 ## Shared Element transitions
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions)
@@ -107,6 +95,18 @@ This example uses:
 - **Description**: In this tutorial, we’ll look at one of the ways to create onboarding screens in a React Native app. We are going to use a React Native community package, called react-native-viewpager, that allows us to swipe left or right between different pages where each page has some data to display.
 
 <img src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2020/09/completenavigationflow.gif?resize=362%2C748&ssl=1" width="200" />
+
+## Remove Tab bar Border Width
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/remove-tabbar-border)
+- 👉 [Blog post](https://amanhimself.dev/blog/react-navigation-remove-tab-bar-border/)
+
+This example uses:
+
+- Expo SDK 40
+- [React Navigation v5](https://reactnavigation.org/docs/getting-started)
+
+<img src="https://i.imgur.com/ttIMI5V.png" width="200"/> <img src="https://i.imgur.com/WqR3X9I.png" width="200"/>
 
 ## Create Custom Custom Wavy Headers with react-native-svg
 
