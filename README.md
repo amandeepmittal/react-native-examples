@@ -18,6 +18,18 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Remove Tab bar Border Width
+
+- 👉 [Repo]()
+- 👉 [Blog post]() **to be published**
+
+This example uses:
+
+- Expo SDK 40
+- [React Navigation v5](https://reactnavigation.org/docs/getting-started)
+
+<img src="https://i.imgur.com/ttIMI5V.png" width="200"/> <img src="https://i.imgur.com/WqR3X9I.png" width="200"/>
+
 ## Shared Element transitions
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions)
