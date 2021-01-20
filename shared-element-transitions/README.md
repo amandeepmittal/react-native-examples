@@ -17,6 +17,6 @@
 
 ## 📝 Notes
 
-- [**Tutorial** _to be published_]() by [@amanhimself][@amanhimself]
+- [**Tutorial**](https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/) by [@amanhimself][@amanhimself]
 
 [@amanhimself]: https://twitter.com/amanhimself

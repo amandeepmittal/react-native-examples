@@ -21,7 +21,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 ## Shared Element transitions
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions)
-- 👉 [Blog post]() **to be published**
+- 👉 [Blog post](https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/)
 
 This example uses:
 
