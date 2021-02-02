@@ -27,7 +27,7 @@ This example uses:
 
 - react-native-cli
 - [React Navigation Bottom Tabs v5](https://reactnavigation.org/docs/getting-started)
-- [BlurView](https://github.com/Kureev/react-native-blur)
+- [BlurView](https://github.com/Kureev/react-native-blur) effect
 - Images from Unsplash
 
 <img src="https://i.imgur.com/Bp58Gzm.gif" width="200"/> <img src="https://i.imgur.com/O3oHRpd.gif" width="200"/>
