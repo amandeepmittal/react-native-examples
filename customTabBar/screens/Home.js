@@ -6,7 +6,9 @@ import {
   Image,
   Dimensions,
   ScrollView,
+  Platform,
 } from 'react-native';
+import {useBottomTabBarHeight} from '@react-navigation/bottom-tabs';
 
 import {data} from './data';
 
@@ -16,6 +18,7 @@ const ITEM_WIDTH = width * 0.9;
 const ITEM_HEIGHT = ITEM_WIDTH * 0.9;
 
 const Home = () => {
+  const tabBarheight = useBottomTabBarHeight();
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
@@ -26,7 +29,13 @@ const Home = () => {
       <View style={styles.scrollContainer}>
         <ScrollView
           indicatorStyle="white"
-          contentContainerStyle={[styles.scrollContentContainer]}>
+          contentContainerStyle={[
+            styles.scrollContentContainer,
+            {
+              paddingBottom:
+                Platform.OS === 'ios' ? tabBarheight : tabBarheight - 40,
+            },
+          ]}>
           {data.map((item) => (
             <View key={item.id} style={styles.imageContainer}>
               <Image
