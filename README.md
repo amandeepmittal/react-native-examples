@@ -18,6 +18,20 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Create a Translucent Bottom Tab Bar
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions)
+- 👉 [Blog post]() **to be published**
+
+This example uses:
+
+- react-native-cli
+- [React Navigation Bottom Tabs v5](https://reactnavigation.org/docs/getting-started)
+- [BlurView](https://github.com/Kureev/react-native-blur)
+- Images from Unsplash
+
+<img src="https://i.imgur.com/Bp58Gzm.gif" width="200"/> <img src="https://i.imgur.com/O3oHRpd.gif" width="200"/>
+
 ## Shared Element transitions
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions)
