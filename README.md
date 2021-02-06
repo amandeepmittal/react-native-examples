@@ -20,7 +20,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 ## Create a Translucent Bottom Tab Bar
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions)
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/customTabBar)
 - 👉 [Blog post]() **to be published**
 
 This example uses:
