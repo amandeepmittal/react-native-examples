@@ -18,6 +18,22 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Convert Reverse Geocode into Postal Address
+
+Fetch user's current location and then convert into actual postal address.
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-geolocation-example)
+- 👉 [Blog post]() **to be published**
+
+This example uses:
+
+- expo-cli
+- [React Navigation Stack v5](https://reactnavigation.org/docs/getting-started)
+- [expo-location](https://docs.expo.io/versions/latest/sdk/location/)
+- Icon from [Flaticon.com](https://www.flaticon.com/free-icon/placeholder_1001022?term=location&related_id=1001022)
+
+<img src="https://i.imgur.com/YSBT6tv.gif" width="200"/>
+
 ## Create a Translucent Bottom Tab Bar
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/customTabBar)
