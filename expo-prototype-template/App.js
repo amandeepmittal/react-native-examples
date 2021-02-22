@@ -1,25 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import AppLoading from 'expo-app-loading';
 
-import { Twitter, Instagram } from './assets/images';
+import loadAssetAsync from './src/constants/CacheAssets';
+import { RNLogo } from './assets/images';
 
 export default function App() {
+  const [assetsLoading, setAssetsLoading] = useState(false);
+
+  if (assetsLoading) {
+    return (
+      <AppLoading
+        startAsync={loadAssetAsync}
+        onFinish={setAssetsLoading(true)}
+        onError={() => console.warn}
+      />
+    );
+  }
+
   return (
     <>
       <StatusBar style='auto' />
       <View style={styles.container}>
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            padding: 10
-          }}
-        >
-          <Twitter height={100} width={100} />
-          <Instagram height={100} width={100} />
-        </View>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Image style={{ width: 50, height: 50 }} source={RNLogo} />
+        <Text style={{}}>Open up App.js to start working on your app!</Text>
       </View>
     </>
   );
