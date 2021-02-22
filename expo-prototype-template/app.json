@@ -14,9 +14,9 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
+    "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true,
-      "userInterfaceStyle": "automatic"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {

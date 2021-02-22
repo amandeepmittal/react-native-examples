@@ -2,6 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance';
 
+// Current
 import { CustomDarkTheme, CustomLightTheme } from '../constants/theme';
 
 // Custom Navigator{s)
