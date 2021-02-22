@@ -1,11 +1,16 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Image, Pressable } from 'react-native';
 
-const Home = () => {
+import { RNLogo } from '../../assets/images';
+
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={RNLogo} />
+      <Image style={styles.image} source={RNLogo} resizeMode='contain' />
       <Text>Home Screen</Text>
+      <Pressable onPress={() => navigation.navigate('Secondary')}>
+        <Text style={styles.buttonText}>Go to Secondary</Text>
+      </Pressable>
     </View>
   );
 };
@@ -20,6 +25,10 @@ const styles = StyleSheet.create({
   image: {
     width: 100,
     height: 100
+  },
+  buttonText: {
+    marginTop: 20,
+    color: 'red'
   }
 });
 
