@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import AppLoading from 'expo-app-loading';
 
 import loadAssetAsync from './src/constants/CacheAssets';
-import { RNLogo } from './assets/images';
+import RootNavigator from './src/navigation/RootNavigator';
 
 export default function App() {
   const [assetsLoading, setAssetsLoading] = useState(false);
@@ -22,10 +22,7 @@ export default function App() {
   return (
     <>
       <StatusBar style='auto' />
-      <View style={styles.container}>
-        <Image style={{ width: 50, height: 50 }} source={RNLogo} />
-        <Text style={{}}>Open up App.js to start working on your app!</Text>
-      </View>
+      <RootNavigator />
     </>
   );
 }
