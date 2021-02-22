@@ -5,7 +5,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "format:check": "prettier --check \"**/*.{js,json,jsx}\"",
+    "format": "prettier --write \"**/*.{js,json,jsx}\""
   },
   "dependencies": {
     "expo": "~40.0.0",
@@ -16,7 +18,8 @@
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
-    "@babel/core": "~7.9.0"
+    "@babel/core": "~7.9.0",
+    "prettier": "2.2.1"
   },
   "private": true
 }
