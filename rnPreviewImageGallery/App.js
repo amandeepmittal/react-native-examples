@@ -24,8 +24,10 @@ const IMAGES = {
 };
 
 const App = () => {
+  const carouselRef = useRef();
+  // const flatListRef = useRef();
   const [images, setImages] = useState([
-    {id: '1', image: IMAGES.image1, selected: true},
+    {id: '1', image: IMAGES.image1},
     {id: '2', image: IMAGES.image2},
     {id: '3', image: IMAGES.image3},
     {id: '4', image: IMAGES.image4},
@@ -39,6 +41,17 @@ const App = () => {
     setIndexSelected(indexSelected);
   };
 
+  const onTouchThumbnail = (touched) => {
+    if (touched === indexSelected) return;
+
+    carouselRef?.current?.snapToItem(touched);
+  };
+
+  // flatListRef?.current?.scrollToOffset({
+  //   animated: true,
+  //   offset: indexSelected * SPACING - width / 2,
+  // });
+
   return (
     <View style={{flex: 1, backgroundColor: 'black', alignItems: 'center'}}>
       <Text
@@ -49,6 +62,7 @@ const App = () => {
       {/* Carousel View */}
       <View style={{flex: 1 / 2, marginTop: 20}}>
         <Carousel
+          ref={carouselRef}
           layout="default"
           data={images}
           sliderWidth={width}
@@ -86,7 +100,6 @@ const App = () => {
       {/* Thumbnail component using FlatList */}
       <FlatList
         horizontal={true}
-        // ref={flatListRef}
         data={images}
         style={{position: 'absolute', bottom: 80}}
         showsHorizontalScrollIndicator={false}
@@ -95,7 +108,10 @@ const App = () => {
         }}
         keyExtractor={(item) => item.id}
         renderItem={({item, index}) => (
-          <TouchableOpacity activeOpacity={0.9}>
+          <TouchableOpacity
+            onPress={() => onTouchThumbnail(index)}
+            activeOpacity={0.9}
+          >
             <Image
               style={{
                 width: THUMB_SIZE,
