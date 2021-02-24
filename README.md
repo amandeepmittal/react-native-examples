@@ -18,6 +18,20 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Create a custom Image Gallery Preview
+Learn how to sync thumbnail using `FlatList` with Carousel from `react-native-snap-carousel`.
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnPreviewImageGallery)
+- 👉 [Blog post]() **to be published**
+
+This example uses:
+- React Native version `0.63.4`
+- The [scrollToOffset method on FlatList](https://reactnative.dev/docs/flatlist#scrolltooffset)
+- [react-native-snap-carousel](https://github.com/meliorence/react-native-snap-carousel)
+- Images from [Unsplash](https://unsplash.com/s/photos/amsterdam)
+
+<img src="https://i.imgur.com/z9MXxjA.png" width="200"/> <img src="https://i.imgur.com/5tYg6ss.gif" width="200"/>
+
 ## Convert Reverse Geocode into Postal Address
 
 Fetch user's current location and then convert into actual postal address.
