@@ -84,6 +84,32 @@ const App = () => {
         </Text>
       </View>
       {/* Thumbnail component using FlatList */}
+      <FlatList
+        horizontal={true}
+        // ref={flatListRef}
+        data={images}
+        style={{position: 'absolute', bottom: 80}}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{
+          paddingHorizontal: SPACING,
+        }}
+        keyExtractor={(item) => item.id}
+        renderItem={({item, index}) => (
+          <TouchableOpacity activeOpacity={0.9}>
+            <Image
+              style={{
+                width: THUMB_SIZE,
+                height: THUMB_SIZE,
+                marginRight: SPACING,
+                borderRadius: 16,
+                borderWidth: index === indexSelected ? 4 : 0.75,
+                borderColor: index === indexSelected ? 'orange' : 'white',
+              }}
+              source={item.image}
+            />
+          </TouchableOpacity>
+        )}
+      />
     </View>
   );
 };
