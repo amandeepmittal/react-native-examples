@@ -25,7 +25,7 @@ const IMAGES = {
 
 const App = () => {
   const carouselRef = useRef();
-  // const flatListRef = useRef();
+  const flatListRef = useRef();
   const [images, setImages] = useState([
     {id: '1', image: IMAGES.image1},
     {id: '2', image: IMAGES.image2},
@@ -39,6 +39,30 @@ const App = () => {
 
   const onSelect = (indexSelected) => {
     setIndexSelected(indexSelected);
+
+    /**
+     * if you want to position the thumbnail in * the middle of the screen on selection
+     * do the following
+     * Calculation done by awesome Catalin Miron
+     * Source: https://www.youtube.com/watch?v=gjC2oUJhePE&t=1097s
+     */
+    // if (indexSelected * (THUMB_SIZE + 10) - THUMB_SIZE / 2 > width / 2) {
+    //   flatListRef?.current?.scrollToOffset({
+    //     offset: indexSelected * (THUMB_SIZE + 10) - width / 2 + THUMB_SIZE / 2,
+    //     animated: true,
+    //   });
+    // } else {
+    //   flatListRef?.current?.scrollToOffset({
+    //     offset: 0,
+    //     animated: true,
+    //   });
+    // }
+
+    //  my initial solution
+    flatListRef?.current?.scrollToOffset({
+      offset: indexSelected * THUMB_SIZE,
+      animated: true,
+    });
   };
 
   const onTouchThumbnail = (touched) => {
@@ -46,11 +70,6 @@ const App = () => {
 
     carouselRef?.current?.snapToItem(touched);
   };
-
-  // flatListRef?.current?.scrollToOffset({
-  //   animated: true,
-  //   offset: indexSelected * SPACING - width / 2,
-  // });
 
   return (
     <View style={{flex: 1, backgroundColor: 'black', alignItems: 'center'}}>
@@ -99,6 +118,7 @@ const App = () => {
       </View>
       {/* Thumbnail component using FlatList */}
       <FlatList
+        ref={flatListRef}
         horizontal={true}
         data={images}
         style={{position: 'absolute', bottom: 80}}
