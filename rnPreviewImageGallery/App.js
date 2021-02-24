@@ -33,6 +33,11 @@ const App = () => {
     {id: '6', image: IMAGES.image6},
     {id: '7', image: IMAGES.image7},
   ]);
+  const [indexSelected, setIndexSelected] = useState(0);
+
+  const onSelect = (indexSelected) => {
+    setIndexSelected(indexSelected);
+  };
 
   return (
     <View style={{flex: 1, backgroundColor: 'black', alignItems: 'center'}}>
@@ -48,6 +53,7 @@ const App = () => {
           data={images}
           sliderWidth={width}
           itemWidth={width}
+          onSnapToItem={(index) => onSelect(index)}
           renderItem={({item, index}) => (
             <Image
               key={index}
@@ -57,6 +63,25 @@ const App = () => {
             />
           )}
         />
+        <Pagination
+          inactiveDotColor="gray"
+          dotColor={'orange'}
+          activeDotIndex={indexSelected}
+          dotsLength={images.length}
+          animatedDuration={150}
+          inactiveDotScale={1}
+        />
+      </View>
+      <View
+        style={{
+          marginTop: 20,
+          paddingHorizontal: 32,
+          alignSelf: 'flex-end',
+        }}
+      >
+        <Text style={{color: 'white', fontSize: 22}}>
+          {indexSelected + 1}/{images.length}
+        </Text>
       </View>
       {/* Thumbnail component using FlatList */}
     </View>
