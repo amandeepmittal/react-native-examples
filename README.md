@@ -37,7 +37,7 @@ This example uses:
 Fetch user's current location and then convert into actual postal address.
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-geolocation-example)
-- 👉 [Blog post]() **to be published**
+- 👉 [Blog post](https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/)
 
 This example uses:
 
