@@ -4,7 +4,7 @@
 
 <blockquote>
 
-👉 Learn about React Native and Expo at my [personal blog](https://amanhimself.dev/).
+👉 Learn about React Native and Expo at [amanhimself.dev](https://amanhimself.dev/).
 
 📮 Or join more than 1200+ Developers to get latest updates on my blog posts and side projects. [Subscribe the newsletter here](https://amanhimself.substack.com/).
 
@@ -12,7 +12,7 @@
 
 [![](https://i.imgur.com/buKsTUD.png)](https://ko-fi.com/amanhimself)
 
-This repository contains most of the examples I've used in blog posts on React Native and Expo. The blog posts are hosted mostly on my [personal blog](https://amanhimself.dev) and elsewhere.
+This repository contains most of the examples I've used in blog posts on React Native and Expo. The blog posts are hosted mostly at [amanhimself.dev](https://amanhimself.dev) and elsewhere.
 
 You may find some of the examples being outdated in time, in terms of framework updates or libraries. Don't worry the concept would be the same.
 
