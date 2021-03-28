@@ -51,7 +51,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIAppFonts</key>
+<key>UIAppFonts</key>
 <array>
   <string>AntDesign.ttf</string>
   <string>Entypo.ttf</string>
@@ -68,6 +68,7 @@
   <string>SimpleLineIcons.ttf</string>
   <string>Octicons.ttf</string>
   <string>Zocial.ttf</string>
-  <string>Fon
+  <string>Fontisto.ttf</string>
+</array>
 </dict>
 </plist>
