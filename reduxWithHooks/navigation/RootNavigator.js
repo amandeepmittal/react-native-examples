@@ -11,11 +11,9 @@ const Tab = createBottomTabNavigator();
 
 const tabBarOptions = {
   showLabel: false,
-  inactiveTintColor: '#2D3038',
-  activeTintColor: '#FFFFFF',
+  activeTintColor: '#9381ff',
   style: {
     height: '10%',
-    backgroundColor: '#1E1B26',
   },
 };
 
