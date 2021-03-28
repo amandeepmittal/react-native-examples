@@ -1,12 +1,9 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+
+import RootNavigator from './navigation/RootNavigator';
 
 const App = () => {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Redux Example</Text>
-    </View>
-  );
+  return <RootNavigator />;
 };
 
 export default App;
