@@ -2,6 +2,8 @@ import axios from 'axios';
 
 // Define action types
 export const GET_MOVIES = 'FETCH_MOVIES';
+export const ADD_FAVORITE_ITEM = 'ADD_FAVORITE_ITEM';
+export const REMOVE_FAVORITE_ITEM = 'REMOVE_FAVORITE_ITEM';
 
 // Construct a BASE URL for API endpoint
 const API_URL = 'https://api.themoviedb.org/3/movie/popular';
@@ -13,12 +15,11 @@ export const getMovies = () => {
   try {
     return async dispatch => {
       const res = await axios.get(`${BASE_URL}`);
-      console.log(res.data.results);
 
       if (res.data) {
         dispatch({
           type: GET_MOVIES,
-          payload: res.data,
+          payload: res.data.results,
         });
       } else {
         console.log('Unable to fetch');
@@ -28,4 +29,18 @@ export const getMovies = () => {
   } catch (error) {
     // Add custom logic to handle errors
   }
+};
+
+export const addFavorite = movie => dispatch => {
+  dispatch({
+    type: ADD_FAVORITE_ITEM,
+    payload: movie,
+  });
+};
+
+export const removeFavorite = movie => dispatch => {
+  dispatch({
+    type: REMOVE_FAVORITE_ITEM,
+    payload: movie,
+  });
 };
