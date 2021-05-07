@@ -19,12 +19,14 @@ You may find some of the examples being outdated in time, in terms of framework 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
 ## Create a custom Image Gallery Preview
+
 Learn how to sync thumbnail using `FlatList` with Carousel from `react-native-snap-carousel`.
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnPreviewImageGallery)
 - 👉 [Blog post]() **to be published**
 
 This example uses:
+
 - React Native version `0.63.4`
 - The [scrollToOffset method on FlatList](https://reactnative.dev/docs/flatlist#scrolltooffset)
 - [react-native-snap-carousel](https://github.com/meliorence/react-native-snap-carousel)
@@ -51,7 +53,7 @@ This example uses:
 ## Create a Translucent Bottom Tab Bar
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/customTabBar)
-- 👉 [Blog post]() **to be published**
+- 👉 [Blog post](https://amanhimself.dev/blog/create-custom-tab-bar-in-react-native/)
 
 This example uses:
 
