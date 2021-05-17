@@ -23,7 +23,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 Learn how to sync thumbnail using `FlatList` with Carousel from `react-native-snap-carousel`.
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnPreviewImageGallery)
-- 👉 [Blog post]() **to be published**
+- 👉 [Blog post](https://medium.com/crowdbotics/how-to-create-a-custom-image-gallery-in-react-native-b84b3c4906ec)
 
 This example uses:
 
