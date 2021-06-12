@@ -30,7 +30,6 @@ export default function SignupScreen({ navigation }) {
       if (email !== '' && password !== '') {
         await auth.createUserWithEmailAndPassword(email, password);
       }
-      return setSignupError('Credentials cannot be empty.');
     } catch (error) {
       setSignupError(error.message);
     }
