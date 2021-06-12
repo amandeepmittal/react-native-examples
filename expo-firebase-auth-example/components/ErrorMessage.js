@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   errorText: {
     color: '#fdca40',
     fontSize: 20,
-    marginBottom: 5,
+    marginBottom: 10,
     fontWeight: '600'
   }
 });
