@@ -31,7 +31,7 @@ This example uses:
 - Firebase JS SDK
 - React Navigation version `5.x.x.`
 
-<img src="https://i.imgur.com/kizROqe.gif" />
+<!-- <img src="https://i.imgur.com/kizROqe.gif" /> -->
 
 ## Create a custom Image Gallery Preview
 
