@@ -4,8 +4,11 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, Button as RNButton } from 'react-native';
 
 import { Button, InputField, ErrorMessage } from '../components';
+import Firebase from '../config/firebase';
 
-export default function LoginScreen() {
+const auth = Firebase.auth();
+
+export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordVisibility, setPasswordVisibility] = useState(true);
@@ -19,6 +22,17 @@ export default function LoginScreen() {
     } else if (rightIcon === 'eye-off') {
       setRightIcon('eye');
       setPasswordVisibility(!passwordVisibility);
+    }
+  };
+
+  const onLogin = async () => {
+    try {
+      if (email !== '' && password !== '') {
+        await auth.signInWithEmailAndPassword(email, password);
+      }
+      return setLoginError('Credentials cannot be empty.');
+    } catch (error) {
+      setLoginError(error.message);
     }
   };
 
@@ -62,8 +76,9 @@ export default function LoginScreen() {
         onChangeText={text => setPassword(text)}
         handlePasswordVisibility={handlePasswordVisibility}
       />
+      {loginError ? <ErrorMessage error={loginError} visible={true} /> : null}
       <Button
-        onPress={() => true}
+        onPress={onLogin}
         backgroundColor='#f57c00'
         title='Login'
         tileColor='#fff'
@@ -72,7 +87,11 @@ export default function LoginScreen() {
           marginBottom: 24
         }}
       />
-      <RNButton onPress={() => true} title='Go to Signup' color='#fff' />
+      <RNButton
+        onPress={() => navigation.navigate('Signup')}
+        title='Go to Signup'
+        color='#fff'
+      />
     </View>
   );
 }
