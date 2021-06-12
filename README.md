@@ -29,7 +29,7 @@ This example uses:
 
 - Expo SDK version `41.x.x`
 - Firebase JS SDK
-- React Navigation version `5.x.x.`
+- React Navigation version `5.x.x`
 
 <!-- <img src="https://i.imgur.com/kizROqe.gif" /> -->
 
