@@ -18,6 +18,21 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Expo Firebase Auth Example
+
+Learn how to integrate Firebase Auth service using Firebase JS SDK and Expo SDK (by generating a managed workflow app).
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-firebase-auth-example)
+- 👉 [Blog post]() **TBD**
+
+This example uses:
+
+- Expo SDK version `41.x.x`
+- Firebase JS SDK
+- React Navigation version `5.x.x.`
+
+<img src="https://i.imgur.com/kizROqe.gif" width="200"/>
+
 ## Create a custom Image Gallery Preview
 
 Learn how to sync thumbnail using `FlatList` with Carousel from `react-native-snap-carousel`.
