@@ -46,7 +46,7 @@ Screens On mobile simulator:
 
 Screens On web:
 
-<img src='./expo-template/assets/screenshots/web1.png' width="300"> <img src='./assets/screenshots/web2.png' width="300"> <img src='./expo-template/assets/screenshots/web3.png' width="300">
+<img src='./expo-template/assets/screenshots/web1.png' width="300"> <img src='./expo-template/assets/screenshots/web2.png' width="300"> <img src='./expo-template/assets/screenshots/web3.png' width="300">
 
 ---
 
