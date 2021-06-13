@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "expo-bare-template",
-    "slug": "expo-template",
+    "slug": "expo-bare-template",
     "description": "Expo template with Navigation.",
     "version": "1.0.0",
     "orientation": "portrait",
