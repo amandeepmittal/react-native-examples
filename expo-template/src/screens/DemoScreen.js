@@ -1,9 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native';
 
 import { theme } from '../constants';
-import { Button, IconButton } from '../components';
+import { Button, IconButton, Input } from '../components';
 
 export default function DemoScreen() {
   return (
@@ -36,6 +35,21 @@ export default function DemoScreen() {
             size={28}
           />
         </View>
+        <Input
+          inputStyle={{
+            fontSize: 14
+          }}
+          containerStyle={{
+            backgroundColor: '#fff',
+            marginBottom: 20
+          }}
+          leftIcon='email'
+          iconVariant='MaterialCommunityIcons'
+          placeholder='Enter email'
+          autoCapitalize='none'
+          keyboardType='email-address'
+          textContentType='emailAddress'
+        />
       </ScrollView>
     </SafeAreaView>
   );

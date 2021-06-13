@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -13,7 +12,6 @@ export default function HomeScreen({ navigation }) {
         title='Go to Detail screen'
         onPress={() => navigation.navigate('Detail')}
       />
-      <StatusBar style='auto' />
     </View>
   );
 }

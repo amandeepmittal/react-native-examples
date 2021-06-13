@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -8,7 +7,6 @@ export default function DetailScreen() {
   return (
     <View style={styles.container}>
       <Text>Detail Screen Placeholder</Text>
-      <StatusBar style='auto' />
     </View>
   );
 }

@@ -8,30 +8,16 @@ import { theme } from '../constants';
 
 const Tab = createBottomTabNavigator();
 
-const TabIcons = ({ route, color, size }) => {
-  let iconName;
-
-  if (route.name === 'Home') {
-    iconName = 'home';
-  }
-
-  if (route.name === 'Demo') {
-    iconName = 'rocket';
-  }
-
-  return <AntDesign name={iconName} color={color} size={size} />;
-};
-
 export default function MainTabs() {
   return (
     <Tab.Navigator
       initialRouteName='Home'
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarIcon: ({ focused, color, size }) => {
+        tabBarIcon: ({ color, size }) => {
           let iconName;
 
-          if (route.name === 'Home') {
+          if (route.name === 'HomeStack') {
             iconName = 'home';
           }
 
@@ -45,7 +31,7 @@ export default function MainTabs() {
         tabBarInactiveTintColor: theme.divider
       })}
     >
-      <Tab.Screen name='Home' component={HomeStack} />
+      <Tab.Screen name='HomeStack' component={HomeStack} />
       <Tab.Screen name='Demo' component={DemoScreen} />
     </Tab.Navigator>
   );
