@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native';
 
 import { theme } from '../constants';
-import { Button } from '../components';
+import { Button, IconButton } from '../components';
 
 export default function DemoScreen() {
   return (
@@ -22,6 +22,20 @@ export default function DemoScreen() {
           containerStyle={styles.button}
           width='75%'
         />
+        <View style={styles.section}>
+          <IconButton
+            variant='MaterialCommunityIcons'
+            iconName='rocket-launch'
+            color={theme.primary}
+            size={28}
+          />
+          <IconButton
+            variant='AntDesign'
+            iconName='rocket1'
+            color={theme.strong}
+            size={28}
+          />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -42,5 +56,9 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 20
+  },
+  section: {
+    paddingVertical: 18,
+    flexDirection: 'row'
   }
 });
