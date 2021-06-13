@@ -18,8 +18,6 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
-## Templates
-
 ### expo-template
 
 Bare minimum Expo template to kickstart a React Native app with following features:
@@ -35,6 +33,12 @@ Bare minimum Expo template to kickstart a React Native app with following featur
 - ESlint and Prettier configured
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template)
+
+**Usage**
+
+```sh
+expo init --template https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template
+```
 
 Screens On mobile simulator:
 
