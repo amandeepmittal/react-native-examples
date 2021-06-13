@@ -10,6 +10,7 @@ Bare minimum Expo template to kickstart a React Native app with following featur
   - Button
   - IconButton
   - Input
+- ESlint and Prettier configured
 
 ## Usage
 
