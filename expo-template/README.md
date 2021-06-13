@@ -33,15 +33,11 @@ Commands to trigger an instance of the app in local development mode:
 
 - On mobile simulator:
 
-<img src='./assets/screenshots/mob1.png' width="300"> <img src='./assets/screenshots/mob2.png' width="300">
-
-<img src='./assets/screenshots/mob3.png' width="300">
+<img src='./assets/screenshots/mob1.png' width="300"> <img src='./assets/screenshots/mob2.png' width="300"> <img src='./assets/screenshots/mob3.png' width="300">
 
 - On web:
 
-<img src='./assets/screenshots/web1.png' width="300"> <img src='./assets/screenshots/web2.png' width="300">
-
-<img src='./assets/screenshots/web3.png' width="300">
+<img src='./assets/screenshots/web1.png' width="300"> <img src='./assets/screenshots/web2.png' width="300"> <img src='./assets/screenshots/web3.png' width="300">
 
 ## File Structure
 

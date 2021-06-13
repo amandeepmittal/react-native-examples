@@ -18,6 +18,34 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Templates
+
+### expo-template
+
+Bare minimum Expo template to kickstart a React Native app with following features:
+
+- Expo SDK `41.x.x`
+- React Navigation v6
+  - ⚠️ React Navigation v6 library is an upcoming version.
+  - Based on Stack and Tab navigators
+- Reusable components to get started with:
+  - Button
+  - IconButton
+  - Input
+- ESlint and Prettier configured
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template)
+
+Screens On mobile simulator:
+
+<img src='./expo-template/assets/screenshots/mob1.png' width="300"> <img src='./expo-template/assets/screenshots/mob2.png' width="300"> <img src='./expo-template/assets/screenshots/mob3.png' width="300">
+
+Screens On web:
+
+<img src='./expo-template/assets/screenshots/web1.png' width="300"> <img src='./assets/screenshots/web2.png' width="300"> <img src='./expo-template/assets/screenshots/web3.png' width="300">
+
+---
+
 ## Expo Firebase Auth Example
 
 Learn how to integrate Firebase Auth service using Firebase JS SDK and Expo SDK (by generating a managed workflow app).
