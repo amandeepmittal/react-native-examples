@@ -38,5 +38,13 @@
     "prettier": "2.3.1"
   },
   "author": "Aman Mittal",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template/issues"
+  }
 }
