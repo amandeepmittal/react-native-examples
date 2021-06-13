@@ -38,11 +38,8 @@
     ],
     "react/prop-types": "off",
     "react/require-default-props": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/display-name": "off",
-    "react-native/no-unused-styles": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-curly-newline": 0
+    "react-native/no-unused-styles": "error"
   },
   "globals": {
     "__DEV__": true,
