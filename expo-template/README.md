@@ -31,7 +31,7 @@ Commands to trigger an instance of the app in local development mode:
 
 ## Screens
 
-- One mobile simulator:
+- On mobile simulator:
 
 <img src='./assets/screenshots/mob1.png' width="300"> <img src='./assets/screenshots/mob2.png' width="300">
 
