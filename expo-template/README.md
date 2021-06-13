@@ -23,15 +23,20 @@ Bare minimum Expo template to kickstart a React Native app with following featur
 <!-- fix -->
 
 ```sh
-expo init --template expo-template
+expo init --template https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template
+```
+
+With [create-react-native-appp](https://github.com/expo/create-react-native-app):
+
+```
+npx create-react-native-app -t https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template
 ```
 
 Commands to trigger an instance of the app in local development mode:
 
-- Run on iOS: `yarn ios` or `npm run ios` or `expo start` > Press `i`
-- Run on Android: `yarn android` or `npm run android` or `expo start` > Press `a`
-- Run on Web: `yarn web` or `npm run web` or `expo web` > Press `w`
-- Lint Code: `yarn lint` or `npm run lint`
+- ios -- open on iOS
+- yarn android -- open on Android
+- yarn web -- open in the web browser
 
 ## Screens
 
