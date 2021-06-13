@@ -18,10 +18,10 @@ Bare minimum Expo template to kickstart a React Native app with following featur
 
 ## Usage
 
-> Make sure to have the [Expo CLI](https://docs.expo.io/workflow/expo-cli/) installed.
+With [Expo CLI](https://docs.expo.io/workflow/expo-cli/):
 
 ```sh
-expo init --template https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template
+expo init -t expo-bare-template
 ```
 
 With [create-react-native-app](https://github.com/expo/create-react-native-app):
