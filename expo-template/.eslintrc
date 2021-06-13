@@ -1,0 +1,48 @@
+{
+  "parser": "@babel/eslint-parser",
+  "plugins": ["react", "react-native", "react-hooks", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "es6": true,
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "env": {
+    "react-native/react-native": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "trailingComma": "none",
+        "arrowParens": "avoid",
+        "proseWrap": "preserve",
+        "quoteProps": "as-needed",
+        "jsxBracketSameLine": false,
+        "bracketSpacing": true
+      }
+    ],
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/display-name": "off",
+    "react-native/no-unused-styles": "error"
+  },
+  "globals": {
+    "__DEV__": true,
+    "require": true
+  }
+}

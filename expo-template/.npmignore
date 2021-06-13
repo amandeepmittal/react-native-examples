@@ -1,0 +1,6 @@
+.expo
+.expo-sahred
+.vscode
+assets
+yarn.lock
+package-lock.json
