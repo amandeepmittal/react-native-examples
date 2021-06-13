@@ -2,7 +2,7 @@
   "name": "@amanhimself_/expo-template",
   "main": "node_modules/expo/AppEntry.js",
   "description": "Bare minimum Expo template with Navigation and linting.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
