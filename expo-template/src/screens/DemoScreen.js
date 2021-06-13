@@ -4,10 +4,10 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { theme } from '../constants';
 
-export default function HomeScreen() {
+export default function DemoScreen() {
   return (
     <View style={styles.container}>
-      <Text>Home Screen Placeholder</Text>
+      <Text>Demo Screen Placeholder</Text>
       <StatusBar style='auto' />
     </View>
   );

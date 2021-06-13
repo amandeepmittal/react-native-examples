@@ -1848,6 +1848,15 @@
   resolved "https://registry.yarnpkg.com/@react-native-masked-view/masked-view/-/masked-view-0.2.4.tgz#305a548abd47dee494a38f90016432d3a6e4164c"
   integrity sha512-2Y9OXWHRutYmdyW+bNMaFTW8uTBpaaK20xdIFoVtqahEOO9++B+ut3CAWKPZcdRtb9ikG0LUKChGqMeocg0PGA==
 
+"@react-navigation/bottom-tabs@6.0.0-next.18":
+  version "6.0.0-next.18"
+  resolved "https://registry.yarnpkg.com/@react-navigation/bottom-tabs/-/bottom-tabs-6.0.0-next.18.tgz#c90a207ebd1ae871c10c0908b3226d0838771294"
+  integrity sha512-xmtrvZXBHNxIIR6pjEClwffVi0Ef7NJtWVfdQrxAUkpRsoahVevlaatpXqfrdCvC3K7QY/a4B5oJqOcYFqHnMA==
+  dependencies:
+    "@react-navigation/elements" "^1.0.0-next.17"
+    color "^3.1.3"
+    warn-once "^0.1.0"
+
 "@react-navigation/core@^6.0.0-next.13":
   version "6.0.0-next.13"
   resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-6.0.0-next.13.tgz#66f8ab1ec75586376ef6d71a00b51c5ffb94e484"
