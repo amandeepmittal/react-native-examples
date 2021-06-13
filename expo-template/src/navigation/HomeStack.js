@@ -8,8 +8,8 @@ const Stack = createStackNavigator();
 export default function HomeStack() {
   return (
     <Stack.Navigator initialRouteName='Home'>
-      <Stack.Screen name='HomeScreen' component={HomeScreen} />
-      <Stack.Screen name='DetailScreen' component={DetailScreen} />
+      <Stack.Screen name='Home' component={HomeScreen} />
+      <Stack.Screen name='Detail' component={DetailScreen} />
     </Stack.Navigator>
   );
 }
