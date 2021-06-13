@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "@amanhimself/expo-template",
+    "name": "expo-bare-template",
     "slug": "expo-template",
     "description": "Expo template with Navigation.",
     "version": "1.0.0",

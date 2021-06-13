@@ -39,6 +39,16 @@
     "eslint-plugin-react-native": "3.11.0",
     "prettier": "2.3.1"
   },
+  "keywords": [
+    "expo",
+    "template",
+    "expo-template",
+    "react-navigation",
+    "react-native",
+    "react-native-template",
+    "eslint",
+    "prettier"
+  ],
   "author": "Aman Mittal",
   "license": "MIT",
   "homepage": "https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template",
