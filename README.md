@@ -37,7 +37,7 @@ Bare minimum Expo template to kickstart a React Native app with following featur
 **Usage**
 
 ```sh
-expo init --template https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template
+expo init -t expo-bare-template
 ```
 
 Screens On mobile simulator:
