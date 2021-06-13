@@ -32,9 +32,9 @@ npx create-react-native-app -t https://github.com/amandeepmittal/react-native-ex
 
 Commands to trigger an instance of the app in local development mode:
 
-- ios -- open on iOS
-- yarn android -- open on Android
-- yarn web -- open in the web browser
+- `yarn ios` -- open on iOS
+- `yarn android` -- open on Android
+- `yarn web` -- open in the web browser
 
 ## Screens
 
