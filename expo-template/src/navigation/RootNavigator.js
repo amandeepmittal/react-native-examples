@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
-import HomeStack from './HomeStack';
+import MainTabs from './MainTabs';
 
 export default function RootNavigator() {
   return (
     <NavigationContainer>
-      <HomeStack />
+      <MainTabs />
     </NavigationContainer>
   );
 }
