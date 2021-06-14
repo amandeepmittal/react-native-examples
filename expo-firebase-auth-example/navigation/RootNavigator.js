@@ -9,7 +9,7 @@ import HomeStack from './HomeStack';
 
 const auth = Firebase.auth();
 
-export default function Routes() {
+export default function RootNavigator() {
   const { user, setUser } = useContext(AuthenticatedUserContext);
   const [isLoading, setIsLoading] = useState(true);
 
