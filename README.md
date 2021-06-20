@@ -20,7 +20,10 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 ### expo-template
 
-Bare minimum Expo template to kickstart a React Native app with following features:
+Bare minimum Expo template to kickstart a React Native app.
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template)
+
+It uses:
 
 - Expo SDK `41.x.x`
 - React Navigation v6
@@ -31,8 +34,6 @@ Bare minimum Expo template to kickstart a React Native app with following featur
   - IconButton
   - Input
 - ESlint and Prettier configured
-
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template)
 
 **Usage**
 
