@@ -1,23 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { theme } from '../constants';
+import { useAppearance } from '../hooks';
 import { Button, IconButton, Input } from '../components';
+import { colors } from '../constants';
 
 export default function DemoScreen() {
+  const theme = useAppearance();
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView
+      style={[styles.container, { backgroundColor: theme.background }]}
+    >
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <Text style={styles.text}>Demo Screen Placeholder</Text>
         <Button
           title='Solid'
-          backgroundColor={theme.primary}
+          backgroundColor={colors.primary}
           containerStyle={styles.button}
         />
         <Button
           title='Outline'
           outline
-          titleColor={theme.strong}
+          titleColor={colors.secondary}
           containerStyle={styles.button}
           width='75%'
         />
@@ -25,13 +30,13 @@ export default function DemoScreen() {
           <IconButton
             variant='MaterialCommunityIcons'
             iconName='rocket-launch'
-            color={theme.primary}
+            color={colors.primary}
             size={28}
           />
           <IconButton
             variant='AntDesign'
             iconName='rocket1'
-            color={theme.strong}
+            color={colors.secondary}
             size={28}
           />
         </View>
@@ -57,15 +62,14 @@ export default function DemoScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: theme.background
+    flex: 1
   },
   scrollContainer: {
     paddingHorizontal: 16
   },
   text: {
     fontSize: 22,
-    color: theme.primary,
+    color: colors.primary,
     fontWeight: '600'
   },
   button: {

@@ -10,5 +10,6 @@ export default {
   secondary: 'rgba(122, 210, 206, 1)',
   strong: 'rgba(27, 33, 75, 1)',
   strongInverse: 'rgba(255, 255, 255, 1)',
-  surface: 'rgba(255, 255, 255, 1)'
+  surface: 'rgba(255, 255, 255, 1)',
+  black: '#010101'
 };

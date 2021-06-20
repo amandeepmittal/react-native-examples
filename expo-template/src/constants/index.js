@@ -1,3 +1,4 @@
-import theme from './Theme';
+import colors from './colors';
+import theme from './theme';
 
-export { theme };
+export { colors, theme };
