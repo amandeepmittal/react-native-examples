@@ -14,6 +14,8 @@ Bare minimum Expo template to kickstart a React Native app with following featur
   - Button
   - IconButton
   - Input
+- Define and switch between theme modes
+- [Asyncstorage](https://react-native-async-storage.github.io/async-storage/docs/install) to persist theme value
 - ESlint and Prettier configured
 
 ## Usage
@@ -40,11 +42,16 @@ Commands to trigger an instance of the app in local development mode:
 
 - On mobile simulator:
 
-<img src='./assets/screenshots/mob1.png' width="300"> <img src='./assets/screenshots/mob2.png' width="300"> <img src='./assets/screenshots/mob3.png' width="300">
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211920/mb1_d7az6i.png' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/mb2_hwig6s.png' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/mb3_fg9tjw.png' width="280">
+
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211915/md4_s1n2ea.gif' width="280">
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/md5_x1cvtc.gif' width="280">
 
 - On web:
 
-<img src='./assets/screenshots/web1.png' width="300"> <img src='./assets/screenshots/web2.png' width="300"> <img src='./assets/screenshots/web3.png' width="300">
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211916/web1_lzjl0q.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211918/web2_sardvp.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211918/web3_kmv1dd.png' width="300">
+
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211920/web4_icsovr.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211921/web5_g1bo8j.png' width="300">
 
 ## File Structure
 
@@ -55,6 +62,13 @@ Expo Template
 │   └── Button.js ➡️ Button component
 │   └── Input.js ➡️ TextInput component
 │   └── IconButton.js ➡️ Button with icon only component, support different variants from @expo/vector-icons
+├── constants ➡️ Color and theme values
+│   └── colors.js ➡️ Contain pre-defined color values
+│   └── theme.js ➡️ Contain pre-defined custom themes
+├── contexts ➡️ Collection of Providers
+│   └── ThemeProver.js ➡️ Provider to change theme and persist it with Asyncstorage
+├── hooks ➡️ Collection of custom hooks
+│   └── useAppearance.js ➡️ Provides access to the theme object across screens
 ├── navigation
 │   └── HomeStack.js ➡️ Routes such as Home & Detail screen
 │   └── MainTabs.js ➡️ Routes such as HomeStack & Demo screen
@@ -63,6 +77,7 @@ Expo Template
 │   └── DemoScreen.js ➡️ Screen that hows a little demo of reusable components
 │   └── HomeScreen.js ➡️ Home screen
 │   └── DetailScreen.js ➡️ Detail screen
+│   └── SettingScreen.js ➡️ Screen that allows to switch theme
 ├── App.js ➡️ Entry Point for Mobile apps
 ├── app.json ➡️ Expo config file
 └── babel.config.js ➡️ Babel config (should be using `babel-preset-expo`)
