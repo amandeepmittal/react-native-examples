@@ -2,7 +2,7 @@
 
 [![supports iOS](https://img.shields.io/badge/iOS-4630EB.svg?style=for-the-badge&logo=APPLE&labelColor=000&logoColor=fff)](https://github.com/expo/expo)
 [![supports Android](https://img.shields.io/badge/Android-4630EB.svg?style=for-the-badge&logo=ANDROID&labelColor=000&logoColor=fff)](https://github.com/expo/expo)
-[![supports web](https://img.shields.io/badge/Web-4630EB.svg?style=for-the-badge&logo=GOOGLE-CHROME&labelColor=000&logoColor=fff)](https://github.com/expo/expo) ![npm-badge](https://img.shields.io/npm/v/expo-bare-template?color=%23ff0000&style=for-the-badge)
+[![supports web](https://img.shields.io/badge/Web-4630EB.svg?style=for-the-badge&logo=GOOGLE-CHROME&labelColor=000&logoColor=fff)](https://github.com/expo/expo) [![npm-badge](https://img.shields.io/npm/v/expo-bare-template?color=%23ff0000&style=for-the-badge)](https://www.npmjs.com/package/expo-bare-template)
 
 Bare minimum Expo template to kickstart a React Native app with following features:
 
