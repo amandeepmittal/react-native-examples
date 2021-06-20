@@ -44,8 +44,7 @@ Commands to trigger an instance of the app in local development mode:
 
 <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211920/mb1_d7az6i.png' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/mb2_hwig6s.png' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/mb3_fg9tjw.png' width="280">
 
-<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211915/md4_s1n2ea.gif' width="280">
-<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/md5_x1cvtc.gif' width="280">
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211915/md4_s1n2ea.gif' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/md5_x1cvtc.gif' width="280">
 
 - On web:
 
