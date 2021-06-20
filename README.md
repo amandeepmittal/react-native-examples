@@ -21,6 +21,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 ### expo-template
 
 Bare minimum Expo template to kickstart a React Native app.
+
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template)
 
 It uses:
@@ -41,13 +42,17 @@ It uses:
 expo init -t expo-bare-template
 ```
 
-Screens On mobile simulator:
+Screens on mobile simulator:
 
-<img src='./expo-template/assets/screenshots/mob1.png' width="300"> <img src='./expo-template/assets/screenshots/mob2.png' width="300"> <img src='./expo-template/assets/screenshots/mob3.png' width="300">
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211920/mb1_d7az6i.png' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/mb2_hwig6s.png' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/mb3_fg9tjw.png' width="280">
 
-Screens On web:
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211915/md4_s1n2ea.gif' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/md5_x1cvtc.gif' width="280">
 
-<img src='./expo-template/assets/screenshots/web1.png' width="300"> <img src='./expo-template/assets/screenshots/web2.png' width="300"> <img src='./expo-template/assets/screenshots/web3.png' width="300">
+Screens on web:
+
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211916/web1_lzjl0q.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211918/web2_sardvp.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211918/web3_kmv1dd.png' width="300">
+
+<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211920/web4_icsovr.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211921/web5_g1bo8j.png' width="300">
 
 ---
 
