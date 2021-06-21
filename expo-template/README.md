@@ -57,7 +57,7 @@ Commands to trigger an instance of the app in local development mode:
 ```sh
 Expo Template
 ├── assets ➡️ All static assets
-├── components ➡️ All re-suable UI components for screens│
+├── components ➡️ All re-suable UI components for screens
 │   └── Button.js ➡️ Button component
 │   └── Input.js ➡️ TextInput component
 │   └── IconButton.js ➡️ Button with icon only component, support different variants from @expo/vector-icons
