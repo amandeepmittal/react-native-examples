@@ -70,7 +70,6 @@ This example uses:
 - React Navigation version `5.x.x`
 - Managing Environment Variables with `app.config.json`
 
-<img src='https://res.cloudinary.com/amanmittal/image/upload/v1625211711/kizROqe_thr1xm.gif'  width="200"/>
 
 ## Create a custom Image Gallery Preview
 
