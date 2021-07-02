@@ -61,15 +61,16 @@ Screens on web:
 Learn how to integrate Firebase Auth service using Firebase JS SDK and Expo SDK (by generating a managed workflow app).
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-firebase-auth-example)
-- 👉 [Blog post]() **TBD**
+- 👉 [Blog post](https://blog.jscrambler.com/how-to-integrate-firebase-authentication-with-an-expo-app/)
 
 This example uses:
 
 - Expo SDK version `41.x.x`
 - Firebase JS SDK
 - React Navigation version `5.x.x`
+- Managing Environment Variables with `app.config.json`
 
-<!-- <img src="https://i.imgur.com/kizROqe.gif" /> -->
+<img src="https://i.imgur.com/kizROqe.gif"  width="200"/>
 
 ## Create a custom Image Gallery Preview
 
