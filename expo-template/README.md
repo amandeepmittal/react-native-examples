@@ -6,7 +6,7 @@
 
 Bare minimum Expo template to kickstart a React Native app with following features:
 
-- Expo SDK `41.x.x`
+- Expo SDK `42.x.x`
 - React Navigation v6
   - ⚠️ React Navigation v6 library is an upcoming version.
   - Based on Stack and Tab navigators
