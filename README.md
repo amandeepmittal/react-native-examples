@@ -70,7 +70,6 @@ This example uses:
 - React Navigation version `5.x.x`
 - Managing Environment Variables with `app.config.json`
 
-
 ## Create a custom Image Gallery Preview
 
 Learn how to sync thumbnail using `FlatList` with Carousel from `react-native-snap-carousel`.
