@@ -12,8 +12,14 @@
     "dev": "react-native run-ios --simulator='iPhone 12 mini'"
   },
   "dependencies": {
+    "native-base": "3.0.6",
     "react": "17.0.1",
-    "react-native": "0.64.1"
+    "react-native": "0.64.1",
+    "react-native-safe-area-context": "3.2.0",
+    "react-native-svg": "12.1.1",
+    "react-native-vector-icons": "8.1.0",
+    "styled-components": "5.3.0",
+    "styled-system": "5.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
