@@ -2,7 +2,7 @@
   "name": "expo-bare-template",
   "description": "Bare minimum Expo template with Navigation and linting.",
   "main": "node_modules/expo/AppEntry.js",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -59,8 +59,5 @@
   },
   "bugs": {
     "url": "https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template/issues"
-  },
-  "files": [
-    ".gitignore"
-  ]
+  }
 }
