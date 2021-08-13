@@ -18,6 +18,23 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Multi-language Support Example
+
+Learn how to add multi-language support to a React Native app using [i18next](https://www.i18next.com/).
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
+- 👉 [Blog post](https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/)
+
+This example uses:
+
+- React Native version `0.64.1`
+- React Navigation v6
+- react-native-localize
+- i18next
+- react-i18next
+
+<img src="https://blog.crowdbotics.com/content/images/2021/08/cb5.gif" width="200"/>
+
 ### expo-template
 
 Bare minimum Expo template to kickstart a React Native app.
@@ -53,8 +70,6 @@ Screens on web:
 <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211916/web1_lzjl0q.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211918/web2_sardvp.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211918/web3_kmv1dd.png' width="300">
 
 <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211920/web4_icsovr.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211921/web5_g1bo8j.png' width="300">
-
----
 
 ## Expo Firebase Auth Example
 
