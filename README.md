@@ -32,6 +32,7 @@ This example uses:
 - react-native-localize
 - i18next
 - react-i18next
+- @react-native-async-storage/async-storage
 
 <img src="https://blog.crowdbotics.com/content/images/2021/08/cb5.gif" width="200"/>
 
