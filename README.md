@@ -36,42 +36,6 @@ This example uses:
 
 <img src="https://blog.crowdbotics.com/content/images/2021/08/cb5.gif" width="200"/>
 
-### expo-template
-
-Bare minimum Expo template to kickstart a React Native app.
-
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-template)
-
-It uses:
-
-- Expo SDK `41.x.x`
-- React Navigation v6
-  - ⚠️ React Navigation v6 library is an upcoming version.
-  - Based on Stack and Tab navigators
-- Reusable components to get started with:
-  - Button
-  - IconButton
-  - Input
-- ESlint and Prettier configured
-
-**Usage**
-
-```sh
-expo init -t expo-bare-template
-```
-
-Screens on mobile simulator:
-
-<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211920/mb1_d7az6i.png' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/mb2_hwig6s.png' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/mb3_fg9tjw.png' width="280">
-
-<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211915/md4_s1n2ea.gif' width="280"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211917/md5_x1cvtc.gif' width="280">
-
-Screens on web:
-
-<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211916/web1_lzjl0q.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211918/web2_sardvp.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211918/web3_kmv1dd.png' width="300">
-
-<img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211920/web4_icsovr.png' width="300"> <img src='https://res.cloudinary.com/amanmittal/image/upload/v1624211921/web5_g1bo8j.png' width="300">
-
 ## Expo Firebase Auth Example
 
 Learn how to integrate Firebase Auth service using Firebase JS SDK and Expo SDK (by generating a managed workflow app).
