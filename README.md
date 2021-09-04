@@ -1,257 +1,310 @@
-# React Native Examples
+# How to add Splash Screen and App Icon in React Native
 
-[![made with expo](https://img.shields.io/badge/MADE%20WITH%20EXPO-000.svg?style=for-the-badge&logo=expo&labelColor=4630eb&logoWidth=20)](https://github.com/expo/expo) [![supports iOS and Android](https://img.shields.io/badge/Platforms-Native-4630EB.svg?style=for-the-badge&logo=EXPO&labelColor=000&logoColor=fff)](https://github.com/expo/expo) [![follow @amanhimself](https://img.shields.io/twitter/follow/amanhimself.svg?style=for-the-badge&logo=TWITTER&logoColor=FFFFFF&labelColor=00aced&logoWidth=20&color=lightgray)](https://twitter.com/amanhimself)
+Every mobile application has a splash screen and an app icon. Together they provide the first impression. An app icon is displayed in various places, such as on an app store, on the device's app drawer, etc., whereas a splash screen is shown during the app startup. Adding a splash screen or an app icon to a React Native app can be an agile process.
 
-<blockquote>
+In this tutorial, let's learn how to use an awesome package called [`react-native-bootsplash`](https://github.com/zoontek/react-native-bootsplash) to display a splash screen when an app starts and then learn the process of adding app icons in a React Native app.
 
-👉 Learn about React Native and Expo at [amanhimself.dev](https://amanhimself.dev/).
+## Prerequisites
 
-📮 Or join more than 1200+ Developers to get latest updates on my blog posts and side projects. [Subscribe the newsletter here](https://amanhimself.substack.com/).
+To follow this tutorial, please make sure you have the following tools and utilities installed on your local development environment and have access to the services mentioned below:
 
-</blockquote>
+- [Node.js](https://nodejs.org/en/) version `12.x.x` or above installed
+- Have access to one package manager such as npm or yarn or npx
+- [react-native-cli](https://www.npmjs.com/package/react-native-cli) installed, or use npx
 
-[![](https://i.imgur.com/buKsTUD.png)](https://ko-fi.com/amanhimself)
+Note, the example app is created using React Native version `0.65.x`.
 
-This repository contains most of the examples I've used in blog posts on React Native and Expo. The blog posts are hosted mostly at [amanhimself.dev](https://amanhimself.dev) and elsewhere.
+[**Complete source code for this example is at this GitHub repo**](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)
 
-You may find some of the examples being outdated in time, in terms of framework updates or libraries. Don't worry the concept would be the same.
+## Setup a React Native app
 
-Here is a list of notable examples and the blog post they are related [_if possible_].
+As an example for this tutorial, I will use a React Native project with two screens and React Navigation integrated. You check out this [GitHub commit](https://github.com/amandeepmittal/react-native-examples/commit/65b768d741c9eea485d11d55d55a607754d4b0d0) as a starting point to learn more about how I set up the example app or create your own React Native project.
 
-## Add splash screen and app icon
+Here is the example app looks like in its current form. Notice that the splash screen and the app icon are defaults that come with React Native.
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)
-- 👉 [Blog post]() **Coming soon**
+[js1]
 
-This example uses:
+I am picking an icon from [Flaticon.com](https://www.flaticon.com/premium-icon/atom_3326760?term=react&related_id=3326850&origin=search) for the example app.
 
-- React Native version `0.65.1`
-- React Navigation v6
-- [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash)
+After creating the original app icon, save it inside the directory `src/assets/` and name the file `original_icon`. (_Note: you can name the original icon file as per your requirement_).
 
-<img src="https://i.imgur.com/kJMWcH1.gif" width="250"/>
+[js2]
 
-## Multi-language Support Example
+_Tip_: Make sure your initial app logo is `1024x1024px`.
 
-Learn how to add multi-language support to a React Native app using [i18next](https://www.i18next.com/).
+## Installing react-native-bootsplash
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
-- 👉 [Blog post](https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/)
+The initial step is to install the react-native-bootsplash package and then generate assets using it.
 
-This example uses:
+Open the terminal window and execute the following command to install the package:
 
-- React Native version `0.64.1`
-- React Navigation v6
-- react-native-localize
-- i18next
-- react-i18next
-- @react-native-async-storage/async-storage
+```shell
+yarn add react-native-bootsplash
 
-<img src="https://blog.crowdbotics.com/content/images/2021/08/cb5.gif" width="200"/>
+# or if using npm
+npm install react-native-bootsplash
+```
 
-## Expo Firebase Auth Example
+Next, for iOS, execute the command to install pods.
 
-Learn how to integrate Firebase Auth service using Firebase JS SDK and Expo SDK (by generating a managed workflow app).
+```shell
+npx pod-install ios
+```
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-firebase-auth-example)
-- 👉 [Blog post](https://blog.jscrambler.com/how-to-integrate-firebase-authentication-with-an-expo-app/)
+Tip: If you use a React Native version lower than `0.60`, please follow the instructions [here] to link the package manually.
 
-This example uses:
+Next, add the following script in the `package.json` file under the `"scripts"` section:
 
-- Expo SDK version `41.x.x`
-- Firebase JS SDK
-- React Navigation version `5.x.x`
-- Managing Environment Variables with `app.config.json`
+```json
+"scripts": {
+  "generate": "npx react-native generate-bootsplash ./src/assets/original_icon.png --background-color=2EE59D   --logo-width=100 --assets-path=./src/assets --flavor=main"
+}
+```
 
-## Create a custom Image Gallery Preview
+Here is each option described:
 
-Learn how to sync thumbnail using `FlatList` with Carousel from `react-native-snap-carousel`.
+- `generate-bootsplash` is the command to generate the assets.
+- `./src/assets/original_icon.png` is the path to the original icon file. The path may vary depending on where you save the file in your React Native project.
+- `--background-color=hexadecimal_value` is a color value in hexadecimal format. The color here is used as the background color of the splash screen.
+- `--logo-width=100` is the width of the logo. This is a default value provided by the package
+- `assets-path` is the path to the assets directory.
+- `flavor` is an Android only option. Let's pass the value `main` here to target the default version of the Android app. You can learn more about [Build Variants on Android here](https://developer.android.com/studio/build/build-variants).
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnPreviewImageGallery)
-- 👉 [Blog post](https://medium.com/crowdbotics/how-to-create-a-custom-image-gallery-in-react-native-b84b3c4906ec)
+This will generate assets in the path specifid for the option `assets-path`, a storyboard called `BootSplash.storyboard` file inside `ios/app-name` directory and generate assets for the Android app inside different sub-directories of `android/app/src/main/res` folder.
 
-This example uses:
+Android requires five different sizes for different screen pixel densities. Icons for lower resolution are created automatically from the baseline (_mdpi_). Refer to the table below for more information on pixel densities:
 
-- React Native version `0.63.4`
-- The [scrollToOffset method on FlatList](https://reactnative.dev/docs/flatlist#scrolltooffset)
-- [react-native-snap-carousel](https://github.com/meliorence/react-native-snap-carousel)
-- Images from [Unsplash](https://unsplash.com/s/photos/amsterdam)
+|   Resolution    | Density | Pixel units |
+| :-------------: | :-----: | :---------: |
+| mdpi (Baseline) | 160 dpi |     1×      |
+|      hdpi       | 240 dpi |    1.5×     |
+|      xhdpi      | 320 dpi |     2×      |
+|     xxhdpi      | 480 dpi |     3×      |
+|     xxxhdpi     | 640 dpi |     4×      |
 
-<img src="https://i.imgur.com/z9MXxjA.png" width="200"/> <img src="https://i.imgur.com/5tYg6ss.gif" width="200"/>
+## Adding splash screen on iOS
 
-## Convert Reverse Geocode into Postal Address
+Start by opening the file `ios/app-name.xcodeproj` in Xcode.
 
-Fetch user's current location and then convert into actual postal address.
+[js4]
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-geolocation-example)
-- 👉 [Blog post](https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/)
+Then, drag the file `BootSplash.storyboard` under the Project directory in the Xcode file manager on the left side of the Xcode from the path `ios/app-name/` directory.
 
-This example uses:
+[js5]
 
-- expo-cli
-- [React Navigation Stack v5](https://reactnavigation.org/docs/getting-started)
-- [expo-location](https://docs.expo.io/versions/latest/sdk/location/)
-- Icon from [Flaticon.com](https://www.flaticon.com/free-icon/placeholder_1001022?term=location&related_id=1001022)
+After dragging it, Xcode will prompt the following to create a folder reference. Make sure under the `Add to targets` option, and then click the **Finish** button.
 
-<img src="https://i.imgur.com/YSBT6tv.gif" width="200"/>
+[js6]
 
-## Create a Translucent Bottom Tab Bar
+The `BootSplash.storyboard` file will now be represented in the file manager as shown below:
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/customTabBar)
-- 👉 [Blog post](https://amanhimself.dev/blog/create-custom-tab-bar-in-react-native/)
+[js7]
 
-This example uses:
+Click on the `BootSplash.storyboard` file to verify that the background color was added when generating assets.
 
-- react-native-cli
-- [React Navigation Bottom Tabs v5](https://reactnavigation.org/docs/getting-started)
-- [BlurView](https://github.com/Kureev/react-native-blur) effect
-- Images from Unsplash
+[js8]
 
-<img src="https://i.imgur.com/Bp58Gzm.gif" width="200"/> <img src="https://i.imgur.com/O3oHRpd.gif" width="200"/>
+Select the Xcode project from the file manager and select `BootSplash` from the dropdown menu next to `Launch Screen File`.
 
-## Shared Element transitions
+[js9]
+
+Now, open the `ios/app-name/AppDelegate.m` file and add the import the following header reference:
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/shared-element-transitions)
-- 👉 [Blog post](https://blog.logrocket.com/how-to-use-shared-element-transition-with-react-navigation-v5/)
+```c
+#import "AppDelegate.h"
 
-This example uses:
+#import <React/RCTBridge.h>
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
 
-- Expo SDK 40
-- [React Navigation v5](https://reactnavigation.org/docs/getting-started)
-- [react-navigation-shared-element](https://github.com/IjzerenHein/react-navigation-shared-element)
-- [react-native-shared-element](https://github.com/IjzerenHein/react-native-shared-element#SharedElementAnimation)
-- Images from Unsplash
-- Delayed loading example using [react-native-animatable](https://github.com/oblador/react-native-animatable)
+#import "RNBootSplash.h" // <- add this
+```
 
-<img src="https://i.imgur.com/M4Fhl05.gif" width="200"/>
+In the same file, add the following line to initialize the BootSplash.
 
-## Custom Scroll bar indicator in ScrollView
+```c
+@implementation AppDelegate
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/custom-scroll-indicator)
-- 👉 [Blog post](https://amanhimself.dev/blog/custom-scroll-bar-indicator-with-react-native-animated-api)
-- **Description**: The implementation of a scroll bar indicator is not directly customizable on cross-platforms in React Native. If you are building an app whose screen design depends on displaying a customized scroll bar indicator, then let's build one in this tutorial.
-  This example uses:
-  - Expo SDK 40
-  - `Animated.multiply()` from React Native API
-  - `onScroll` prop on `ScrollView`
-  - Example API data from [Draftbit's Example Data Service](https://example-data.draftbit.com/).
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  // ... other statements
+   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
+  return YES;
+}
+```
 
-<img src="https://i.imgur.com/WCvjoHN.gif" width="200"/> <img src="https://i.imgur.com/jWULIWa.gif" width="200" />
+## Adding splash screen on Android
 
-## Redux Persist
+Start by modifying the `android/app/src/main/java/com/app-name/MainActivity.java` file.
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/redux-persist-asyncstorage)
-- 👉 [Blog post](https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/)
-- **Description**: How to configure, integrate and use redux-persist library in a React Native & Expo app and dynamically change the UI based on the state updates. This example uses:
-  - Expo SDK 40
-  - react-navigation v5 (bottom-tabs)
-  - redux, react-redux (with hooks), redux-thunk, redux-persist
-  - Example API data from [Draftbit's Example Data Service](https://example-data.draftbit.com/).
+```java
+package com.rnsplashandiconexample;
 
-<img src="https://i.imgur.com/tP4SSP5.gif" width="200" />
+import com.facebook.react.ReactActivity;
 
-## Forms with Formik
+// ----- Add the following imports --------
+import android.os.Bundle;
+import com.zoontek.rnbootsplash.RNBootSplash;
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/forms-with-formik)
-- 👉 [Blog post](https://blog.jscrambler.com/creating-and-validating-react-native-forms-with-formik/)
-- **Description**: In this post, let's take a look at how to integrate Formik along with Yup in a React Native app to create forms and validate them. We are also going to cover how to change the focus of one input field to another using a device's keyboard by forwarding the ref created using a `useRef` hook.
+public class MainActivity extends ReactActivity {
 
-<img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-creating-forms-react-native-formik-4.gif" width="200"/> <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-creating-forms-react-native-formik-8.gif" width="200" />
+  /**
+   * Returns the name of the main component registered from JavaScript. This is used to schedule
+   * rendering of the component.
+   */
+  @Override
+  protected String getMainComponentName() {
+    return "rnSplashAndIconExample";
+  }
 
-## Animated Header View on a Scroll with React Native Animated API
+  // ----- Add the following --------
+  @Override
+    protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    RNBootSplash.init(R.drawable.bootsplash, MainActivity.this);
+  }
+}
+```
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/animate-header-on-scroll)
-- 👉 [Blog post](https://blog.jscrambler.com/how-to-animate-a-header-view-on-scroll-with-react-native-animated/)
-- **Description**: In this tutorial, let's explore a way to create a header view component that animates on the scroll position of the ScrollView component from React Native. We will go through the basics of creating a new Animated value as well as explaining the significance of functions and properties like interpolation, extrapolate, contentOffset, and so on. This example uses:
-  - Expo SDK 38
-  - React Native Animated API
+Then, modify the `android/app/src/main/res/values/styles.xml`:
 
-<img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-how-to-animate-header-view-with-react-native-animated-5.gif" width="200" /> <img src="https://blog.jscrambler.com/content/images/2020/10/jscrambler-blog-how-to-animate-header-view-with-react-native-animated-6.gif" width="200" />
+```xml
+<resources>
 
-## Chat app with Expo + Firebase + Firestore + react-native-gifted-chat + react-native-paper + react-navigation v5
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:textColor">#000000</item>
+    </style>
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp)
-- 👉 **Blog post series**: [Part1](https://amanhimself.dev/blog/chat-app-with-react-native-part-1) | [Part2](https://amanhimself.dev/blog/chat-app-with-react-native-part-2) | [Part3](https://amanhimself.dev/blog/chat-app-with-react-native-part-3) | [Part4](https://amanhimself.dev/blog/chat-app-with-react-native-part-4) | [Part5](https://amanhimself.dev/blog/chat-app-with-react-native-part-5) | [Part6](https://amanhimself.dev/blog/chat-app-with-react-native-part-6)
+    <!-- Add the following lines (BootTheme should inherit from AppTheme) -->
+    <style name="BootTheme" parent="AppTheme">
+      <!-- set the generated bootsplash.xml drawable as activity background -->
+      <item name="android:background">@drawable/bootsplash</item>
+    </style>
 
-<img src="https://miro.medium.com/max/684/1*7UqfiUWxFDtSyR2_CQoigQ.gif" width="200" /> <img src="https://miro.medium.com/max/684/1*5owHh4tZ5mmOyVfsn9kOwA.gif" width="200" />
+</resources>
+```
 
-<img src="https://miro.medium.com/max/684/1*Ztwt_qL30dreUv_JMvhhwg.gif" width="200" /> <img src="https://miro.medium.com/max/684/1*nDaN1lXF75iWEWg6X-0sqQ.gif" width="200" />
+Next, modify the `android/app/src/main/AndroidManifest.xml` file by removing the original `<intent-filter>` tag and its contents. Replace it by adding `android:exported="true"` and create a new `activity` element to use the theme created in the previous step.
 
-<img src="https://miro.medium.com/max/714/1*_X5Ye5IJpkOYbUsED8ELYg.gif" width="200" />
+```xml
+<activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize"
+        android:exported="true">  <!--- Add this -->
+</activity>
 
-## Create onBoarding screens with react-native-viewpager
+<!-- Then, add the following lines -->
+<activity
+      android:name="com.zoontek.rnbootsplash.RNBootSplashActivity"
+      android:theme="@style/BootTheme"
+      android:launchMode="singleTask">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+</activity>
+```
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/onboarding-viewpager)
-- 👉 [Blog post](https://blog.logrocket.com/how-to-create-onboarding-screens-with-react-native-viewpager/)
-- **Description**: In this tutorial, we’ll look at one of the ways to create onboarding screens in a React Native app. We are going to use a React Native community package, called react-native-viewpager, that allows us to swipe left or right between different pages where each page has some data to display.
+## Control how to display a splash screen when the navigator is mounted
 
-<img src="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2020/09/completenavigationflow.gif?resize=362%2C748&ssl=1" width="200" />
+You can control the behavior of the splash screen to display until all the children of the React Navigation's `NavigationContainer` are mounted for the first time. This can be done by using a prop on the `NavigationContainer` called [`onReady`](https://reactnavigation.org/docs/navigation-container/#onready).
 
-## Remove Tab bar Border Width
+Modify the `RootNavigator.js` file by importing the `react-native-bootsplash` and adding the prop `onReady`.
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/remove-tabbar-border)
-- 👉 [Blog post](https://amanhimself.dev/blog/react-navigation-remove-tab-bar-border/)
+```js
+// after other import statements
+import RNBootSplash from 'react-native-bootsplash';
 
-This example uses:
+const RootNavigator = () => {
+  return (
+    <NavigationContainer onReady={() => RNBootSplash.hide()}>
+      {/* Rest remains same */}
+    </NavigationContainer>
+  );
+};
+```
 
-- Expo SDK 40
-- [React Navigation v5](https://reactnavigation.org/docs/getting-started)
+## Testing the splash screen configuration
 
-<img src="https://i.imgur.com/ttIMI5V.png" width="200"/> <img src="https://i.imgur.com/WqR3X9I.png" width="200"/>
+The last step to see the splash screen in action is to run the build command for both iOS and Android.
 
-## Create Custom Custom Wavy Headers with react-native-svg
+Open the terminal window and run the command to build the app for iOS and Android:
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/onboarding-viewpager)
-- 👉 [Expo Client](https://expo.io/@amanhimself/rnwavysvg)
-- 👉 [Blog post](https://amanhimself.dev/blog/create-custom-headers-with-react-native-svg)
+```shell
+# for iOS
+npx react-native run-ios
 
-<img src="https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif" width="200" />
+# for Android
+npx react-native run-android
+```
 
-## Using Styled Components in React Native and Expo
+Here is the output after this step:
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnStyledComponents)
-- 👉 [Blog post](https://blog.logrocket.com/how-to-use-styled-components-with-react-native/)
+[js10]
 
-<img src="https://blog.logrocket.com/wp-content/uploads/2020/10/completedui-nocdn.png" width="200" />
+## Adding app icon to iOS app
 
-## Using react-native-image-picker
+To generate assets for different iOS devices, I am using a free app icon generator called [appicon.co](https://appicon.co/).
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnImagePickerExample)
-- 👉 [Blog post](https://amanhimself.dev/blog/how-to-use-react-native-image-picker)
+[js11]
 
-<img src="https://blog.crowdbotics.com/content/images/2020/04/cb14.png" width="200" /> <img src="https://blog.crowdbotics.com/content/images/2020/04/cb13.gif" width="200" />
+After generating all the image assets, you will be able to download them in a zip file.
 
-## Handle Navigation in WebViews
+Uploading an app icon for iOS follows the same process as using native iOS development. Open the file `ios/app-name.xcodeproj` in Xcode. Select the `Image.xcassets` from the file manager. Then select the **AppIcon**.
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnWebViewCustomNav)
-- 👉 [Blog post](https://amanhimself.dev/blog/handle-navigation-in-webviews-react-native)
+[js12]
 
-<img src="https://miro.medium.com/max/377/1*r2li3qWatN2JM_Pl9nhGBA.gif" width="200" />
+Drag and drop all the required image assets after downloading and unzipping them from appicon.co. Place the images as per the necessary pixel densities. After you are done, here is how the Xcode might look like:
 
-## Getting Started with react-navigation v5
+[js13]
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-stack-navigator)
-- 👉 [Blog post](https://amanhimself.dev/blog/stack-navigator-with-react-navigation-v5)
+Open a terminal window and run the command to build an app for iOS:
 
-<img src="https://miro.medium.com/max/825/1*IUWdHNEwH4bLtRzBwQ8yng.gif" width="400" />
+```shell
+npx react-native run-ios
+```
 
-## Nesting Tab and Stack Navigation Patterns in react-navigation v5
+After the rebuild, the app icon will display.
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-tab-navigator)
-- 👉 [Blog post](https://amanhimself.dev/blog/nested-navigators-in-react-native)
+[js14]
 
-<img src="https://miro.medium.com/max/369/1*gCs24QDMEQ_D6DcDxjiALw.gif" width="200" />
+## Adding app icon to Android app
 
-## Getting Started with Expo and React Native with Hooks & Redux (Hooks!)
+The leverage react-native-bootsplash package gives is that it generates all the app icons and stores them in the multiple sub-directories under `android/app/src/main/res` directory.
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/reactnav5-tab-navigator)
-- 👉 **Blog post series**: [Part 1](https://amanhimself.dev/blog/getting-started-with-react-native-expo-hooks-2020) | [Part 2](https://amanhimself.dev/blog/redux-with-react-native-hooks)
+[js15]
 
-<img src="https://miro.medium.com/max/381/1*BJYPQHfTF0wKbZ9CIIhL0g.gif" width="200" />
+The simple way here is to replace the default values for the properties `android:icon` and `android:roundIcon` in the `android/app/src/main/AndroidManifest.xml` file to point to the `bootsplash_logo` file name.
 
-## Create a custom hook to status bar styles with useFocusEffect & react-navigation v5
+```xml
+ <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      // modify the two lines below
+      android:icon="@mipmap/bootsplash_logo"
+      android:roundIcon="@mipmap/bootsplash_logo"
+      // ----------------------------
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+```
 
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/customStatusBarHook)
-- 👉 [Blog post series](https://amanhimself.dev/blog/create-custom-status-bar-hook-react-navigation)
+After this modification, rebuild the Android app using the following command from a terminal window:
 
-<img src="https://i.imgur.com/sS9ASUg.gif" width="200" />
+```shell
+npx react-native run-android
+```
+
+After the rebuild, the app icon will display.
+
+[js16]
+
+## Conlusion
+
+Once you get the hang of this process, it doesn't take much time. That is all the necessary steps to add a splash screen and an app icon to a React Native app.
+
+For more advanced usage of `react-native-bootsplash`, please check its [official documentation here on GitHub](https://github.com/zoontek/react-native-bootsplash). There are some advanced strategies explained there, including animating the splash screen.
+
+[**Complete source code for this example is at this GitHub repo**](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)
