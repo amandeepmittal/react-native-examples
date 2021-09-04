@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		67EA67DD2A9BBA7DBE775462 /* libPods-rnSplashAndIconExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D77219106ECD4F172A45D4F1 /* libPods-rnSplashAndIconExample.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		85B9025926E3CD7300C4D89D /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B9025826E3CD7300C4D89D /* BootSplash.storyboard */; };
 		DDC607E7E1E5606F7965C1D9 /* libPods-rnSplashAndIconExample-rnSplashAndIconExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5690212F2084260637A80CD /* libPods-rnSplashAndIconExample-rnSplashAndIconExampleTests.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rnSplashAndIconExample/main.m; sourceTree = "<group>"; };
 		3BF1A6649A34F595A89560B2 /* Pods-rnSplashAndIconExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnSplashAndIconExample.release.xcconfig"; path = "Target Support Files/Pods-rnSplashAndIconExample/Pods-rnSplashAndIconExample.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rnSplashAndIconExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85B9025826E3CD7300C4D89D /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = rnSplashAndIconExample/BootSplash.storyboard; sourceTree = "<group>"; };
 		A2B6706B9630C028912A76B0 /* Pods-rnSplashAndIconExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnSplashAndIconExample.debug.xcconfig"; path = "Target Support Files/Pods-rnSplashAndIconExample/Pods-rnSplashAndIconExample.debug.xcconfig"; sourceTree = "<group>"; };
 		A50848F980BD2170AC738C9B /* Pods-rnSplashAndIconExample-rnSplashAndIconExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rnSplashAndIconExample-rnSplashAndIconExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-rnSplashAndIconExample-rnSplashAndIconExampleTests/Pods-rnSplashAndIconExample-rnSplashAndIconExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5690212F2084260637A80CD /* libPods-rnSplashAndIconExample-rnSplashAndIconExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rnSplashAndIconExample-rnSplashAndIconExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 		13B07FAE1A68108700A75B9A /* rnSplashAndIconExample */ = {
 			isa = PBXGroup;
 			children = (
+				85B9025826E3CD7300C4D89D /* BootSplash.storyboard */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -145,7 +148,6 @@
 				A50848F980BD2170AC738C9B /* Pods-rnSplashAndIconExample-rnSplashAndIconExampleTests.debug.xcconfig */,
 				BCEA77968689D0B9A5843DF1 /* Pods-rnSplashAndIconExample-rnSplashAndIconExampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B9025926E3CD7300C4D89D /* BootSplash.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

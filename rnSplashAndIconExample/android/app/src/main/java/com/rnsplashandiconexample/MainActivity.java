@@ -2,7 +2,9 @@ package com.rnsplashandiconexample;
 
 import com.facebook.react.ReactActivity;
 
+// Add following imports
 import android.os.Bundle;
+import com.zoontek.rnbootsplash.RNBootSplash; 
 
 public class MainActivity extends ReactActivity {
 
@@ -14,9 +16,11 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "rnSplashAndIconExample";
   }
-
+  
+  // Add the following
   @Override
     protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(null);
+    super.onCreate(savedInstanceState);
+    RNBootSplash.init(R.drawable.bootsplash, MainActivity.this);
   }
 }

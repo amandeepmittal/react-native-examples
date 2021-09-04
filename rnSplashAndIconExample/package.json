@@ -8,7 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "pod": "npx pod-install ios"
+    "pod": "npx pod-install ios",
+    "generate": "npx react-native generate-bootsplash ./src/assets/original_icon.png  --background-color=2EE59D --logo-width=100 --assets-path=./src/assets   --flavor=main"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.2",
