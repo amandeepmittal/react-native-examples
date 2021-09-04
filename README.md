@@ -18,6 +18,19 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Add splash screen and app icon
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)
+- 👉 [Blog post]() **Coming soon**
+
+This example uses:
+
+- React Native version `0.65.1`
+- React Navigation v6
+- [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash)
+
+<img src="https://i.imgur.com/kJMWcH1.gif" width="250"/>
+
 ## Multi-language Support Example
 
 Learn how to add multi-language support to a React Native app using [i18next](https://www.i18next.com/).
