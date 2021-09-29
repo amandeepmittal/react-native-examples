@@ -21,7 +21,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 ## Add splash screen and app icon
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)
-- 👉 [Blog post]() **Coming soon**
+- 👉 [Blog post](https://blog.jscrambler.com/how-to-add-a-splash-screen-and-app-icon-in-react-native/)
 
 This example uses:
 
