@@ -18,7 +18,7 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
-## Add splash screen and app icon
+## 🆕 Add splash screen and app icon
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)
 - 👉 [Blog post](https://blog.jscrambler.com/how-to-add-a-splash-screen-and-app-icon-in-react-native/)
