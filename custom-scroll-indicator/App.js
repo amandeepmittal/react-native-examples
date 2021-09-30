@@ -47,7 +47,7 @@ export default function App() {
               contentContainerStyle={{ paddingRight: 14 }}
               showsVerticalScrollIndicator={false}
               scrollEventThrottle={16}
-              onContentSizeChange={height => {
+              onContentSizeChange={(_,height) => {
                 setCompleteScrollBarHeight(height);
               }}
               onLayout={({
