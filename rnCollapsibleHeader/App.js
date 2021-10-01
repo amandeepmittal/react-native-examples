@@ -1,8 +1,14 @@
 import React from 'react';
-import { View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { BooksScreen } from './src/screens/BooksScreen';
 
 const App = () => {
-  return <View style={{ flex: 1, backgroundColor: 'papayawhip' }} />;
+  return (
+    <SafeAreaProvider>
+      <BooksScreen />
+    </SafeAreaProvider>
+  );
 };
 
 export default App;
