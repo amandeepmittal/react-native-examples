@@ -28,7 +28,7 @@ This example uses:
 - Expo SDK `42`
 - [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
 
-<img src="https://i.imgur.com/86uwW7N.png" width="250"/>
+<img src="https://i.imgur.com/86uwW7N.png" width="400"/>
 
 ## Add splash screen and app icon
 
@@ -41,7 +41,7 @@ This example uses:
 - React Navigation v6
 - [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash)
 
-<img src="https://i.imgur.com/kJMWcH1.gif" width="250"/>
+<img src="https://i.imgur.com/kJMWcH1.gif" width="400"/>
 
 ## Multi-language Support Example
 
