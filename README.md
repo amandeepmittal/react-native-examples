@@ -18,7 +18,19 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
-## 🆕 Add splash screen and app icon
+## Safe Area Context in React Native and Expo apps
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/safe-area-insets-example)
+- 👉 [Blog post]() **Coming soon**
+
+This example uses:
+
+- Expo SDK `42`
+- [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
+
+<img src="https://i.imgur.com/86uwW7N.png" width="250"/>
+
+## Add splash screen and app icon
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)
 - 👉 [Blog post](https://blog.jscrambler.com/how-to-add-a-splash-screen-and-app-icon-in-react-native/)
