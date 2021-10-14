@@ -21,7 +21,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 ## Safe Area Context in React Native and Expo apps
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/safe-area-insets-example)
-- 👉 [Blog post]() **Coming soon**
+- 👉 [Blog post](https://amanhimself.dev/blog/safe-area-context-in-react-native-apps/)
 
 This example uses:
 
