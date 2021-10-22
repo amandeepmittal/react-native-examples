@@ -7,7 +7,7 @@ export default function Signup({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const onHandleSignup = async () => {
+  const onHandleSignup = () => {
     if (email !== '' && password !== '') {
       auth
         .createUserWithEmailAndPassword(email, password)
