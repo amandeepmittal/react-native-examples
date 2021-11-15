@@ -13,14 +13,7 @@ export default function Chat({ navigation }) {
   const [messages, setMessages] = useState([]);
 
   const onSignOut = () => {
-    auth
-      .signOut()
-      .then(() => {
-        navigation.navigate('Login');
-      })
-      .catch(error => {
-        console.log(`Logout error: ${error}`);
-      });
+    auth.signOut();
   };
 
   useLayoutEffect(() => {
