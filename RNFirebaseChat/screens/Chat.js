@@ -6,6 +6,14 @@ import React, {
 } from 'react';
 import { TouchableOpacity, Text } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat';
+import {
+  collection,
+  addDoc,
+  orderBy,
+  query,
+  onSnapshot
+} from 'firebase/firestore';
+import { signOut } from 'firebase/auth';
 
 import { auth, database } from '../config/firebase';
 
@@ -13,7 +21,7 @@ export default function Chat({ navigation }) {
   const [messages, setMessages] = useState([]);
 
   const onSignOut = () => {
-    auth.signOut();
+    signOut(auth).catch(error => console.log('Error logging out: ', error));
   };
 
   useLayoutEffect(() => {
@@ -37,19 +45,21 @@ export default function Chat({ navigation }) {
   // }, []);
 
   useLayoutEffect(() => {
-    const unsubscribe = database
-      .collection('chats')
-      .orderBy('createdAt', 'desc')
-      .onSnapshot(snapshot =>
-        setMessages(
-          snapshot.docs.map(doc => ({
-            _id: doc.data()._id,
-            createdAt: doc.data().createdAt.toDate(),
-            text: doc.data().text,
-            user: doc.data().user
-          }))
-        )
+    const collectionRef = collection(database, 'chats');
+    const q = query(collectionRef, orderBy('createdAt', 'desc'));
+
+    const unsubscribe = onSnapshot(q, querySnapshot => {
+      setMessages(
+        querySnapshot.docs.map(doc => ({
+          _id: doc.data()._id,
+          createdAt: doc.data().createdAt.toDate(),
+          text: doc.data().text,
+          user: doc.data().user
+        }))
       );
+    });
+
+    return unsubscribe;
   });
 
   const onSend = useCallback((messages = []) => {
@@ -57,7 +67,12 @@ export default function Chat({ navigation }) {
       GiftedChat.append(previousMessages, messages)
     );
     const { _id, createdAt, text, user } = messages[0];
-    database.collection('chats').add({ _id, createdAt, text, user });
+    addDoc(collection(database, 'chats'), {
+      _id,
+      createdAt,
+      text,
+      user
+    });
   }, []);
 
   return (

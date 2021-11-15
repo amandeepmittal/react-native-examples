@@ -2,6 +2,7 @@ import React, { useState, createContext, useContext, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { View, ActivityIndicator } from 'react-native';
+import { onAuthStateChanged } from 'firebase/auth';
 
 import { auth } from './config/firebase';
 
@@ -46,18 +47,17 @@ function RootNavigator() {
 
   useEffect(() => {
     // onAuthStateChanged returns an unsubscriber
-    const unsubscribeAuth = auth.onAuthStateChanged(async authenticatedUser => {
-      try {
-        await (authenticatedUser ? setUser(authenticatedUser) : setUser(null));
+    const unsubscribeAuth = onAuthStateChanged(
+      auth,
+      async authenticatedUser => {
+        authenticatedUser ? setUser(authenticatedUser) : setUser(null);
         setIsLoading(false);
-      } catch (error) {
-        console.log(error);
       }
-    });
+    );
 
     // unsubscribe auth listener on unmount
     return unsubscribeAuth;
-  }, []);
+  }, [user]);
 
   if (isLoading) {
     return (
