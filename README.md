@@ -41,18 +41,6 @@ This example uses:
 
 <img src="https://i.imgur.com/86uwW7N.png" width="400"/>
 
-## Safe Area Context in React Native and Expo apps
-
-- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/safe-area-insets-example)
-- 👉 [Blog post](https://amanhimself.dev/blog/safe-area-context-in-react-native-apps/)
-
-This example uses:
-
-- Expo SDK `42`
-- [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
-
-<img src="https://i.imgur.com/86uwW7N.png" width="400"/>
-
 ## Add splash screen and app icon
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)
