@@ -18,6 +18,29 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Show/Hide Password Visibility Custom Hook
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/custom-hook-password-toggle)
+- 👉 [Blog post]()
+
+This example uses:
+
+- Expo SDK `43`
+
+<img src="https://i.imgur.com/rTNH2Ud.gif" width="200"/>
+
+## Safe Area Context in React Native and Expo apps
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/safe-area-insets-example)
+- 👉 [Blog post](https://amanhimself.dev/blog/safe-area-context-in-react-native-apps/)
+
+This example uses:
+
+- Expo SDK `42`
+- [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
+
+<img src="https://i.imgur.com/86uwW7N.png" width="400"/>
+
 ## Safe Area Context in React Native and Expo apps
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/safe-area-insets-example)
