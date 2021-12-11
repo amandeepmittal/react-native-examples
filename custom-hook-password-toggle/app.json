@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "custom-hook-password-toggle",
+    "slug": "custom-hook-password-toggle",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "custom-hook-password-toggle"
+}
