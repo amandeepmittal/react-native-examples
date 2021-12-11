@@ -21,7 +21,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 ## Show/Hide Password Visibility Custom Hook
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/custom-hook-password-toggle)
-- 👉 [Blog post]()
+- 👉 [Blog post](https://amanhimself.dev/blog/show-hide-password-in-react-native-using-custom-hook/)
 
 This example uses:
 
