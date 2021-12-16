@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "tamagui-example",
+    "slug": "tamagui-example",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "tamagui-example"
+}
