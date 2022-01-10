@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 export default function App() {
   return (
     <>
-      <StatusBar style='auto' />
+      <StatusBar hidden />
       <NativeBaseProvider>
         <QueryClientProvider client={queryClient}>
           <HomeScreen />

@@ -18,6 +18,20 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## useInfiniteQuery hook from React Query and FlatList
+
+- 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/infinite-scroll-with-react-query)
+- 👉 [Blog post]() _Coming soon_
+
+This example uses:
+
+- Expo SDK `44`
+- [create-react-native-app](https://github.com/expo/create-react-native-app)
+- [NativeBase v3](https://docs.nativebase.io/installation)
+- [React Query](https://react-query.tanstack.com/)
+
+<img src="https://i.imgur.com/uLmbrjC.gif" width="200"/>
+
 ## Show/Hide Password Visibility Custom Hook
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/custom-hook-password-toggle)
