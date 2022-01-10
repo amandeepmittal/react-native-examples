@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "infinite-scroll-with-react-query",
+    "slug": "infinite-scroll-with-react-query",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "infinite-scroll-with-react-query"
+}
