@@ -1,4 +1,5 @@
 const BASE_URL = 'https://api.rawg.io/api';
-const API_KEY = 'dd310c7717914633b502424ce79912d9';
+// Replace the Xs below with your own API key
+const API_KEY = 'XXXXX';
 
 export { BASE_URL, API_KEY };

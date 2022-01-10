@@ -1,11 +1,30 @@
 import React from 'react';
 import { Box, Text, FlatList, Divider, Spinner } from 'native-base';
-import { useQuery } from 'react-query';
+import { useInfiniteQuery } from 'react-query';
 
 import { gamesApi } from '../api';
 
 export const HomeScreen = () => {
-  const { isLoading, data } = useQuery('games', gamesApi.fetchAllGames);
+  const { isLoading, data, hasNextPage, fetchNextPage, isFetchingNextPage } =
+    useInfiniteQuery('games', gamesApi.fetchAllGames, {
+      getNextPageParam: lastPage => {
+        if (lastPage.next !== null) {
+          return lastPage.next;
+        }
+
+        return lastPage;
+      }
+    });
+
+  const loadMore = () => {
+    if (hasNextPage) {
+      fetchNextPage();
+    }
+  };
+
+  const renderSpinner = () => {
+    return <Spinner color='emerald.500' size='lg' />;
+  };
 
   const gameItemExtractorKey = (item, index) => {
     return index.toString();
@@ -13,9 +32,9 @@ export const HomeScreen = () => {
 
   const renderData = item => {
     return (
-      <Text fontSize='20' py='2'>
-        {item.item.name}
-      </Text>
+      <Box px={2} mb={8}>
+        <Text fontSize='20'>{item.item.name}</Text>
+      </Box>
     );
   };
 
@@ -38,9 +57,12 @@ export const HomeScreen = () => {
       <Divider />
       <Box px={2}>
         <FlatList
-          data={data.results}
+          data={data.pages.map(page => page.results).flat()}
           keyExtractor={gameItemExtractorKey}
           renderItem={renderData}
+          onEndReached={loadMore}
+          onEndReachedThreshold={0.3}
+          ListFooterComponent={isFetchingNextPage ? renderSpinner : null}
         />
       </Box>
     </Box>
