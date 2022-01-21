@@ -21,7 +21,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 ## useInfiniteQuery hook from React Query and FlatList
 
 - 👉 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/infinite-scroll-with-react-query)
-- 👉 [Blog post]() _Coming soon_
+- 👉 [Blog post](https://blog.jscrambler.com/implementing-infinite-scroll-with-react-query-and-flatlist-in-react-native/)
 
 This example uses:
 
