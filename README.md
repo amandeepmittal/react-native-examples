@@ -256,7 +256,7 @@ This example uses:
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnImagePickerExample)
 - 📝 [Blog post](https://amanhimself.dev/blog/how-to-use-react-native-image-picker)
 
-<img src="https://blog.crowdbotics.com/content/images/2020/04/cb14.png" width="200" /> <img src="https://blog.crowdbotics.com/content/images/2020/04/cb13.gif" width="200" />
+<img src="https://crowdbotics.ghost.io/content/images/2020/04/cb14.png" width="200" />
 
 ## Handle Navigation in WebViews
 
