@@ -39,7 +39,7 @@ This example uses:
 
 This example uses:
 
-- Expo SDK `43`
+- Expo SDK `44`
 
 <img src="https://i.imgur.com/rTNH2Ud.gif" width="200"/>
 
@@ -50,7 +50,7 @@ This example uses:
 
 This example uses:
 
-- Expo SDK `42`
+- Expo SDK `44`
 - [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
 
 <img src="https://i.imgur.com/86uwW7N.png" width="400"/>
