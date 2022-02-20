@@ -73,7 +73,7 @@ This example uses:
 Learn how to add multi-language support to a React Native app using [i18next](https://www.i18next.com/).
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnMultiLanguageExample)
-- 📝 [Blog post](https://blog.crowdbotics.com/how-to-offer-multi-language-support-in-a-react-native-app/)
+- 📝 [Blog post](https://amanhimself.dev/blog/multi-language-support-in-react-native-with-react-i18next/)
 
 This example uses:
 
@@ -84,7 +84,7 @@ This example uses:
 - react-i18next
 - @react-native-async-storage/async-storage
 
-<img src="https://blog.crowdbotics.com/content/images/2021/08/cb5.gif" width="200"/>
+<img src="https://amanhimself.dev/_next/image/?url=https%3A%2F%2Fcrowdbotics.ghost.io%2Fcontent%2Fimages%2F2021%2F08%2Fcb3.png&w=640&q=100" width="200"/>
 
 ## Expo Firebase Auth Example
 
