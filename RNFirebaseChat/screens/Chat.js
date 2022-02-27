@@ -44,7 +44,7 @@ export default function Chat({ navigation }) {
 
   // }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const collectionRef = collection(database, 'chats');
     const q = query(collectionRef, orderBy('createdAt', 'desc'));
 
@@ -59,8 +59,8 @@ export default function Chat({ navigation }) {
       );
     });
 
-    return unsubscribe;
-  });
+    return () => unsubscribe();
+  }, []);
 
   const onSend = useCallback((messages = []) => {
     setMessages(previousMessages =>
@@ -82,7 +82,7 @@ export default function Chat({ navigation }) {
       onSend={messages => onSend(messages)}
       user={{
         _id: auth?.currentUser?.email,
-        avatar: 'https://i.pravatar.cc/300'
+        avatar: 'https://avatars.githubusercontent.com/u/10234615?v=4'
       }}
     />
   );
