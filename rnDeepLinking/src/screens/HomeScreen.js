@@ -9,7 +9,7 @@ import {
 
 import Separator from '../components/Separator';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,7 +28,7 @@ const HomeScreen = () => {
   const renderList = ({ item }) => {
     return (
       <Pressable
-        onPress={() => alert('Navigate to Details screen')}
+        onPress={() => navigation.navigate('Details')}
         style={{ paddingHorizontal: 10 }}
       >
         <Text style={{ fontSize: 24, color: '#000' }}>{item.name}</Text>

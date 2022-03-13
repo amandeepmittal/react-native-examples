@@ -9,7 +9,18 @@ import DetailsScreen from '../screens/DetailsScreen';
 const RootStack = createNativeStackNavigator();
 
 const linking = {
-  prefixes: ['peoplesapp://']
+  prefixes: ['peoplesapp://'],
+  config: {
+    initialRouteName: 'Home',
+    screens: {
+      Home: {
+        path: 'home'
+      },
+      Details: {
+        path: 'details'
+      }
+    }
+  }
 };
 
 const RootNavigator = () => {
