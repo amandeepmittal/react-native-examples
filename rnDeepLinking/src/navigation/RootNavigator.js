@@ -9,7 +9,7 @@ import DetailsScreen from '../screens/DetailsScreen';
 const RootStack = createNativeStackNavigator();
 
 const linking = {
-  prefixes: ['peopleapp://']
+  prefixes: ['peoplesapp://']
 };
 
 const RootNavigator = () => {
