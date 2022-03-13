@@ -18,6 +18,18 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Deep Linking with React Native and React Navigation v6
+
+- 🐙 [Repo]()
+- 📝 [Blog post]()
+
+This example uses:
+
+- React Native `0.67.x`
+- [React Navigation v6](https://reactnavigation.org/)
+
+<img src="https://i.imgur.com/vinhEG4.gif" width="300"/>
+
 ## useInfiniteQuery hook from React Query and FlatList
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/infinite-scroll-with-react-query)
