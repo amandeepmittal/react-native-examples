@@ -1,12 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+
+import RootNavigator from './src/navigation/RootNavigator';
 
 const App = () => {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Deep Linking Example</Text>
-    </View>
-  );
+  return <RootNavigator />;
 };
 
 export default App;
