@@ -20,15 +20,15 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 ## Deep Linking with React Native and React Navigation v6
 
-- 🐙 [Repo]()
-- 📝 [Blog post]()
+- 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/rnDeepLinking)
+- 📝 [Blog post](https://blog.jscrambler.com/how-to-handle-deep-linking-in-a-react-native-app)
 
 This example uses:
 
 - React Native `0.67.x`
 - [React Navigation v6](https://reactnavigation.org/)
 
-<img src="https://i.imgur.com/vinhEG4.gif" width="300"/>
+<img src="https://i.imgur.com/vinhEG4.gif" width="440"/>
 
 ## useInfiniteQuery hook from React Query and FlatList
 
