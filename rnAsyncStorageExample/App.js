@@ -1,111 +1,128 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, {useState, useEffect} from 'react';
+import {StyleSheet, View, Text, TextInput, Pressable} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+let STORAGE_KEY = '@user_input';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const App = () => {
+  const [input, setInput] = useState('');
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const saveData = async () => {
+    try {
+      await AsyncStorage.setItem(STORAGE_KEY, input);
+      alert('Input value saved successfully.');
+    } catch (e) {
+      alert('Failed to save input in the storage');
+    }
+  };
+
+  const readData = async () => {
+    try {
+      const value = await AsyncStorage.getItem(STORAGE_KEY);
+
+      if (value !== null) {
+        setInput(value);
+      }
+    } catch (e) {
+      alert('Failed to fetch the input from storage');
+    }
+  };
+
+  const clearStorage = async () => {
+    try {
+      await AsyncStorage.clear();
+      alert('Storage successfully cleared!');
+    } catch (e) {
+      alert(`Failed to clear the async storage: ${e}`);
+    }
+  };
+
+  const onChangeText = value => setInput(value);
+
+  const onSubmitEditing = () => {
+    if (!input) {
+      return;
+    }
+
+    saveData(input);
+    setInput('');
+  };
+
+  useEffect(() => {
+    readData();
+  }, []);
+
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.title}>AsyncStorage React Native</Text>
+      </View>
+      <View style={styles.panel}>
+        <Text style={styles.label}>Enter your input here:</Text>
+        <TextInput
+          style={styles.inputField}
+          value={input}
+          placeholder="Enter"
+          onChangeText={onChangeText}
+          onSubmitEditing={onSubmitEditing}
+        />
+        <Text style={styles.text}>Your input is {input}</Text>
+        <Pressable onPress={clearStorage} style={styles.button}>
+          <Text style={styles.buttonText}>Clear Storage</Text>
+        </Pressable>
+      </View>
     </View>
   );
 };
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
-
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
   },
-  sectionTitle: {
+  header: {
+    width: '100%',
+    backgroundColor: '#dcdcdc',
+    paddingTop: 48,
+    paddingBottom: 10,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 22,
+    color: '#333',
+    fontWeight: 'bold',
+  },
+  panel: {
+    paddingTop: 10,
+    paddingHorizontal: 10,
+  },
+  label: {
+    fontSize: 20,
+  },
+  text: {
     fontSize: 24,
-    fontWeight: '600',
+    paddingTop: 10,
   },
-  sectionDescription: {
-    marginTop: 8,
+  inputField: {
+    backgroundColor: '#fff',
+    height: 44,
+    borderWidth: 1,
+    borderColor: '#333',
+    width: '100%',
+    padding: 10,
+    marginTop: 12,
+  },
+  button: {
+    margin: 10,
+    padding: 10,
+    backgroundColor: 'orange',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+  },
+  buttonText: {
     fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+    color: '#444',
   },
 });
 
