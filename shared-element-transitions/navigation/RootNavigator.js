@@ -12,19 +12,23 @@ const options = {
   cardStyleInterpolator: ({ current: { progress } }) => {
     return {
       cardStyle: {
-        opacity: progress
-      }
+        opacity: progress,
+      },
     };
-  }
+  },
 };
 
 export default function RootNavigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode='none' initialRouteName='Home'>
-        <Stack.Screen name='HomeScreen' component={HomeScreen} />
+      <Stack.Navigator
+        headerMode="none"
+        initialRouteName="Home"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen
-          name='DetailScreen'
+          name="DetailScreen"
           component={DetailScreen}
           options={() => options}
         />

@@ -3,9 +3,9 @@ import {
   ScrollView,
   Text,
   View,
-  TouchableOpacity,
+  Pressable,
   Image,
-  Dimensions
+  Dimensions,
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SimpleLineIcons } from '@expo/vector-icons';
@@ -34,12 +34,12 @@ export default function HomeScreen({ navigation }) {
       {/* Scrollable content */}
       <View style={{ flex: 1, paddingBottom: 20 }}>
         <ScrollView
-          indicatorStyle='white'
+          indicatorStyle="white"
           contentContainerStyle={{ alignItems: 'center' }}
         >
           {data.map(item => (
             <View key={item.id}>
-              <TouchableOpacity
+              <Pressable
                 activeOpacity={0.8}
                 style={{ marginBottom: 14 }}
                 onPress={() => navigation.navigate('DetailScreen', { item })}
@@ -49,24 +49,24 @@ export default function HomeScreen({ navigation }) {
                     style={{
                       borderRadius: 14,
                       width: ITEM_WIDTH,
-                      height: ITEM_HEIGHT
+                      height: ITEM_HEIGHT,
                     }}
                     source={{ uri: item.image_url }}
-                    resizeMode='cover'
+                    resizeMode="cover"
                   />
                 </SharedElement>
                 <View
                   style={{
                     position: 'absolute',
                     bottom: 20,
-                    left: 10
+                    left: 10,
                   }}
                 >
                   <View style={{ flexDirection: 'row' }}>
                     <SharedElement id={`item.${item.id}.iconName`}>
                       <SimpleLineIcons
                         size={40}
-                        color='white'
+                        color="white"
                         name={item.iconName}
                       />
                     </SharedElement>
@@ -77,7 +77,7 @@ export default function HomeScreen({ navigation }) {
                             color: 'white',
                             fontSize: 24,
                             fontWeight: 'bold',
-                            lineHeight: 28
+                            lineHeight: 28,
                           }}
                         >
                           {item.title}
@@ -89,7 +89,7 @@ export default function HomeScreen({ navigation }) {
                             color: 'white',
                             fontSize: 16,
                             fontWeight: 'bold',
-                            lineHeight: 18
+                            lineHeight: 18,
                           }}
                         >
                           {item.description}
@@ -98,7 +98,7 @@ export default function HomeScreen({ navigation }) {
                     </View>
                   </View>
                 </View>
-              </TouchableOpacity>
+              </Pressable>
             </View>
           ))}
         </ScrollView>
