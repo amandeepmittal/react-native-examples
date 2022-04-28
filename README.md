@@ -165,8 +165,8 @@ This example uses:
 
 This example uses:
 
-- Expo SDK 40
-- [React Navigation v5](https://reactnavigation.org/docs/getting-started)
+- Expo SDK 44
+- [React Navigation v6](https://reactnavigation.org/docs/getting-started)
 - [react-navigation-shared-element](https://github.com/IjzerenHein/react-navigation-shared-element)
 - [react-native-shared-element](https://github.com/IjzerenHein/react-native-shared-element#SharedElementAnimation)
 - Images from Unsplash
