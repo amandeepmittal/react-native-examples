@@ -243,8 +243,8 @@ This example uses:
 
 This example uses:
 
-- Expo SDK 40
-- [React Navigation v5](https://reactnavigation.org/docs/getting-started)
+- Expo SDK 44
+- [React Navigation v6](https://reactnavigation.org/docs/getting-started)
 
 <img src="https://i.imgur.com/ttIMI5V.png" width="200"/> <img src="https://i.imgur.com/WqR3X9I.png" width="200"/>
 
