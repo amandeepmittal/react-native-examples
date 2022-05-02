@@ -137,8 +137,8 @@ Fetch user's current location and then convert into actual postal address.
 
 This example uses:
 
-- expo-cli
-- [React Navigation Stack v5](https://reactnavigation.org/docs/getting-started)
+- Expo SDK 44
+- [React Navigation Stack v6](https://reactnavigation.org/docs/getting-started)
 - [expo-location](https://docs.expo.io/versions/latest/sdk/location/)
 - Icon from [Flaticon.com](https://www.flaticon.com/free-icon/placeholder_1001022?term=location&related_id=1001022)
 
@@ -174,13 +174,13 @@ This example uses:
 
 <img src="https://i.imgur.com/M4Fhl05.gif" width="200"/>
 
-## Custom Scroll bar indicator in ScrollView
+## Custom scroll bar indicator in ScrollView with Animated API
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/custom-scroll-indicator)
 - 📝 [Blog post](https://amanhimself.dev/blog/custom-scroll-bar-indicator-with-react-native-animated-api)
 - **Description**: The implementation of a scroll bar indicator is not directly customizable on cross-platforms in React Native. If you are building an app whose screen design depends on displaying a customized scroll bar indicator, then let's build one in this tutorial.
   This example uses:
-  - Expo SDK 40
+  - Expo SDK 44
   - `Animated.multiply()` from React Native API
   - `onScroll` prop on `ScrollView`
   - Example API data from [Draftbit's Example Data Service](https://example-data.draftbit.com/).
