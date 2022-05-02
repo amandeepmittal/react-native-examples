@@ -30,7 +30,7 @@ const Welcome = ({ navigation }) => {
   };
 
   const GetCurrentLocation = async () => {
-    let { status } = await Location.requestPermissionsAsync();
+    let { status } = await Location.requestForegroundPermissionsAsync();
 
     if (status !== 'granted') {
       Alert.alert(
@@ -47,7 +47,7 @@ const Welcome = ({ navigation }) => {
       const { latitude, longitude } = coords;
       let response = await Location.reverseGeocodeAsync({
         latitude,
-        longitude
+        longitude,
       });
 
       for (let item of response) {
@@ -81,28 +81,28 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#070707',
     alignItems: 'center',
-    paddingTop: 130
+    paddingTop: 130,
   },
   contentContainer: {
     alignItems: 'center',
-    marginBottom: 20
+    marginBottom: 20,
   },
   image: {
     width: 150,
     height: 150,
     resizeMode: 'contain',
-    marginBottom: 20
+    marginBottom: 20,
   },
   title: {
     fontSize: 22,
     fontWeight: '700',
-    color: '#FD0139'
+    color: '#FD0139',
   },
   text: {
     fontSize: 20,
     fontWeight: '400',
-    color: '#fff'
-  }
+    color: '#fff',
+  },
 });
 
 export default Welcome;
