@@ -18,6 +18,18 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Remove Header Border Width in React Navigation
+
+- 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/remove-header-border-react-navigation)
+- 📝 [Blog post]() _Coming Soon_
+
+This example uses:
+
+- Expo SDK 44
+- [React Navigation v6](https://reactnavigation.org/docs/getting-started)
+
+<img src="https://i.imgur.com/PnxIHxT.png" width="200"/> <img src="https://i.imgur.com/bBQuIJJ.png" width="200"/>
+
 ## Deep Linking with React Native and React Navigation v6
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/rnDeepLinking)
