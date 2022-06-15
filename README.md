@@ -21,7 +21,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 ## Remove Header Border Width in React Navigation
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/remove-header-border-react-navigation)
-- 📝 [Blog post]() _Coming Soon_
+- 📝 [Blog post](https://amanhimself.dev/blog/remove-bottom-border-shadow-on-header-in-react-navigation/)
 
 This example uses:
 
