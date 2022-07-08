@@ -7,6 +7,7 @@ export default function App() {
     <View style={styles.container}>
       <Pressable
         style={{ borderRadius: 4, backgroundColor: "#FF0063", padding: 8 }}
+        activeOpacity={0.5}
       >
         <Text style={styles.text}>Press me</Text>
       </Pressable>
