@@ -18,6 +18,17 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 Here is a list of notable examples and the blog post they are related [_if possible_].
 
+## Add opacity to Pressable component
+
+- 🐙 [Repo]()
+- 📝 [Blog post]() **TBD**
+
+This example uses:
+
+- Expo SDK 45
+
+<img src="https://i.imgur.com/LDyiXIu.gif" width="200"/>
+
 ## Remove Header Border Width in React Navigation
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/remove-header-border-react-navigation)
