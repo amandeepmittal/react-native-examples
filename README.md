@@ -20,7 +20,7 @@ Here is a list of notable examples and the blog post they are related [_if possi
 
 ## Add opacity to Pressable component
 
-- 🐙 [Repo]()
+- 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/e98319be78df486705377ce832f9dafd0b34a283/pressable-with-opacity)
 - 📝 [Blog post]() **TBD**
 
 This example uses:
