@@ -3,11 +3,11 @@
 [![made with expo](https://img.shields.io/badge/MADE%20WITH%20EXPO-000.svg?style=for-the-badge&logo=expo&labelColor=4630eb&logoWidth=20)](https://github.com/expo/expo) [![supports iOS and Android](https://img.shields.io/badge/Platforms-Native-4630EB.svg?style=for-the-badge&logo=EXPO&labelColor=000&logoColor=fff)](https://github.com/expo/expo) [![follow @amanhimself](https://img.shields.io/twitter/follow/amanhimself.svg?style=for-the-badge&logo=TWITTER&logoColor=FFFFFF&labelColor=00aced&logoWidth=20&color=lightgray)](https://twitter.com/amanhimself)
 
 ## Why react-native-examples
-  
-I am passionate about React Native and Expo ecosystem and one thing I often struggled with is the lack of resources when I was getting started. My another passion is for writing and I though why not combine these two and see how it goes. So I decided to write about React Native related content in the form of  blog posts, and tutorials on my personal blog [**amanhimself.dev**](https://amanhimself.dev/) and sometimes for [other publications](https://amanhimself.dev/about/). This repository contains most of the examples I've used in blog posts on React Native and Expo.
-  
+
+I am passionate about React Native and Expo ecosystem and one thing I often struggled with is the lack of resources when I was getting started. My another passion is for writing and I though why not combine these two and see how it goes. So I decided to write about React Native related content in the form of blog posts, and tutorials on my personal blog [**amanhimself.dev**](https://amanhimself.dev/) and sometimes for [other publications](https://amanhimself.dev/about/). This repository contains most of the examples I've used in blog posts on React Native and Expo.
+
 With time, it gets harder to maintain different repositories, update the code and dependencies (and trying to match up with the speed of ever-changing ecosystem). Thus, I decided to keep all of projects/exmaples that are mostly code examples used in these various tutorials in one place and hence, this repository.
-  
+
 It's completely [free](https://github.com/amandeepmittal/react-native-examples/blob/main/LICENSE.md). If you find anythning useful in this repo, go ahead pick up any code snippet, use it in your own way.
 
 <small>You may find some of the examples being outdated in time, in terms of framework updates or libraries. Don't worry the concept would be the same. Feel free top up an issue or a PR. </small>
@@ -16,11 +16,10 @@ It's completely [free](https://github.com/amandeepmittal/react-native-examples/b
 
 ---
 
-
 ## Add opacity to Pressable component
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/e98319be78df486705377ce832f9dafd0b34a283/pressable-with-opacity)
-- 📝 [Blog post]() **TBD**
+- 📝 [Blog post](https://amanhimself.dev/blog/add-opacity-to-pressable-component-react-native/)
 
 This example uses:
 
