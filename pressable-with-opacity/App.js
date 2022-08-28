@@ -5,10 +5,7 @@ import Pressable from "./Pressable";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Pressable
-        style={{ borderRadius: 4, backgroundColor: "#FF0063", padding: 8 }}
-        activeOpacity={0.5}
-      >
+      <Pressable style={styles.button} activeOpacity={0.5}>
         <Text style={styles.text}>Press me</Text>
       </Pressable>
     </View>
@@ -25,5 +22,10 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 24,
     color: "#fff",
+  },
+  button: {
+    borderRadius: 4,
+    backgroundColor: "#FF0063",
+    padding: 8,
   },
 });
