@@ -18,12 +18,12 @@ It's completely [free](https://github.com/amandeepmittal/react-native-examples/b
 
 ## Add opacity to Pressable component
 
-- 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/e98319be78df486705377ce832f9dafd0b34a283/pressable-with-opacity)
+- 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/pressable-with-opacity)
 - 📝 [Blog post](https://amanhimself.dev/blog/add-opacity-to-pressable-component-react-native/)
 
 This example uses:
 
-- Expo SDK 45
+- Expo SDK 46
 
 <img src="https://i.imgur.com/LDyiXIu.gif" width="200"/>
 
