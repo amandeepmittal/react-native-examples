@@ -38,7 +38,7 @@ This example uses:
 
 This example uses:
 
-- Expo SDK 44
+- Expo SDK 46
 - [React Navigation v6](https://reactnavigation.org/docs/getting-started)
 
 <img src="https://i.imgur.com/PnxIHxT.png" width="200"/> <img src="https://i.imgur.com/bBQuIJJ.png" width="200"/>
