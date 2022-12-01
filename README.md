@@ -327,6 +327,11 @@ This example uses:
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/02-statusbar-config-based-on-route)
 
+**Uses**
+
+- [`useIsFocused` hook from React Navigation](https://reactnavigation.org/docs/status-bar/)
+- [`expo-status-bar`](https://docs.expo.dev/versions/latest/sdk/status-bar/)
+
 <img src="https://i.imgur.com/sS9ASUg.gif" width="200" />
 
 ## Create a custom hook to change status bar styles with useFocusEffect & react-navigation v6
