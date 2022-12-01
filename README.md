@@ -325,7 +325,7 @@ This example uses:
 
 ## Create a custom hook to status bar styles with useFocusEffect & react-navigation v5
 
-- 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/customStatusBarHook)
+- 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/01-custom-status-bar-hook)
 - 👉 [Blog post series](https://amanhimself.dev/blog/create-custom-status-bar-hook-react-navigation)
 
 <img src="https://i.imgur.com/sS9ASUg.gif" width="200" />
