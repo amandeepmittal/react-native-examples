@@ -71,7 +71,7 @@ This example uses:
 
 ## Show/Hide Password Visibility Custom Hook
 
-- 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/custom-hook-password-toggle)
+- 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/password-visibility-custom-hook-example)
 - 📝 [Blog post](https://amanhimself.dev/blog/show-hide-password-in-react-native-using-custom-hook/)
 
 This example uses:
