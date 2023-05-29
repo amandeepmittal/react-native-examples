@@ -46,7 +46,7 @@ This example uses:
 ## Deep Linking with React Native and React Navigation v6
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/rnDeepLinking)
-- 📝 [Blog post](https://blog.jscrambler.com/how-to-handle-deep-linking-in-a-react-native-app)
+- 📝 [Blog post](https://amanhimself.dev/blog/handle-deep-linking-react-native/)
 
 This example uses:
 
@@ -58,7 +58,7 @@ This example uses:
 ## useInfiniteQuery hook from React Query and FlatList
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/infinite-scroll-with-react-query)
-- 📝 [Blog post](https://blog.jscrambler.com/implementing-infinite-scroll-with-react-query-and-flatlist-in-react-native/)
+- 📝 [Blog post](https://amanhimself.dev/blog/infinite-scroll-with-react-query-and-flatlist-in-react-native/)
 
 This example uses:
 
@@ -95,7 +95,7 @@ This example uses:
 ## Add splash screen and app icon
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/rnSplashAndIconExample)
-- 📝 [Blog post](https://blog.jscrambler.com/how-to-add-a-splash-screen-and-app-icon-in-react-native/)
+- 📝 [Blog post](https://amanhimself.dev/blog/how-to-add-a-splash-screen-and-app-icon-in-react-native-with-react-native-bootsplash/)
 
 This example uses:
 
@@ -128,7 +128,7 @@ This example uses:
 Learn how to integrate Firebase Auth service using Firebase JS SDK and Expo SDK (by generating a managed workflow app).
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-firebase-auth-example)
-- 📝 [Blog post](https://blog.jscrambler.com/how-to-integrate-firebase-authentication-with-an-expo-app/)
+- 📝 [Blog post](https://amanhimself.dev/blog/firebase-authentication-with-expo/)
 
 This example uses:
 
@@ -158,7 +158,7 @@ This example uses:
 Fetch user's current location and then convert into actual postal address.
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/expo-geolocation-example)
-- 📝 [Blog post](https://blog.jscrambler.com/how-to-use-react-native-geolocation-to-get-postal-address/)
+- 📝 [Blog post](https://amanhimself.dev/blog/react-native-geolocation-to-get-postal-address/)
 
 This example uses:
 
@@ -215,7 +215,7 @@ This example uses:
 ## Redux Persist
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/redux-persist-asyncstorage)
-- 📝 [Blog post](https://blog.jscrambler.com/how-to-use-redux-persist-in-react-native-with-asyncstorage/)
+- 📝 [Blog post](https://amanhimself.dev/blog/redux-persist-in-react-native-with-async-storage/)
 - **Description**: How to configure, integrate and use redux-persist library in a React Native & Expo app and dynamically change the UI based on the state updates. This example uses:
   - Expo SDK 40
   - react-navigation v5 (bottom-tabs)
@@ -235,7 +235,7 @@ This example uses:
 ## Animated Header View on a Scroll with React Native Animated API
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/animate-header-on-scroll)
-- 📝 [Blog post](https://blog.jscrambler.com/how-to-animate-a-header-view-on-scroll-with-react-native-animated/)
+- 📝 [Blog post](https://amanhimself.dev/blog/animate-header-view-on-scroll-with-react-native-animated-api/)
 - **Description**: In this tutorial, let's explore a way to create a header view component that animates on the scroll position of the ScrollView component from React Native. We will go through the basics of creating a new Animated value as well as explaining the significance of functions and properties like interpolation, extrapolate, contentOffset, and so on. This example uses:
   - Expo SDK 38
   - React Native Animated API
