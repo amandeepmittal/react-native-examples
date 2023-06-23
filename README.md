@@ -16,7 +16,7 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 **To keep me caffeinated, you can buy me a coffee too ☕️**
 
-<a href='https://ko-fi.com/A611K61' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi4.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/amandeepmittal?frequency=one-time)
 
 ---
 
