@@ -27,7 +27,7 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 This example uses:
 
-- Expo SDK 48
+- Expo SDK 49
 
 <img src="https://i.imgur.com/LDyiXIu.gif" width="200"/>
 
@@ -76,7 +76,7 @@ This example uses:
 
 This example uses:
 
-- Expo SDK `48`
+- Expo SDK 49
 
 <img src="https://i.imgur.com/rTNH2Ud.gif" width="200"/>
 
