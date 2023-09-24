@@ -31,15 +31,15 @@ This example uses:
 
 <img src="https://i.imgur.com/LDyiXIu.gif" width="200"/>
 
-## Remove Header Border Width in React Navigation
+## Remove Header Border Width in React Navigation or Expo Router
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/main/remove-header-border-react-navigation)
 - 📝 [Blog post](https://amanhimself.dev/blog/remove-bottom-border-shadow-on-header-in-react-navigation/)
 
 This example uses:
 
-- Expo SDK 46
-- [React Navigation v6](https://reactnavigation.org/docs/getting-started)
+- Expo SDK 49
+- [Expo Router v2](https://docs.expo.dev/routing/introduction/)
 
 <img src="https://i.imgur.com/PnxIHxT.png" width="200"/> <img src="https://i.imgur.com/bBQuIJJ.png" width="200"/>
 
