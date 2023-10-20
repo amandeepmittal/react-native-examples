@@ -6,7 +6,7 @@
 
 I am passionate about React Native and Expo ecosystem and one thing I often struggled with is the lack of resources when I was getting started. My another passion is for writing and I though why not combine these two and see how it goes.
 
-I write about React Native and Expo form of blog posts, and tutorials on my personal blog [**amanhimself.dev**](https://amanhimself.dev/) and sometimes for [other external publications such as LogRocket, freeCodeCamp, Snetry and Jscrambler](https://amanhimself.dev/about/). This repository is a collection of examples created for those blog posts.
+I write about React Native and Expo form of blog posts, and tutorials on my personal blog [**amanhimself.dev**](https://amanhimself.dev/) and sometimes for [other external publications such as LogRocket, freeCodeCamp, Sentry, and Jscrambler](https://amanhimself.dev/about/). This repository is a collection of examples created for those blog posts.
 
 With time, it gets harder to maintain different repositories, update the code and dependencies (and trying to match up with the speed of ever-changing ecosystem). Thus, I decided to keep all of projects/exmaples that are mostly code examples used in these various tutorials in one place and hence, this repository.
 
