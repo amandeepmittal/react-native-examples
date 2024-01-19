@@ -38,8 +38,8 @@ This example uses:
 
 This example uses:
 
-- Expo SDK 49
-- [Expo Router v2](https://docs.expo.dev/routing/introduction/)
+- Expo SDK 50
+- [Expo Router v3](https://docs.expo.dev/router/introduction/)
 
 <img src="https://i.imgur.com/PnxIHxT.png" width="200"/> <img src="https://i.imgur.com/bBQuIJJ.png" width="200"/>
 
