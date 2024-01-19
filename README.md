@@ -76,7 +76,7 @@ This example uses:
 
 This example uses:
 
-- Expo SDK 49
+- Expo SDK 50
 
 <img src="https://i.imgur.com/rTNH2Ud.gif" width="200"/>
 
