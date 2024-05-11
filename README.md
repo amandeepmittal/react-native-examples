@@ -38,7 +38,7 @@ This example uses:
 
 This example uses:
 
-- Expo SDK 50
+- Expo SDK 51
 - [Expo Router v3](https://docs.expo.dev/router/introduction/)
 
 <img src="https://i.imgur.com/PnxIHxT.png" width="200"/> <img src="https://i.imgur.com/bBQuIJJ.png" width="200"/>
@@ -76,7 +76,7 @@ This example uses:
 
 This example uses:
 
-- Expo SDK 50
+- Expo SDK 51
 
 <img src="https://i.imgur.com/rTNH2Ud.gif" width="200"/>
 
