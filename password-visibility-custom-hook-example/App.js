@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { StyleSheet, Pressable, TextInput, View } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 import { useTogglePasswordVisibility } from "./hook/useTogglePasswordVisibility";
 
