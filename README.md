@@ -164,7 +164,7 @@ This example uses:
 
 - Expo SDK 44
 - [React Navigation Stack v6](https://reactnavigation.org/docs/getting-started)
-- [expo-location](https://docs.expo.io/versions/latest/sdk/location/)
+- [expo-location](https://docs.expo.dev/versions/latest/sdk/location/)
 - Icon from [Flaticon.com](https://www.flaticon.com/free-icon/placeholder_1001022?term=location&related_id=1001022)
 
 <img src="https://i.imgur.com/YSBT6tv.gif" width="200"/>
@@ -276,7 +276,6 @@ This example uses:
 ## Create Custom Custom Wavy Headers with react-native-svg
 
 - 🐙 [Repo](https://github.com/amandeepmittal/react-native-examples/tree/master/onboarding-viewpager)
-- 👉 [Expo Client](https://expo.io/@amanhimself/rnwavysvg)
 - 📝 [Blog post](https://amanhimself.dev/blog/create-custom-headers-with-react-native-svg)
 
 <img src="https://miro.medium.com/max/598/1*aivsFUf_OF6mYBSfOCGrTQ.gif" width="200" />
