@@ -121,8 +121,6 @@ This example uses:
 - react-i18next
 - @react-native-async-storage/async-storage
 
-<img src="https://amanhimself.dev/_next/image/?url=https%3A%2F%2Fcrowdbotics.ghost.io%2Fcontent%2Fimages%2F2021%2F08%2Fcb3.png&w=640&q=100" width="300"/>
-
 ## Expo Firebase Auth Example
 
 Learn how to integrate Firebase Auth service using Firebase JS SDK and Expo SDK (by generating a managed workflow app).
